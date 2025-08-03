@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<Description>This layer is used to define gRPC clients and does not need to be published to Nuget.</Description>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<NoWarn>$(NoWarn);1591</NoWarn>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Grpc.Net.ClientFactory" Version="$(Grpc_Net_ClientFactory_Version)" />
+		<PackageReference Include="Google.Protobuf" Version="$(Google_Protobuf_Version)" />
+		<PackageReference Include="Grpc.Tools" Version="$(Grpc_Tools_Version)">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+	<ItemGroup>
+		<Protobuf Include="..\protos\messages\*.proto" GrpcServices="Client" ProtoRoot="..\protos\"/>
+		<Protobuf Include="..\protos\services\*.proto" GrpcServices="Client" ProtoRoot="..\protos\"/>
+		<!--
+		<Protobuf Include="..\protos\services\*.proto" GrpcServices="Client" Link="Grpc\protos\services\%(Filename)%(Extension)" ProtoRoot="..\protos\services\" />
+		<Protobuf Include="..\protos\messages\*.proto" GrpcServices="Client" Link="Grpc\protos\messages\%(Filename)%(Extension)" ProtoRoot="..\protos\messages\" />		-->
+	</ItemGroup>
+</Project>

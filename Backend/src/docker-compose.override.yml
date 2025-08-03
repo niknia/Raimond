@@ -1,0 +1,26 @@
+version: '3.9'
+
+services:
+ 
+  dkd.app.admin.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+      - ServiceConfig__Id=dkd.app.raimond.api
+      - ServiceConfig__Name=usr
+      - ServiceConfig__DiscoveryAddress=http://consul:8500
+      - ServiceConfig__Address=dkd.app.raimond.api
+      - ServiceConfig__Port=80
+      - ServiceConfig__HealthCheckEndPoint=healthcheck
+      - GRPC_PORT=81
+      #- ASPNETCORE_Kestrel__Certificates__Default__Password="Mahdi1395"
+      #- ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx -v ${HOME}/.aspnet/https:/https/ mcr.microsoft.com/dotnet/samples:aspnetapp
+      #- ASPNETCORE_HOSTINGSTARTUPASSEMBLIES=SkyAPM.Agent.AspNetCore
+      - SKYWALKING__SERVICENAME=dkd.app.raimond.api
+    ports:
+      - "60030:60020"
+      #- "50011:443"
+      - "60032:60022"
+    volumes:
+      - ~/.aspnet/https:/root/.aspnet/https:ro
+      - ~/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro

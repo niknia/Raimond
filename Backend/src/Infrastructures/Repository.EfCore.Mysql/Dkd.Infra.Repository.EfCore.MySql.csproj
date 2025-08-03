@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<Description>This library implements MySQL functionality based on `Adnc.Infra.Repository.EfCore`.</Description>
+		<PackageTags>adnc,efcore,pomelo</PackageTags>
+	</PropertyGroup>
+	<ItemGroup>
+	  <Compile Remove="SqlGenerator\**" />
+	  <EmbeddedResource Remove="SqlGenerator\**" />
+	  <None Remove="SqlGenerator\**" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="$(Pomelo_EntityFrameworkCore_MySql_Version)" />
+		<PackageReference Include="DotNetCore.CAP.MySql" Version="$(DotNetCore_CAP_MySql_Version)" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Repository.EfCore\Dkd.Infra.Repository.EfCore.csproj" />
+		<ProjectReference Include="..\Repository\Dkd.Infra.Repository.csproj" />
+	</ItemGroup>
+</Project>

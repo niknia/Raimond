@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<ItemGroup>
+		<ProjectReference Include="..\..\Shared\Remote.Grpc\Dkd.App.Remote.Grpc.csproj" />
+		<ProjectReference Include="..\Admin.Application.Contracts\Dkd.App.Admin.Application.Contracts.csproj" />
+		<ProjectReference Include="..\Admin.Repository\Dkd.App.Admin.Repository.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\ServiceShared\Application\Dkd.Shared.Application.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="inferaStrucure\" />
+	</ItemGroup>
+
+</Project>

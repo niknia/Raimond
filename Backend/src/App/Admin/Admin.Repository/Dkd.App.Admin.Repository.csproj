@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<ItemGroup>
+	  <Compile Remove="Migrations\**" />
+	  <EmbeddedResource Remove="Migrations\**" />
+	  <None Remove="Migrations\**" />
+	</ItemGroup>
+	<ItemGroup>
+    <ProjectReference Include="..\..\Shared\Const\Dkd.App.Const.csproj" />
+  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\Infrastructures\Repository\Dkd.Infra.Repository.csproj" />
+		<ProjectReference Include="..\..\..\ServiceShared\Repository\Dkd.Shared.Repository.csproj" />
+		<ProjectReference Include="..\..\..\Infrastructures\Repository.EfCore.Mysql\Dkd.Infra.Repository.EfCore.MySql.csproj" />
+	</ItemGroup>
+</Project>

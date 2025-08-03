@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<ItemGroup>
+	  <Compile Remove="Dtos\NewFolder1\**" />
+	  <Compile Remove="Dtos\NewFolder2\**" />
+	  <Compile Remove="Dtos\NewFolder3\**" />
+	  <Compile Remove="Dtos\NewFolder4\**" />
+	  <Compile Remove="Dtos\NewFolder5\**" />
+	  <Compile Remove="Dtos\NewFolder\**" />
+	  <EmbeddedResource Remove="Dtos\NewFolder1\**" />
+	  <EmbeddedResource Remove="Dtos\NewFolder2\**" />
+	  <EmbeddedResource Remove="Dtos\NewFolder3\**" />
+	  <EmbeddedResource Remove="Dtos\NewFolder4\**" />
+	  <EmbeddedResource Remove="Dtos\NewFolder5\**" />
+	  <EmbeddedResource Remove="Dtos\NewFolder\**" />
+	  <None Remove="Dtos\NewFolder1\**" />
+	  <None Remove="Dtos\NewFolder2\**" />
+	  <None Remove="Dtos\NewFolder3\**" />
+	  <None Remove="Dtos\NewFolder4\**" />
+	  <None Remove="Dtos\NewFolder5\**" />
+	  <None Remove="Dtos\NewFolder\**" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\Shared\Const\Dkd.App.Const.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\Infrastructures\Helper\Dkd.Infra.Helper.csproj" />
+    <ProjectReference Include="..\..\..\Infrastructures\Repository\Dkd.Infra.Repository.csproj" />
+    <ProjectReference Include="..\..\..\Infrastructures\Redis.Caching\Dkd.Infra.Redis.Caching.csproj" />
+		<ProjectReference Include="..\..\..\ServiceShared\Shared\Dkd.Shared.csproj" />
+		<ProjectReference Include="..\..\..\ServiceShared\Application.Contracts\Dkd.Shared.Application.Contracts.csproj" />
+    <PackageReference Include="Refit" Version="$(Refit_HttpClientFactory)" />
+    <PackageReference Include="Refit.HttpClientFactory" Version="$(Refit_HttpClientFactory)" />
+	</ItemGroup>
+
+</Project>

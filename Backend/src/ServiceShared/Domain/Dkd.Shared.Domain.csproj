@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<Description>This library provides common implementations for all Domain layers.</Description>
+		<PackageTags>Adnc.Shared.Domain</PackageTags>
+	</PropertyGroup>	
+	<ItemGroup>
+    <ProjectReference Include="..\..\Infrastructures\EventBus\Dkd.Infra.EventBus.csproj" />
+    <ProjectReference Include="..\..\Infrastructures\Repository\Dkd.Infra.Repository.csproj" />
+    <ProjectReference Include="..\..\Infrastructures\Repository.EfCore\Dkd.Infra.Repository.EfCore.csproj" />
+		<ProjectReference Include="..\Repository\Dkd.Shared.Repository.csproj" />
+	</ItemGroup>
+</Project>

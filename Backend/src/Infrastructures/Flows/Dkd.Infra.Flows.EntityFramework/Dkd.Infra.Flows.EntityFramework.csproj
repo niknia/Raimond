@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>Latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="logo-squared.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="$(Microsoft_EntityFrameworkCore_Relational_Version)" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="$(Microsoft_Extensions_Hosting_Version)" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="$(Microsoft_Extensions_Http_Version)" />
+
+    <PackageReference Include="NodaTime" Version="$(NodaTime_Version)" />
+
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Dkd.Infra.Core.csproj" />
+    <ProjectReference Include="..\Dkd.Infra.Flows\Dkd.Infra.Flows.csproj" />
+  </ItemGroup>
+
+</Project>

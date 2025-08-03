@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<Description>This library provides common helper classes such as HashHelper, SecurityHelper, etc.</Description>
+		<PackageTags>adnc,helper</PackageTags>
+	</PropertyGroup>
+	<ItemGroup>
+	  <Compile Remove="Internal\IdGenerater\**" />
+	  <EmbeddedResource Remove="Internal\IdGenerater\**" />
+	  <None Remove="Internal\IdGenerater\**" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Http" Version="$(Microsoft_AspNetCore_Http_Version)" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Core\Dkd.Infra.Core.csproj" />
+	</ItemGroup>
+</Project>

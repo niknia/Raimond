@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>Latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="logo-squared.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+<ItemGroup>
+  <PackageReference Include="Google.Cloud.Translate.V3" Version="$(Google_Cloud_Translate_V3_Version)" />
+  <PackageReference Include="HtmlPerformanceKit" Version="$(HtmlPerformanceKit_Version)" />
+  <PackageReference Include="Meziantou.Analyzer" Version="$(Meziantou_Analyzer_Version)">
+    <PrivateAssets>all</PrivateAssets>
+    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+  </PackageReference>
+  <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="$(Microsoft_Extensions_Configuration_Abstractions_Version)" />
+  <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="$(Microsoft_Extensions_Configuration_Binder_Version)" />
+  <PackageReference Include="Microsoft.Extensions.Http" Version="$(Microsoft_Extensions_Http_Version)" />
+  <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="$(Microsoft_Extensions_Logging_Abstractions_Version)" />
+  <PackageReference Include="Microsoft.Extensions.ObjectPool" Version="$(Microsoft_Extensions_ObjectPool_Version)" />
+  <PackageReference Include="Microsoft.Extensions.Options" Version="$(Microsoft_Extensions_Options_Version)" />
+  <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="$(Microsoft_Extensions_Options_ConfigurationExtensions_Version)" />
+  <PackageReference Include="Microsoft.Extensions.Primitives" Version="$(Microsoft_Extensions_Primitives_Version)" />
+  <PackageReference Include="Microsoft.SourceLink.GitHub" Version="$(Microsoft_SourceLink_GitHub_Version)">
+    <PrivateAssets>all</PrivateAssets>
+    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+  </PackageReference>
+  <PackageReference Include="Markdig" Version="$(Markdig_Version)" />
+  <PackageReference Include="System.Text.Json" Version="$(System_Text_Json_Version)" />
+</ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Dkd.Infra.Core.csproj" />
+  </ItemGroup>
+
+</Project>

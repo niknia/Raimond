@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<Description>This library defines the base classes for Entity objects, UnitOfWork interface, and Repository interface.</Description>
+		<PackageTags>adnc,repository,dapper</PackageTags>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Dapper" Version="$(Dapper_Version)" />
+		<PackageReference Include="MySqlConnector" Version="$(MySqlConnector_Version)" />
+		<PackageReference Include="Microsoft.Data.SqlClient" Version="$(Microsoft_Data_SqlClient)" />
+		<PackageReference Include="Oracle.ManagedDataAccess.Core" Version="$(Oracle_ManagedDataAccess_Core)" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Core\Dkd.Infra.Core.csproj" />
+		<ProjectReference Include="..\Repository\Dkd.Infra.Repository.csproj" />
+	</ItemGroup>
+</Project>

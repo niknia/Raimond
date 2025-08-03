@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<ItemGroup>
+		<ProjectReference Include="..\..\Shared\Remote.Grpc\Dkd.App.Remote.Grpc.csproj" />
+		<ProjectReference Include="..\Admin.Application.Contracts\Dkd.App.Admin.Application.Contracts.csproj" />
+		<ProjectReference Include="..\Admin.Repository\Dkd.App.Admin.Repository.csproj" />
+    <PackageReference Include="System.ServiceModel.Http" Version="$(System_ServiceModel_Http_Version)" />
+    <PackageReference Include="Polly" Version="$(Polly_Version)" />
+    </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\ServiceShared\Application\Dkd.Shared.Application.csproj" />
+	</ItemGroup>
+
+</Project>

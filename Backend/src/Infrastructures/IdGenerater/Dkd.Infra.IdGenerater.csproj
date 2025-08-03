@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<Description>This library is responsible for ID generation, currently implementing a Snowflake algorithm generator that can dynamically obtain WorkerId.</Description>
+		<PackageTags>adnc,snowklake,yitter</PackageTags>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Yitter.IdGenerator" Version="$(Yitter_IdGenerator_Version)" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Redis\Dkd.Infra.Redis.csproj" />
+		<ProjectReference Include="..\Core\Dkd.Infra.Core.csproj" />
+	</ItemGroup>
+</Project>

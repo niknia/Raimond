@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<Description>This project implements MongoDB functionality based on `Adnc.Infra.Repository.EfCore`.</Description>
+		<PackageTags>adnc,efcore,mongodb</PackageTags>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="MongoDB.EntityFrameworkCore" Version="$(MongoDB_EntityFrameworkCore_Version)" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Repository.EfCore\Dkd.Infra.Repository.EfCore.csproj" />
+		<ProjectReference Include="..\Repository\Dkd.Infra.Repository.csproj" />
+	</ItemGroup>
+</Project>

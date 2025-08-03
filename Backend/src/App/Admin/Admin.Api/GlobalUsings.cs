@@ -1,0 +1,13 @@
+global using System.IdentityModel.Tokens.Jwt;
+global using Dkd.App.Admin.Application.Contracts.Dtos;
+global using Dkd.App.Admin.Application.Contracts.Services;
+global using Dkd.App.Const;
+global using Dkd.App.Const.Permissions.Admin;
+global using Dkd.Shared;
+global using Dkd.Shared.Application.Contracts.Dtos;
+global using Dkd.Shared.WebApi;
+global using Dkd.Shared.WebApi.Authentication.Bearer;
+global using Dkd.Shared.WebApi.Authorization;
+global using Microsoft.AspNetCore.Authorization;
+global using Microsoft.AspNetCore.Mvc;
+global using Microsoft.Extensions.Options;

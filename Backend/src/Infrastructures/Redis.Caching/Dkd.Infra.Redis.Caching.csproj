@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<Description>This library is a further encapsulation based on `Adnc.Infra.Redis`, responsible for cache management. In addition to common operations, it also solves issues such as cache penetration, cache breakdown, and cache avalanche.</Description>
+		<PackageTags>adnc,redis,distributed cache</PackageTags>
+	</PropertyGroup>
+	<ItemGroup>
+		<Compile Remove="Core\Interceptor\CachingPutAttribute.cs" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Polly" Version="$(Polly_Version)" />
+		<PackageReference Include="Castle.Core.AsyncInterceptor" Version="$(Castle_Core_AsyncInterceptor_Version)" />
+    <PackageReference Include="SkyAPM.Core" Version="$(SkyAPM_Agent_AspNetCore_Version)" />
+    <PackageReference Include="SkyAPM.Abstractions" Version="$(SkyAPM_Agent_AspNetCore_Version)" />
+    <PackageReference Include="SkyAPM.Utilities.DependencyInjection" Version="$(SkyAPM_Agent_AspNetCore_Version)" />
+  </ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\Core\Dkd.Infra.Core.csproj" />
+	  <ProjectReference Include="..\Redis\Dkd.Infra.Redis.csproj" />
+	</ItemGroup>
+</Project>

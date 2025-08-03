@@ -1,0 +1,600 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityDeveloper Version="7.3.235.0">
+  <ModelSettings xmlns:ed="http://devart.com/schemas/EntityDeveloper/1.0" ConnectionStringInAppConfig="False" TargetFramework="Net60" DetectTPTInheritance="True" AddComplexTypesToDiagram="True" UseNullParameterValues="True" DefaultUnicode="True" SynchronizeNullableReferenceTypes="True" EntityFrameworkCoreVersion="Version6" UseLazyLoadingProxies="True" DetectFunctionBasedColumnDefault="True">
+    <Connection ConnectionString="persistsecurityinfo=True;server=87.107.165.236;user id=root;password=M@hd!1395;database=raimond" Provider="MySql.Data.MySqlClient" />
+    <Generation>
+      <GeneratedFiles>
+        <File Name="ApplicationDbContext.cs" DestinationFolder=".\DB" />
+        <File Name="SysConfig.cs" DestinationFolder=".\entities" />
+        <File Name="SysDictionary.cs" DestinationFolder=".\entities" />
+        <File Name="SysDictionaryData.cs" DestinationFolder=".\entities" />
+        <File Name="SysEventtracker.cs" DestinationFolder=".\entities" />
+        <File Name="SysMenu.cs" DestinationFolder=".\entities" />
+        <File Name="SysOrganization.cs" DestinationFolder=".\entities" />
+        <File Name="SysRole.cs" DestinationFolder=".\entities" />
+        <File Name="SysRoleMenuRelation.cs" DestinationFolder=".\entities" />
+        <File Name="SysRoleUserRelation.cs" DestinationFolder=".\entities" />
+        <File Name="SysUser.cs" DestinationFolder=".\entities" />
+        <File Name="WbmRation.cs" DestinationFolder=".\entities" />
+        <File Name="WbmStation.cs" DestinationFolder=".\entities" />
+        <File Name="WbmUserStatus.cs" DestinationFolder=".\entities" />
+        <File Name="WbmFaq.cs" DestinationFolder=".\entities" />
+        <File Name="WbmFaqgroup.cs" DestinationFolder=".\entities" />
+        <File Name="WbmMemberships.cs" DestinationFolder=".\entities" />
+        <File Name="WbmUsertype.cs" DestinationFolder=".\entities" />
+        <File Name="WbmWebuser.cs" DestinationFolder=".\entities" />
+        <File Name="SysConfig.Configuration.cs" DestinationFolder=".\Mapping" />
+        <File Name="SysDictionary.Configuration.cs" DestinationFolder=".\Mapping" />
+        <File Name="SysDictionaryData.Configuration.cs" DestinationFolder=".\Mapping" />
+        <File Name="SysEventtracker.Configuration.cs" DestinationFolder=".\Mapping" />
+        <File Name="SysMenu.Configuration.cs" DestinationFolder=".\Mapping" />
+        <File Name="SysOrganization.Configuration.cs" DestinationFolder=".\Mapping" />
+        <File Name="SysRole.Configuration.cs" DestinationFolder=".\Mapping" />
+        <File Name="SysRoleMenuRelation.Configuration.cs" DestinationFolder=".\Mapping" />
+        <File Name="SysRoleUserRelation.Configuration.cs" DestinationFolder=".\Mapping" />
+        <File Name="SysUser.Configuration.cs" DestinationFolder=".\Mapping" />
+        <File Name="WbmRation.Configuration.cs" DestinationFolder=".\Mapping" />
+        <File Name="WbmStation.Configuration.cs" DestinationFolder=".\Mapping" />
+        <File Name="WbmUserStatus.Configuration.cs" DestinationFolder=".\Mapping" />
+        <File Name="WbmFaq.Configuration.cs" DestinationFolder=".\Mapping" />
+        <File Name="WbmFaqgroup.Configuration.cs" DestinationFolder=".\Mapping" />
+        <File Name="WbmMemberships.Configuration.cs" DestinationFolder=".\Mapping" />
+        <File Name="WbmUsertype.Configuration.cs" DestinationFolder=".\Mapping" />
+        <File Name="WbmWebuser.Configuration.cs" DestinationFolder=".\Mapping" />
+        <File Name="DeleteSysConfigRequest.cs" DestinationFolder=".\delete" />
+        <File Name="DeleteSysDictionaryRequest.cs" DestinationFolder=".\delete" />
+        <File Name="DeleteSysDictionaryDataRequest.cs" DestinationFolder=".\delete" />
+        <File Name="DeleteSysEventtrackerRequest.cs" DestinationFolder=".\delete" />
+        <File Name="DeleteSysMenuRequest.cs" DestinationFolder=".\delete" />
+        <File Name="DeleteSysOrganizationRequest.cs" DestinationFolder=".\delete" />
+        <File Name="DeleteSysRoleRequest.cs" DestinationFolder=".\delete" />
+        <File Name="DeleteSysRoleMenuRelationRequest.cs" DestinationFolder=".\delete" />
+        <File Name="DeleteSysRoleUserRelationRequest.cs" DestinationFolder=".\delete" />
+        <File Name="DeleteSysUserRequest.cs" DestinationFolder=".\delete" />
+        <File Name="DeleteWbmRationRequest.cs" DestinationFolder=".\delete" />
+        <File Name="DeleteWbmStationRequest.cs" DestinationFolder=".\delete" />
+        <File Name="DeleteWbmUserStatusRequest.cs" DestinationFolder=".\delete" />
+        <File Name="DeleteWbmFaqRequest.cs" DestinationFolder=".\delete" />
+        <File Name="DeleteWbmFaqgroupRequest.cs" DestinationFolder=".\delete" />
+        <File Name="DeleteWbmMembershipsRequest.cs" DestinationFolder=".\delete" />
+        <File Name="DeleteWbmUsertypeRequest.cs" DestinationFolder=".\delete" />
+        <File Name="DeleteWbmWebuserRequest.cs" DestinationFolder=".\delete" />
+        <File Name="UpdateSysConfigRequest.cs" DestinationFolder=".\update" />
+        <File Name="UpdateSysDictionaryRequest.cs" DestinationFolder=".\update" />
+        <File Name="UpdateSysDictionaryDataRequest.cs" DestinationFolder=".\update" />
+        <File Name="UpdateSysEventtrackerRequest.cs" DestinationFolder=".\update" />
+        <File Name="UpdateSysMenuRequest.cs" DestinationFolder=".\update" />
+        <File Name="UpdateSysOrganizationRequest.cs" DestinationFolder=".\update" />
+        <File Name="UpdateSysRoleRequest.cs" DestinationFolder=".\update" />
+        <File Name="UpdateSysRoleMenuRelationRequest.cs" DestinationFolder=".\update" />
+        <File Name="UpdateSysRoleUserRelationRequest.cs" DestinationFolder=".\update" />
+        <File Name="UpdateSysUserRequest.cs" DestinationFolder=".\update" />
+        <File Name="UpdateWbmRationRequest.cs" DestinationFolder=".\update" />
+        <File Name="UpdateWbmStationRequest.cs" DestinationFolder=".\update" />
+        <File Name="UpdateWbmUserStatusRequest.cs" DestinationFolder=".\update" />
+        <File Name="UpdateWbmFaqRequest.cs" DestinationFolder=".\update" />
+        <File Name="UpdateWbmFaqgroupRequest.cs" DestinationFolder=".\update" />
+        <File Name="UpdateWbmMembershipsRequest.cs" DestinationFolder=".\update" />
+        <File Name="UpdateWbmUsertypeRequest.cs" DestinationFolder=".\update" />
+        <File Name="UpdateWbmWebuserRequest.cs" DestinationFolder=".\update" />
+        <File Name="CreateSysConfigRequest.cs" DestinationFolder=".\create" />
+        <File Name="CreateSysDictionaryRequest.cs" DestinationFolder=".\create" />
+        <File Name="CreateSysDictionaryDataRequest.cs" DestinationFolder=".\create" />
+        <File Name="CreateSysEventtrackerRequest.cs" DestinationFolder=".\create" />
+        <File Name="CreateSysMenuRequest.cs" DestinationFolder=".\create" />
+        <File Name="CreateSysOrganizationRequest.cs" DestinationFolder=".\create" />
+        <File Name="CreateSysRoleRequest.cs" DestinationFolder=".\create" />
+        <File Name="CreateSysRoleMenuRelationRequest.cs" DestinationFolder=".\create" />
+        <File Name="CreateSysRoleUserRelationRequest.cs" DestinationFolder=".\create" />
+        <File Name="CreateSysUserRequest.cs" DestinationFolder=".\create" />
+        <File Name="CreateWbmRationRequest.cs" DestinationFolder=".\create" />
+        <File Name="CreateWbmStationRequest.cs" DestinationFolder=".\create" />
+        <File Name="CreateWbmUserStatusRequest.cs" DestinationFolder=".\create" />
+        <File Name="CreateWbmFaqRequest.cs" DestinationFolder=".\create" />
+        <File Name="CreateWbmFaqgroupRequest.cs" DestinationFolder=".\create" />
+        <File Name="CreateWbmMembershipsRequest.cs" DestinationFolder=".\create" />
+        <File Name="CreateWbmUsertypeRequest.cs" DestinationFolder=".\create" />
+        <File Name="CreateWbmWebuserRequest.cs" DestinationFolder=".\create" />
+        <File Name="SysConfigDto.cs" DestinationFolder="dto" />
+        <File Name="SysDictionaryDto.cs" DestinationFolder="dto" />
+        <File Name="SysDictionaryDataDto.cs" DestinationFolder="dto" />
+        <File Name="SysEventtrackerDto.cs" DestinationFolder="dto" />
+        <File Name="SysMenuDto.cs" DestinationFolder="dto" />
+        <File Name="SysOrganizationDto.cs" DestinationFolder="dto" />
+        <File Name="SysRoleDto.cs" DestinationFolder="dto" />
+        <File Name="SysRoleMenuRelationDto.cs" DestinationFolder="dto" />
+        <File Name="SysRoleUserRelationDto.cs" DestinationFolder="dto" />
+        <File Name="SysUserDto.cs" DestinationFolder="dto" />
+        <File Name="WbmRationDto.cs" DestinationFolder="dto" />
+        <File Name="WbmStationDto.cs" DestinationFolder="dto" />
+        <File Name="WbmUserStatusDto.cs" DestinationFolder="dto" />
+        <File Name="WbmFaqDto.cs" DestinationFolder="dto" />
+        <File Name="WbmFaqgroupDto.cs" DestinationFolder="dto" />
+        <File Name="WbmMembershipsDto.cs" DestinationFolder="dto" />
+        <File Name="WbmUsertypeDto.cs" DestinationFolder="dto" />
+        <File Name="WbmWebuserDto.cs" DestinationFolder="dto" />
+        <File Name="PermissionConsts.cs" />
+        <File Name="ISysConfigAppService.cs" DestinationFolder=".\serviceinterface" />
+        <File Name="ISysDictionaryAppService.cs" DestinationFolder=".\serviceinterface" />
+        <File Name="ISysDictionaryDataAppService.cs" DestinationFolder=".\serviceinterface" />
+        <File Name="ISysEventtrackerAppService.cs" DestinationFolder=".\serviceinterface" />
+        <File Name="ISysMenuAppService.cs" DestinationFolder=".\serviceinterface" />
+        <File Name="ISysOrganizationAppService.cs" DestinationFolder=".\serviceinterface" />
+        <File Name="ISysRoleAppService.cs" DestinationFolder=".\serviceinterface" />
+        <File Name="ISysRoleMenuRelationAppService.cs" DestinationFolder=".\serviceinterface" />
+        <File Name="ISysRoleUserRelationAppService.cs" DestinationFolder=".\serviceinterface" />
+        <File Name="ISysUserAppService.cs" DestinationFolder=".\serviceinterface" />
+        <File Name="IWbmRationAppService.cs" DestinationFolder=".\serviceinterface" />
+        <File Name="IWbmStationAppService.cs" DestinationFolder=".\serviceinterface" />
+        <File Name="IWbmUserStatusAppService.cs" DestinationFolder=".\serviceinterface" />
+        <File Name="IWbmFaqAppService.cs" DestinationFolder=".\serviceinterface" />
+        <File Name="IWbmFaqgroupAppService.cs" DestinationFolder=".\serviceinterface" />
+        <File Name="IWbmMembershipsAppService.cs" DestinationFolder=".\serviceinterface" />
+        <File Name="IWbmUsertypeAppService.cs" DestinationFolder=".\serviceinterface" />
+        <File Name="IWbmWebuserAppService.cs" DestinationFolder=".\serviceinterface" />
+        <File Name="SysConfigAppService.cs" DestinationFolder=".\ServiceClassGen" />
+        <File Name="SysDictionaryAppService.cs" DestinationFolder=".\ServiceClassGen" />
+        <File Name="SysDictionaryDataAppService.cs" DestinationFolder=".\ServiceClassGen" />
+        <File Name="SysEventtrackerAppService.cs" DestinationFolder=".\ServiceClassGen" />
+        <File Name="SysMenuAppService.cs" DestinationFolder=".\ServiceClassGen" />
+        <File Name="SysOrganizationAppService.cs" DestinationFolder=".\ServiceClassGen" />
+        <File Name="SysRoleAppService.cs" DestinationFolder=".\ServiceClassGen" />
+        <File Name="SysRoleMenuRelationAppService.cs" DestinationFolder=".\ServiceClassGen" />
+        <File Name="SysRoleUserRelationAppService.cs" DestinationFolder=".\ServiceClassGen" />
+        <File Name="SysUserAppService.cs" DestinationFolder=".\ServiceClassGen" />
+        <File Name="WbmRationAppService.cs" DestinationFolder=".\ServiceClassGen" />
+        <File Name="WbmStationAppService.cs" DestinationFolder=".\ServiceClassGen" />
+        <File Name="WbmUserStatusAppService.cs" DestinationFolder=".\ServiceClassGen" />
+        <File Name="WbmFaqAppService.cs" DestinationFolder=".\ServiceClassGen" />
+        <File Name="WbmFaqgroupAppService.cs" DestinationFolder=".\ServiceClassGen" />
+        <File Name="WbmMembershipsAppService.cs" DestinationFolder=".\ServiceClassGen" />
+        <File Name="WbmUsertypeAppService.cs" DestinationFolder=".\ServiceClassGen" />
+        <File Name="WbmWebuserAppService.cs" DestinationFolder=".\ServiceClassGen" />
+        <File Name="SysConfigDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="SysDictionaryDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="SysDictionaryDataDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="SysEventtrackerDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="SysMenuDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="SysOrganizationDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="SysRoleDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="SysRoleMenuRelationDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="SysRoleUserRelationDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="SysUserDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="WbmRationDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="WbmStationDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="WbmUserStatusDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="WbmFaqDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="WbmFaqgroupDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="WbmMembershipsDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="WbmUsertypeDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="WbmWebuserDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="SysConfigCreationDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="SysDictionaryCreationDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="SysDictionaryDataCreationDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="SysEventtrackerCreationDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="SysMenuCreationDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="SysOrganizationCreationDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="SysRoleCreationDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="SysRoleMenuRelationCreationDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="SysRoleUserRelationCreationDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="SysUserCreationDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="WbmRationCreationDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="WbmStationCreationDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="WbmUserStatusCreationDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="WbmFaqCreationDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="WbmFaqgroupCreationDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="WbmMembershipsCreationDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="WbmUsertypeCreationDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="WbmWebuserCreationDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="SysConfigUpdationDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="SysDictionaryUpdationDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="SysDictionaryDataUpdationDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="SysEventtrackerUpdationDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="SysMenuUpdationDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="SysOrganizationUpdationDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="SysRoleUpdationDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="SysRoleMenuRelationUpdationDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="SysRoleUserRelationUpdationDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="SysUserUpdationDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="WbmRationUpdationDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="WbmStationUpdationDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="WbmUserStatusUpdationDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="WbmFaqUpdationDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="WbmFaqgroupUpdationDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="WbmMembershipsUpdationDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="WbmUsertypeUpdationDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="WbmWebuserUpdationDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="SysConfigSearchPagedDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="SysDictionarySearchPagedDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="SysDictionaryDataSearchPagedDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="SysEventtrackerSearchPagedDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="SysMenuSearchPagedDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="SysOrganizationSearchPagedDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="SysRoleSearchPagedDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="SysRoleMenuRelationSearchPagedDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="SysRoleUserRelationSearchPagedDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="SysUserSearchPagedDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="WbmRationSearchPagedDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="WbmStationSearchPagedDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="WbmUserStatusSearchPagedDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="WbmFaqSearchPagedDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="WbmFaqgroupSearchPagedDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="WbmMembershipsSearchPagedDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="WbmUsertypeSearchPagedDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="WbmWebuserSearchPagedDto.cs" DestinationFolder=".\DtoClass" />
+        <File Name="SysConfigController.cs" DestinationFolder="./controller" />
+        <File Name="SysDictionaryController.cs" DestinationFolder="./controller" />
+        <File Name="SysDictionaryDataController.cs" DestinationFolder="./controller" />
+        <File Name="SysEventtrackerController.cs" DestinationFolder="./controller" />
+        <File Name="SysMenuController.cs" DestinationFolder="./controller" />
+        <File Name="SysOrganizationController.cs" DestinationFolder="./controller" />
+        <File Name="SysRoleController.cs" DestinationFolder="./controller" />
+        <File Name="SysRoleMenuRelationController.cs" DestinationFolder="./controller" />
+        <File Name="SysRoleUserRelationController.cs" DestinationFolder="./controller" />
+        <File Name="SysUserController.cs" DestinationFolder="./controller" />
+        <File Name="WbmRationController.cs" DestinationFolder="./controller" />
+        <File Name="WbmStationController.cs" DestinationFolder="./controller" />
+        <File Name="WbmUserStatusController.cs" DestinationFolder="./controller" />
+        <File Name="WbmFaqController.cs" DestinationFolder="./controller" />
+        <File Name="WbmFaqgroupController.cs" DestinationFolder="./controller" />
+        <File Name="WbmMembershipsController.cs" DestinationFolder="./controller" />
+        <File Name="WbmUsertypeController.cs" DestinationFolder="./controller" />
+        <File Name="WbmWebuserController.cs" DestinationFolder="./controller" />
+      </GeneratedFiles>
+    </Generation>
+    <DatabaseFirstNamingRules>
+      <EntitySet PluralizationName="Pluralize" />
+      <Class UseSchemaAsPrefix="False" PluralizeCollectionNavigationPropertyName="True" AddConstraintColumnsToNavigationPropertyName="False" RemoveUnderscores="True" AddUnderscores="False" RemoveInvalidCharacters="True" CodeCase="FirstLetterUppercase" AddPrefix="" AddSuffix="" RemovePrefixes="" RemoveSuffixes="" PluralizationName="Unchanged" />
+      <Property RemoveUnderscores="True" AddUnderscores="False" RemoveInvalidCharacters="True" CodeCase="FirstLetterUppercase" AddPrefix="" AddSuffix="" RemovePrefixes="" RemoveSuffixes="" PluralizationName="Unchanged" RemoveGuid="False" />
+    </DatabaseFirstNamingRules>
+    <ModelFirst StorageSynchronizationEnabled="False" TargetSchema="raimond" TargetProviderName="MySql.Data.MySqlClient">
+      <TargetServer Server="MySQL" ServerVersion="8.3" />
+      <ModelFirstNamingRules>
+        <Table RemoveUnderscores="False" AddUnderscores="False" RemoveInvalidCharacters="True" CodeCase="Unchanged" AddPrefix="" AddSuffix="" RemovePrefixes="" RemoveSuffixes="" PluralizationName="Unchanged" />
+        <Column RemoveUnderscores="False" AddUnderscores="False" RemoveInvalidCharacters="True" CodeCase="Unchanged" AddPrefix="" AddSuffix="" RemovePrefixes="" RemoveSuffixes="" PluralizationName="Unchanged" />
+      </ModelFirstNamingRules>
+    </ModelFirst>
+    <Diagrams>
+      <Diagram Name="Diagram1" DefaultDiagram="True" />
+    </Diagrams>
+    <Templates>
+      <Template Name="DB" Description="New empty template for Devart Entity Developer C# code generation." Enabled="True" File="DB.tmpl">
+        <ed:Property Name="ValidationFramework" Type="EntityDeveloper.TemplateEngine.ValidationFramework, EntityDeveloper.Common, Version=7.3.235.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <ValidationFramework>None</ValidationFramework>
+        </ed:Property>
+        <ed:Property Name="ValidationErrorMessages" Type="EntityDeveloper.TemplateEngine.ValidationErrorMessages, EntityDeveloper.Common, Version=7.3.235.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <ValidationErrorMessages xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </ed:Property>
+        <ed:Property Name="ContextOutput" Type="EntityDeveloper.TemplateEngine.OutputInfo, EntityDeveloper.Common, Version=7.3.235.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <OutputInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <Project />
+            <ProjectFolder />
+            <DestinationFolder>.\DB</DestinationFolder>
+          </OutputInfo>
+        </ed:Property>
+        <ed:Property Name="EntitiesOutput" Type="EntityDeveloper.TemplateEngine.OutputInfo, EntityDeveloper.Common, Version=7.3.235.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <OutputInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <Project />
+            <ProjectFolder />
+            <DestinationFolder>.\entities</DestinationFolder>
+          </OutputInfo>
+        </ed:Property>
+        <ed:Property Name="EnumOutput" Type="EntityDeveloper.TemplateEngine.OutputInfo, EntityDeveloper.Common, Version=7.3.235.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <OutputInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <Project />
+            <ProjectFolder />
+            <DestinationFolder />
+          </OutputInfo>
+        </ed:Property>
+        <ed:Property Name="FilePerClass" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>true</boolean>
+        </ed:Property>
+        <ed:Property Name="GeneratePartialClass" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>false</boolean>
+        </ed:Property>
+        <ed:Property Name="ModelNameAsFilesPrefix" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>false</boolean>
+        </ed:Property>
+        <ed:Property Name="HeaderTimestampVersionControlTag" Type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <string d6p1:nil="true" xmlns:d6p1="http://www.w3.org/2001/XMLSchema-instance" />
+        </ed:Property>
+        <ed:Property Name="PropertyChangeNotifiers" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>false</boolean>
+        </ed:Property>
+        <ed:Property Name="PropertyChangePartialMethods" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>false</boolean>
+        </ed:Property>
+        <ed:Property Name="ImplementEquals" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>true</boolean>
+        </ed:Property>
+        <ed:Property Name="ImplementCloneable" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>true</boolean>
+        </ed:Property>
+        <ed:Property Name="GenerateDummyComments" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>false</boolean>
+        </ed:Property>
+        <ed:Property Name="GenerateGeneratedCodeAttributes" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>false</boolean>
+        </ed:Property>
+        <ed:Property Name="IncludeEnvironmentVariables" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>false</boolean>
+        </ed:Property>
+        <ed:Property Name="JsonFileBasePath" Type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <string d6p1:nil="true" xmlns:d6p1="http://www.w3.org/2001/XMLSchema-instance" />
+        </ed:Property>
+        <ed:Property Name="PrimitiveDefaultValueGeneration" Type="EntityDeveloper.DefaultValueBehavior, EntityDeveloper.Orm.Common, Version=7.3.235.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <DefaultValueBehavior>Literal</DefaultValueBehavior>
+        </ed:Property>
+        <ed:Property Name="CollectionPropertyType" Type="EntityDeveloper.EntityFrameworkCore.EFCoreCollectionPropertyType, EntityDeveloper.Orm.EntityFrameworkCore, Version=7.3.235.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <EFCoreCollectionPropertyType>Default</EFCoreCollectionPropertyType>
+        </ed:Property>
+        <ed:Property Name="CollectionInitializationType" Type="EntityDeveloper.EntityFrameworkCore.EFCoreCollectionInitializationType, EntityDeveloper.Orm.EntityFrameworkCore, Version=7.3.235.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <EFCoreCollectionInitializationType>Default</EFCoreCollectionInitializationType>
+        </ed:Property>
+        <ed:Property Name="NullableReferenceTypes" Type="EntityDeveloper.ReferenceTypeNullability, EntityDeveloper.Orm.Common, Version=7.3.235.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <ReferenceTypeNullability>Enable</ReferenceTypeNullability>
+        </ed:Property>
+        <ed:Property Name="SelfContainedEntityConfiguration" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>true</boolean>
+        </ed:Property>
+        <ed:Property Name="EntitiesConfigurationOutput" Type="EntityDeveloper.TemplateEngine.OutputInfo, EntityDeveloper.Common, Version=7.3.235.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <OutputInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <Project />
+            <ProjectFolder />
+            <DestinationFolder>.\Mapping</DestinationFolder>
+          </OutputInfo>
+        </ed:Property>
+        <ed:Property Name="NameSpaceConfiguration" Type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <string>Dkd.App.Planingschedule.Repository.Entities.Config</string>
+        </ed:Property>
+        <ed:Property Name="SerializationLibrary" Type="EntityDeveloper.SerializationLibrary, EntityDeveloper.Orm.Common, Version=7.3.235.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <SerializationLibrary>None</SerializationLibrary>
+        </ed:Property>
+        <ed:Property Name="SerializeOriginalColumnNames" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>false</boolean>
+        </ed:Property>
+        <ed:Property Name="SerializeNullValues" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>true</boolean>
+        </ed:Property>
+        <ed:Property Name="SerializeNavigationProperties" Type="EntityDeveloper.NavigationPropertySerializationBehavior, EntityDeveloper.Orm.Common, Version=7.3.235.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <NavigationPropertySerializationBehavior>All</NavigationPropertySerializationBehavior>
+        </ed:Property>
+        <ed:Property Name="GenerateSerializableAttributes" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>true</boolean>
+        </ed:Property>
+        <ed:Property Name="GenerateDataContracts" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>false</boolean>
+        </ed:Property>
+        <ed:Property Name="pocoNameSpace" Type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <string>Dkd.App.Admin.Repository.Entities</string>
+        </ed:Property>
+      </Template>
+      <Template Name="Dto" Description="New empty template for Devart Entity Developer C# code generation." Enabled="True" File="Dto.tmpl">
+        <ed:Property Name="ValidationFramework" Type="EntityDeveloper.TemplateEngine.ValidationFramework, EntityDeveloper.Common, Version=7.3.235.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <ValidationFramework>None</ValidationFramework>
+        </ed:Property>
+        <ed:Property Name="ValidationErrorMessages" Type="EntityDeveloper.TemplateEngine.ValidationErrorMessages, EntityDeveloper.Common, Version=7.3.235.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <ValidationErrorMessages xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </ed:Property>
+        <ed:Property Name="FilePerClass" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>true</boolean>
+        </ed:Property>
+        <ed:Property Name="DtosOutput" Type="EntityDeveloper.TemplateEngine.OutputInfo, EntityDeveloper.Common, Version=7.3.235.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <OutputInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <Project />
+            <ProjectFolder />
+            <DestinationFolder>dto</DestinationFolder>
+          </OutputInfo>
+        </ed:Property>
+        <ed:Property Name="CreateRequestOutput" Type="EntityDeveloper.TemplateEngine.OutputInfo, EntityDeveloper.Common, Version=7.3.235.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <OutputInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <Project />
+            <ProjectFolder />
+            <DestinationFolder>.\create</DestinationFolder>
+          </OutputInfo>
+        </ed:Property>
+        <ed:Property Name="UpdateRequestOutput" Type="EntityDeveloper.TemplateEngine.OutputInfo, EntityDeveloper.Common, Version=7.3.235.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <OutputInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <Project />
+            <ProjectFolder />
+            <DestinationFolder>.\update</DestinationFolder>
+          </OutputInfo>
+        </ed:Property>
+        <ed:Property Name="DeleteRequestOutput" Type="EntityDeveloper.TemplateEngine.OutputInfo, EntityDeveloper.Common, Version=7.3.235.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <OutputInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <Project />
+            <ProjectFolder />
+            <DestinationFolder>.\delete</DestinationFolder>
+          </OutputInfo>
+        </ed:Property>
+        <ed:Property Name="ConvertersOutput" Type="EntityDeveloper.TemplateEngine.OutputInfo, EntityDeveloper.Common, Version=7.3.235.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <OutputInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <Project />
+            <ProjectFolder />
+            <DestinationFolder>.\convert</DestinationFolder>
+          </OutputInfo>
+        </ed:Property>
+        <ed:Property Name="GeneratePartialDtos" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>false</boolean>
+        </ed:Property>
+        <ed:Property Name="GeneratePartialConverters" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>false</boolean>
+        </ed:Property>
+        <ed:Property Name="DtoNamespace" Type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <string>Dkd.App.Admin.Application.Dtos</string>
+        </ed:Property>
+        <ed:Property Name="CreateRequestNamespace" Type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <string>Dkd.App.Admin.Application.create</string>
+        </ed:Property>
+        <ed:Property Name="UpdateRequestNamespace" Type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <string>Dkd.App.Admin.Application.update</string>
+        </ed:Property>
+        <ed:Property Name="DeleteRequestNamespace" Type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <string>Dkd.App.Admin.Application.delete</string>
+        </ed:Property>
+        <ed:Property Name="HeaderTimestampVersionControlTag" Type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <string d6p1:nil="true" xmlns:d6p1="http://www.w3.org/2001/XMLSchema-instance" />
+        </ed:Property>
+        <ed:Property Name="DtoClassNamePrefix" Type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <string d6p1:nil="true" xmlns:d6p1="http://www.w3.org/2001/XMLSchema-instance" />
+        </ed:Property>
+        <ed:Property Name="DtoClassNameSuffix" Type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <string>Dto</string>
+        </ed:Property>
+        <ed:Property Name="GenerateDtoConstructors" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>true</boolean>
+        </ed:Property>
+        <ed:Property Name="UseDtoClassesInAssociations" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>true</boolean>
+        </ed:Property>
+        <ed:Property Name="GenerateConverters" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>false</boolean>
+        </ed:Property>
+        <ed:Property Name="ConverterClassNamePrefix" Type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <string d6p1:nil="true" xmlns:d6p1="http://www.w3.org/2001/XMLSchema-instance" />
+        </ed:Property>
+        <ed:Property Name="ConverterClassNameSuffix" Type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <string>Converter</string>
+        </ed:Property>
+        <ed:Property Name="SerializationLibrary" Type="EntityDeveloper.SerializationLibrary, EntityDeveloper.Orm.Common, Version=7.3.235.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <SerializationLibrary>NewtonsoftJson</SerializationLibrary>
+        </ed:Property>
+        <ed:Property Name="SerializeNavigationProperties" Type="EntityDeveloper.NavigationPropertySerializationBehavior, EntityDeveloper.Orm.Common, Version=7.3.235.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <NavigationPropertySerializationBehavior>All</NavigationPropertySerializationBehavior>
+        </ed:Property>
+        <ed:Property Name="WcfDataContractAttributes" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>false</boolean>
+        </ed:Property>
+        <ed:Property Name="WcfDataMemberOnNavigationProperties" Type="EntityDeveloper.WcfDataMemberGenerationBehavior, EntityDeveloper.Orm.Common, Version=7.3.235.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <WcfDataMemberGenerationBehavior>All</WcfDataMemberGenerationBehavior>
+        </ed:Property>
+      </Template>
+      <Template Name="repository" Description="New empty template for Devart Entity Developer C# code generation." Enabled="True" File="ModelCodeGenerator.Blank.tmpl">
+        <ed:Property Name="ValidationFramework" Type="EntityDeveloper.TemplateEngine.ValidationFramework, EntityDeveloper.Common, Version=7.3.235.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <ValidationFramework>None</ValidationFramework>
+        </ed:Property>
+        <ed:Property Name="ValidationErrorMessages" Type="EntityDeveloper.TemplateEngine.ValidationErrorMessages, EntityDeveloper.Common, Version=7.3.235.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <ValidationErrorMessages xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </ed:Property>
+        <ed:Property Name="InterfaceLayerOutput" Type="EntityDeveloper.TemplateEngine.OutputInfo, EntityDeveloper.Common, Version=7.3.235.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <OutputInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <Project />
+            <ProjectFolder />
+            <DestinationFolder>.\serviceinterface</DestinationFolder>
+          </OutputInfo>
+        </ed:Property>
+        <ed:Property Name="ClassServiceLayerOutput" Type="EntityDeveloper.TemplateEngine.OutputInfo, EntityDeveloper.Common, Version=7.3.235.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <OutputInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <Project />
+            <ProjectFolder />
+            <DestinationFolder>.\ServiceClassGen</DestinationFolder>
+          </OutputInfo>
+        </ed:Property>
+        <ed:Property Name="ClassServiceDtoOutPut" Type="EntityDeveloper.TemplateEngine.OutputInfo, EntityDeveloper.Common, Version=7.3.235.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <OutputInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <Project />
+            <ProjectFolder />
+            <DestinationFolder>.\DtoClass</DestinationFolder>
+          </OutputInfo>
+        </ed:Property>
+        <ed:Property Name="DataAccessLayerOutput" Type="EntityDeveloper.TemplateEngine.OutputInfo, EntityDeveloper.Common, Version=7.3.235.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <OutputInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <Project />
+            <ProjectFolder />
+            <DestinationFolder />
+          </OutputInfo>
+        </ed:Property>
+        <ed:Property Name="ModelNameAsFilesPrefix" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>false</boolean>
+        </ed:Property>
+        <ed:Property Name="GeneratePartial" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>true</boolean>
+        </ed:Property>
+        <ed:Property Name="ServiceLayerOutput" Type="EntityDeveloper.TemplateEngine.OutputInfo, EntityDeveloper.Common, Version=7.3.235.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <OutputInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <Project />
+            <ProjectFolder />
+            <DestinationFolder />
+          </OutputInfo>
+        </ed:Property>
+        <ed:Property Name="ControllerClassOutput" Type="EntityDeveloper.TemplateEngine.OutputInfo, EntityDeveloper.Common, Version=7.3.235.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <OutputInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <Project />
+            <ProjectFolder />
+            <DestinationFolder>./controller</DestinationFolder>
+          </OutputInfo>
+        </ed:Property>
+        <ed:Property Name="ConstantsFolderName" Type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <string>Constants</string>
+        </ed:Property>
+        <ed:Property Name="InterfaceLayerNamespace" Type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <string>Dkd.App.Admin.Application.Contracts.Services</string>
+        </ed:Property>
+        <ed:Property Name="ControllerNamespace" Type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <string>Dkd.App.Admin.Api.Controllers</string>
+        </ed:Property>
+        <ed:Property Name="ControllerRoutName" Type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <string>{RouteConsts.AdminRoot}</string>
+        </ed:Property>
+        <ed:Property Name="DtoClassNamespace" Type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <string>Dkd.App.Admin.Application.Dtos</string>
+        </ed:Property>
+        <ed:Property Name="DataAccessLayerNamespace" Type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <string>Dkd.App.Admin.Application.Entities;</string>
+        </ed:Property>
+        <ed:Property Name="ServicesLayerNamespace" Type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <string>Dkd.App.Admin.Application.Services</string>
+        </ed:Property>
+        <ed:Property Name="HeaderTimestampVersionControlTag" Type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <string d6p1:nil="true" xmlns:d6p1="http://www.w3.org/2001/XMLSchema-instance" />
+        </ed:Property>
+        <ed:Property Name="GenerateMemoryRepository" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>false</boolean>
+        </ed:Property>
+        <ed:Property Name="GenericRepositoryPattern" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>false</boolean>
+        </ed:Property>
+        <ed:Property Name="GenerateUnitOfWorkRepositoryProperties" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>true</boolean>
+        </ed:Property>
+        <ed:Property Name="PropertyChangeNotifiers" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>false</boolean>
+        </ed:Property>
+        <ed:Property Name="GenerateDataContracts" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>false</boolean>
+        </ed:Property>
+        <ed:Property Name="PropertyChangePartialMethods" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>false</boolean>
+        </ed:Property>
+        <ed:Property Name="CollectionPropertyType" Type="EntityDeveloper.EntityFrameworkCore.EFCoreCollectionPropertyType, EntityDeveloper.Orm.EntityFrameworkCore, Version=7.3.235.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <EFCoreCollectionPropertyType>IList</EFCoreCollectionPropertyType>
+        </ed:Property>
+        <ed:Property Name="NullableReferenceTypes" Type="EntityDeveloper.ReferenceTypeNullability, EntityDeveloper.Orm.Common, Version=7.3.235.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <ReferenceTypeNullability>Enable</ReferenceTypeNullability>
+        </ed:Property>
+        <ed:Property Name="GenerateSerializableAttributes" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>true</boolean>
+        </ed:Property>
+        <ed:Property Name="GenerateDummyComments" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>false</boolean>
+        </ed:Property>
+        <ed:Property Name="SerializationLibrary" Type="EntityDeveloper.SerializationLibrary, EntityDeveloper.Orm.Common, Version=7.3.235.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <SerializationLibrary>NewtonsoftJson</SerializationLibrary>
+        </ed:Property>
+        <ed:Property Name="CollectionInitializationType" Type="EntityDeveloper.EntityFrameworkCore.EFCoreCollectionInitializationType, EntityDeveloper.Orm.EntityFrameworkCore, Version=7.3.235.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <EFCoreCollectionInitializationType>List</EFCoreCollectionInitializationType>
+        </ed:Property>
+        <ed:Property Name="SerializeNavigationProperties" Type="EntityDeveloper.NavigationPropertySerializationBehavior, EntityDeveloper.Orm.Common, Version=7.3.235.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <NavigationPropertySerializationBehavior>All</NavigationPropertySerializationBehavior>
+        </ed:Property>
+        <ed:Property Name="SerializeOriginalColumnNames" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>false</boolean>
+        </ed:Property>
+        <ed:Property Name="SerializeNullValues" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>true</boolean>
+        </ed:Property>
+      </Template>
+    </Templates>
+    <AttributeAssemblies />
+  </ModelSettings>
+</EntityDeveloper>

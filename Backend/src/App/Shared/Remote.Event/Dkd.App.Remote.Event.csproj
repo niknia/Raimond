@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<Description>This layer is used to define Events and does not need to be published to Nuget.</Description>
+	</PropertyGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\Infrastructures\Core\Dkd.Infra.Core.csproj" />
+		<ProjectReference Include="..\..\..\ServiceShared\Shared\Dkd.Shared.csproj" />
+		<ProjectReference Include="..\..\..\ServiceShared\Remote\Dkd.Shared.Remote.csproj" />
+	</ItemGroup>
+</Project>

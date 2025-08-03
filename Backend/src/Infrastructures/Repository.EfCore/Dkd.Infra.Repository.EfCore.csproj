@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<Description>This library implements the `Adnc.Infra.Repository` interfaces using Entity Framework Core, providing database CRUD operations and supporting distributed transactions.</Description>
+		<PackageTags>adnc,repository,efcore</PackageTags>
+	</PropertyGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\Core\Dkd.Infra.Core.csproj" />
+	  <ProjectReference Include="..\Repository\Dkd.Infra.Repository.csproj" />
+	</ItemGroup>
+</Project>

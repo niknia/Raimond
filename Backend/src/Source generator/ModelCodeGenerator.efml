@@ -1,0 +1,1915 @@
+<?xml version="1.0" encoding="utf-8"?>
+<efcore schema="dbo" namespace="DkdCore.Domain.entities" p1:name="ApplicationDbContext" p1:Guid="9e73ebea-ae2d-48fa-bdf5-0240e62e329e" p1:EntityBase="EfFullAuditEntity" xmlns:p1="http://devart.com/schemas/EntityDeveloper/1.0">
+  <class name="SysUserType" entity-set="SysUserTypes" table="sys_UserType" schema="raimond" p1:Guid="15926438-1dc4-45b1-bca6-de0c47a16967">
+    <id name="Id" type="Int64" p1:ValidateRequired="true" p1:Guid="65f02316-1959-438e-aa09-e32f5c1ff093">
+      <column name="id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </id>
+    <property name="Createby" type="Int64" p1:ValidateRequired="true" p1:Guid="39fda36d-b6ff-4747-9c65-b41c42d2e267">
+      <Documentation>
+        <Summary>Creator</Summary>
+      </Documentation>
+      <column name="createby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Createtime" type="DateTime" p1:ValidateRequired="true" p1:Guid="7e0feaa3-9847-4aef-9748-35390aed7851">
+      <Documentation>
+        <Summary>Creation Time/Registration Time</Summary>
+      </Documentation>
+      <column name="createtime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="IsDeleted" type="Boolean" p1:ValidateRequired="true" p1:Guid="b0395443-060c-4ca9-bacf-77492803bb10">
+      <column name="IsDeleted" default="b'0'" not-null="True" precision="1" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="Modifyby" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="92078060-bcb8-49f8-820b-390c4905a581">
+      <Documentation>
+        <Summary>Last Updated By</Summary>
+      </Documentation>
+      <column name="modifyby" not-null="False" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Modifytime" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="69320961-cc7a-4404-b826-526ff0c5ba85">
+      <Documentation>
+        <Summary>Last Update Time</Summary>
+      </Documentation>
+      <column name="modifytime" not-null="False" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Name" type="String" p1:nullable="True" p1:ValidateMaxLength="50" p1:ValidateRequired="false" p1:Guid="2e1fc89d-f3fa-4ab3-851f-2e48e5096c34">
+      <column name="Name" not-null="False" length="50" sql-type="varchar" p1:unicode="True" />
+    </property>
+  </class>
+  <class name="SysUser" entity-set="SysUsers" table="sys_user" schema="raimond" p1:Guid="a414af67-f451-4353-a570-49083a1dd80e">
+    <Documentation>
+      <Summary>Administrator</Summary>
+    </Documentation>
+    <id name="Id" type="Int64" p1:ValidateRequired="true" p1:Guid="ba20a5e9-f215-4f27-8bc8-f4e14ba3bd36">
+      <column name="id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </id>
+    <property name="Account" type="String" p1:ValidateMaxLength="32" p1:ValidateRequired="true" p1:Guid="1a127ebb-2cbd-47cb-8d46-bde50ea2c608">
+      <Documentation>
+        <Summary>Account</Summary>
+      </Documentation>
+      <column name="account" not-null="True" length="32" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="Avatar" type="String" p1:ValidateMaxLength="128" p1:ValidateRequired="true" p1:Guid="b3e50434-02a5-4fbf-adb7-2d81e31def8f">
+      <Documentation>
+        <Summary>Avatar Path</Summary>
+      </Documentation>
+      <column name="avatar" not-null="True" length="128" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="Birthday" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="092e0d21-d191-4668-bf22-1d97328ad0e7">
+      <Documentation>
+        <Summary>Birthday</Summary>
+      </Documentation>
+      <column name="birthday" not-null="False" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Createby" type="Int64" p1:ValidateRequired="true" p1:Guid="39283c45-452b-4140-a1a6-20c0e179ff4c">
+      <Documentation>
+        <Summary>Creator</Summary>
+      </Documentation>
+      <column name="createby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Createtime" type="DateTime" p1:ValidateRequired="true" p1:Guid="fb0ca7e8-ab6d-451c-8fc5-9898695f9a0c">
+      <Documentation>
+        <Summary>Creation Time/Registration Time</Summary>
+      </Documentation>
+      <column name="createtime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Email" type="String" p1:ValidateMaxLength="32" p1:ValidateRequired="true" p1:Guid="24c7a077-025a-46e7-9f65-47b992c95af8">
+      <Documentation>
+        <Summary>Email</Summary>
+      </Documentation>
+      <column name="email" not-null="True" length="32" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="FkMenu" type="String" p1:nullable="True" p1:ValidateMaxLength="2000" p1:ValidateRequired="false" p1:Guid="f7b7b4c1-2090-4a99-afb2-943868b0365a">
+      <column name="fk_menu" not-null="False" length="2000" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="FkOrganization" type="Int64" p1:ValidateRequired="true" p1:Guid="0219b878-7946-4ca2-9d92-ddb45e1252f6">
+      <Documentation>
+        <Summary>Department ID</Summary>
+      </Documentation>
+      <column name="fk_organization" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="FkRole" type="String" p1:nullable="True" p1:ValidateMaxLength="2000" p1:ValidateRequired="false" p1:Guid="d0ecf5cc-2178-45e2-b319-aeba116912c1">
+      <column name="fk_role" not-null="False" length="2000" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="FkUserType" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="182cb3f6-39d2-42fc-98d7-101f5124750c">
+      <column name="fk_UserType" not-null="False" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Gender" type="Int32" p1:ValidateRequired="true" p1:Guid="faa7e131-f00e-42d9-9e12-bf1260a10978">
+      <Documentation>
+        <Summary>Gender</Summary>
+      </Documentation>
+      <column name="gender" not-null="True" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="IsConfirmed" type="Boolean" p1:ValidateRequired="true" p1:Guid="69c0734e-67b1-4a35-b161-ceda99ade36b">
+      <column name="IsConfirmed" default="0" not-null="True" precision="1" scale="0" sql-type="tinyint" p1:unicode="False" />
+    </property>
+    <property name="Isdeleted" type="Boolean" p1:ValidateRequired="true" p1:Guid="7d48c92c-01a3-40ef-a856-a7a39834132a">
+      <Documentation>
+        <Summary>Delete Flag</Summary>
+      </Documentation>
+      <column name="isdeleted" default="0" not-null="True" precision="1" scale="0" sql-type="tinyint" p1:unicode="False" />
+    </property>
+    <property name="Mobile" type="String" p1:ValidateMaxLength="11" p1:ValidateRequired="true" p1:Guid="7215f449-7fba-4eec-8056-e5876e9c9fa1">
+      <Documentation>
+        <Summary>Mobile Number</Summary>
+      </Documentation>
+      <column name="mobile" not-null="True" length="11" sql-type="varchar" unique="True" p1:unicode="True" />
+    </property>
+    <property name="Modifyby" type="Int64" p1:ValidateRequired="true" p1:Guid="93429e9f-6e7b-486c-8623-7942fccfd63e">
+      <Documentation>
+        <Summary>Last Updated By</Summary>
+      </Documentation>
+      <column name="modifyby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Modifytime" type="DateTime" p1:ValidateRequired="true" p1:Guid="57675ac5-af83-4a4d-8b95-4f85b333f884">
+      <Documentation>
+        <Summary>Last Update Time</Summary>
+      </Documentation>
+      <column name="modifytime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Name" type="String" p1:ValidateMaxLength="32" p1:ValidateRequired="true" p1:Guid="8f0cdc55-1171-488d-bc01-4a0a3f4a2387">
+      <Documentation>
+        <Summary>Name</Summary>
+      </Documentation>
+      <column name="name" not-null="True" length="32" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="NationalCode" type="String" p1:nullable="True" p1:ValidateMaxLength="10" p1:ValidateRequired="false" p1:Guid="e99bdcc4-a932-4ecc-b0c9-12d51c2b941a">
+      <column name="NationalCode" not-null="False" length="10" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="OtpToken" type="String" p1:nullable="True" p1:ValidateMaxLength="6" p1:ValidateRequired="false" p1:Guid="3b77da75-209c-4d3b-8bf5-2b00c2bbd731">
+      <column name="otpToken" not-null="False" length="6" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="Otpvalidto" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="3d0cd25e-c086-4173-bdbb-c803f8297c14">
+      <column name="otpvalidto" not-null="False" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Password" type="String" p1:ValidateMaxLength="32" p1:ValidateRequired="true" p1:Guid="0f430093-79dc-4ebb-9d6b-4d290d0af90f">
+      <Documentation>
+        <Summary>Password</Summary>
+      </Documentation>
+      <column name="`password`" not-null="True" length="32" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="Salt" type="String" p1:ValidateMaxLength="6" p1:ValidateRequired="true" p1:Guid="fe04a7af-b0e5-4c1e-8c54-1454e43fa9b2">
+      <Documentation>
+        <Summary>Password Salt</Summary>
+      </Documentation>
+      <column name="salt" not-null="True" length="6" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="Status" type="Boolean" p1:ValidateRequired="true" p1:Guid="4562064d-4af5-4db7-a8ac-8115d213c161">
+      <Documentation>
+        <Summary>Status</Summary>
+      </Documentation>
+      <column name="status" not-null="True" precision="1" scale="0" sql-type="tinyint" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="SysRoleUserRelation" entity-set="SysRoleUserRelations" table="sys_role_user_relation" schema="raimond" p1:Guid="fb1dd186-fff7-47e7-875f-91533429d78a">
+    <Documentation>
+      <Summary>User Role Relation</Summary>
+    </Documentation>
+    <id name="Id" type="Int64" p1:ValidateRequired="true" p1:Guid="cc586fa3-11de-4c95-9612-4f170a068739">
+      <column name="id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </id>
+    <property name="Roleid" type="Int64" p1:ValidateRequired="true" p1:Guid="a59f3fd4-0180-4db7-b3ee-088232dc377b">
+      <Documentation>
+        <Summary>Role ID</Summary>
+      </Documentation>
+      <column name="roleid" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Userid" type="Int64" p1:ValidateRequired="true" p1:Guid="fc30f014-337a-4116-8550-1767f77398cd">
+      <Documentation>
+        <Summary>User ID</Summary>
+      </Documentation>
+      <column name="userid" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="SysRoleMenuRelation" entity-set="SysRoleMenuRelations" table="sys_role_menu_relation" schema="raimond" p1:Guid="7ee2cbd5-434f-474c-a154-0c7e5b8d8f05">
+    <Documentation>
+      <Summary>Menu Role Relation</Summary>
+    </Documentation>
+    <id name="Id" type="Int64" p1:ValidateRequired="true" p1:Guid="6be3a2af-617d-4d6c-8e30-6f956e464c31">
+      <column name="id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </id>
+    <property name="Menuid" type="Int64" p1:ValidateRequired="true" p1:Guid="6848d01f-5e01-4a6f-ac89-4ab1c5e6cea8">
+      <Documentation>
+        <Summary>Menu ID</Summary>
+      </Documentation>
+      <column name="menuid" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Roleid" type="Int64" p1:ValidateRequired="true" p1:Guid="e5b3a218-93d4-4e0e-aa89-e9c8fba36569">
+      <Documentation>
+        <Summary>Role ID</Summary>
+      </Documentation>
+      <column name="roleid" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="SysRole" entity-set="SysRoles" table="sys_role" schema="raimond" p1:Guid="db36bd11-3454-4795-a999-0785d47b9cd2">
+    <Documentation>
+      <Summary>Role</Summary>
+    </Documentation>
+    <id name="Id" type="Int64" p1:ValidateRequired="true" p1:Guid="3ac56572-5308-48de-97d0-87da55f4db33">
+      <column name="id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </id>
+    <property name="Code" type="String" p1:ValidateMaxLength="32" p1:ValidateRequired="true" p1:Guid="78375cce-dd16-4952-a5c5-54811de4b771">
+      <Documentation>
+        <Summary>Code</Summary>
+      </Documentation>
+      <column name="code" not-null="True" length="32" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="Createby" type="Int64" p1:ValidateRequired="true" p1:Guid="a70c775f-69bc-4e56-b597-109c79d33fbd">
+      <Documentation>
+        <Summary>Creator</Summary>
+      </Documentation>
+      <column name="createby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Createtime" type="DateTime" p1:ValidateRequired="true" p1:Guid="e5d8ec15-fd0a-4ff2-aa18-6c689e5b8179">
+      <Documentation>
+        <Summary>Creation Time/Registration Time</Summary>
+      </Documentation>
+      <column name="createtime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Datascope" type="Int32" p1:ValidateRequired="true" p1:Guid="29c4d832-826f-412b-a71b-e40198c66f1f">
+      <Documentation>
+        <Summary>Data Scope</Summary>
+      </Documentation>
+      <column name="datascope" not-null="True" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="FkMenu" type="String" p1:nullable="True" p1:ValidateMaxLength="2000" p1:ValidateRequired="false" p1:Guid="bb11d4a1-3a3e-46e8-bc6f-0ed619beaeac">
+      <column name="fk_menu" not-null="False" length="2000" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="Modifyby" type="Int64" p1:ValidateRequired="true" p1:Guid="615b2dff-e320-4b5b-879b-f07149064a65">
+      <Documentation>
+        <Summary>Last Updated By</Summary>
+      </Documentation>
+      <column name="modifyby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Modifytime" type="DateTime" p1:ValidateRequired="true" p1:Guid="ce63b5a2-3ecb-4bc1-8628-90155c3848eb">
+      <Documentation>
+        <Summary>Last Update Time</Summary>
+      </Documentation>
+      <column name="modifytime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Name" type="String" p1:ValidateMaxLength="32" p1:ValidateRequired="true" p1:Guid="46933825-3a29-4c81-abe2-7f5f75fa2807">
+      <Documentation>
+        <Summary>Name</Summary>
+      </Documentation>
+      <column name="name" not-null="True" length="32" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="Ordinal" type="Int32" p1:ValidateRequired="true" p1:Guid="9db61dea-4770-4601-b5c5-b8c2ec676330">
+      <Documentation>
+        <Summary>Order Number</Summary>
+      </Documentation>
+      <column name="ordinal" not-null="True" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="Status" type="Boolean" p1:ValidateRequired="true" p1:Guid="040217c0-fa53-495e-8294-efc1d9c5c851">
+      <Documentation>
+        <Summary>Status</Summary>
+      </Documentation>
+      <column name="status" not-null="True" precision="1" scale="0" sql-type="tinyint" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="SysOrganization" entity-set="SysOrganizations" table="sys_organization" schema="raimond" p1:Guid="d884ad34-13d9-45a1-971d-16f6e9e02be5">
+    <Documentation>
+      <Summary>Department</Summary>
+    </Documentation>
+    <id name="Id" type="Int64" p1:ValidateRequired="true" p1:Guid="95c1c9fc-f04e-484b-9d11-0767f5daa3c1">
+      <column name="id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </id>
+    <property name="Code" type="String" p1:ValidateMaxLength="16" p1:ValidateRequired="true" p1:Guid="6ef1d106-065f-4902-83be-4d2349c051e9">
+      <Documentation>
+        <Summary>Code</Summary>
+      </Documentation>
+      <column name="code" not-null="True" length="16" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="Createby" type="Int64" p1:ValidateRequired="true" p1:Guid="c4d615ab-0a06-4a8d-be27-4d5d73d7aa54">
+      <Documentation>
+        <Summary>Creator</Summary>
+      </Documentation>
+      <column name="createby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Createtime" type="DateTime" p1:ValidateRequired="true" p1:Guid="6a61dc44-4580-4edd-aebd-991b8daefcda">
+      <Documentation>
+        <Summary>Creation Time/Registration Time</Summary>
+      </Documentation>
+      <column name="createtime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Modifyby" type="Int64" p1:ValidateRequired="true" p1:Guid="dfea4a8e-768e-42a5-9110-c371156108ae">
+      <Documentation>
+        <Summary>Last Updated By</Summary>
+      </Documentation>
+      <column name="modifyby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Modifytime" type="DateTime" p1:ValidateRequired="true" p1:Guid="37425131-0b6a-4952-b573-35202c198148">
+      <Documentation>
+        <Summary>Last Update Time</Summary>
+      </Documentation>
+      <column name="modifytime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Name" type="String" p1:ValidateMaxLength="32" p1:ValidateRequired="true" p1:Guid="2b678750-368e-4be8-9078-a1adf51ab617">
+      <Documentation>
+        <Summary>Name</Summary>
+      </Documentation>
+      <column name="name" not-null="True" length="32" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="Ordinal" type="Int32" p1:ValidateRequired="true" p1:Guid="fff9917c-568c-415d-93e9-ea1e512c429a">
+      <Documentation>
+        <Summary>Order Number</Summary>
+      </Documentation>
+      <column name="ordinal" not-null="True" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="Parentid" type="Int64" p1:ValidateRequired="true" p1:Guid="093ddcd9-6494-47a5-9703-89a432c9e62f">
+      <Documentation>
+        <Summary>Parent ID</Summary>
+      </Documentation>
+      <column name="parentid" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Parentids" type="String" p1:ValidateMaxLength="128" p1:ValidateRequired="true" p1:Guid="3faec407-099c-42c6-aad8-d3aea6681f0c">
+      <Documentation>
+        <Summary>Parent IDs</Summary>
+      </Documentation>
+      <column name="parentids" not-null="True" length="128" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="Status" type="Boolean" p1:ValidateRequired="true" p1:Guid="a11c508a-480f-4c08-9ade-4d680deb200d">
+      <Documentation>
+        <Summary>Status</Summary>
+      </Documentation>
+      <column name="status" not-null="True" precision="1" scale="0" sql-type="tinyint" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="SysMenu" entity-set="SysMenus" table="sys_menu" schema="raimond" p1:Guid="73ec4db6-8a4b-45d4-a23a-b75351060614">
+    <Documentation>
+      <Summary>Menu</Summary>
+    </Documentation>
+    <id name="Id" type="Int64" p1:ValidateRequired="true" p1:Guid="c303ca8b-f3ee-4ddc-998c-3b4408bce4f2">
+      <column name="id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </id>
+    <property name="Alwaysshow" type="Boolean" p1:ValidateRequired="true" p1:Guid="1b66ee33-5652-4d07-8cca-c96cb3764c0d">
+      <Documentation>
+        <Summary>Always Show Single Child Route</Summary>
+      </Documentation>
+      <column name="alwaysshow" not-null="True" precision="1" scale="0" sql-type="tinyint" p1:unicode="False" />
+    </property>
+    <property name="Component" type="String" p1:ValidateMaxLength="64" p1:ValidateRequired="true" p1:Guid="730bc4ca-c879-441d-8aaf-fe9489b2c907">
+      <Documentation>
+        <Summary>Component Configuration</Summary>
+      </Documentation>
+      <column name="component" not-null="True" length="64" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="Createby" type="Int64" p1:ValidateRequired="true" p1:Guid="dea06c50-4089-4dcb-931e-04642879454f">
+      <Documentation>
+        <Summary>Creator</Summary>
+      </Documentation>
+      <column name="createby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Createtime" type="DateTime" p1:ValidateRequired="true" p1:Guid="133f4712-0108-4411-999f-efe386c7d82b">
+      <Documentation>
+        <Summary>Creation Time/Registration Time</Summary>
+      </Documentation>
+      <column name="createtime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Icon" type="String" p1:ValidateMaxLength="32" p1:ValidateRequired="true" p1:Guid="eaa01899-fd7c-4f49-bb2b-e4ba3d82b597">
+      <Documentation>
+        <Summary>Icon</Summary>
+      </Documentation>
+      <column name="icon" not-null="True" length="32" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="Keepalive" type="Boolean" p1:ValidateRequired="true" p1:Guid="11f42b1d-b597-4858-aa7c-e7b88acb6d7e">
+      <Documentation>
+        <Summary>Enable Page Cache</Summary>
+      </Documentation>
+      <column name="keepalive" not-null="True" precision="1" scale="0" sql-type="tinyint" p1:unicode="False" />
+    </property>
+    <property name="Modifyby" type="Int64" p1:ValidateRequired="true" p1:Guid="7d96755b-d267-4a09-b177-82bf48149ab2">
+      <Documentation>
+        <Summary>Last Updated By</Summary>
+      </Documentation>
+      <column name="modifyby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Modifytime" type="DateTime" p1:ValidateRequired="true" p1:Guid="4f9b61ef-4988-4445-b15a-d8a6c6b5757b">
+      <Documentation>
+        <Summary>Last Update Time</Summary>
+      </Documentation>
+      <column name="modifytime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Name" type="String" p1:ValidateMaxLength="32" p1:ValidateRequired="true" p1:Guid="6fcaa636-89b2-43f2-bf00-62dfab889c7f">
+      <Documentation>
+        <Summary>Name</Summary>
+      </Documentation>
+      <column name="name" not-null="True" length="32" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="Ordinal" type="Int32" p1:ValidateRequired="true" p1:Guid="56df24e0-d248-4afe-804b-244101bb5070">
+      <Documentation>
+        <Summary>Order Number</Summary>
+      </Documentation>
+      <column name="ordinal" not-null="True" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="Params" type="String" p1:ValidateMaxLength="128" p1:ValidateRequired="true" p1:Guid="14706a99-6c19-45c8-bc53-8e4f072718b7">
+      <Documentation>
+        <Summary>Route Parameters</Summary>
+      </Documentation>
+      <column name="params" not-null="True" length="128" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="Parentid" type="Int64" p1:ValidateRequired="true" p1:Guid="b7ded232-b78c-44c4-b42c-9c648b0307ca">
+      <Documentation>
+        <Summary>Parent Menu ID</Summary>
+      </Documentation>
+      <column name="parentid" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Parentids" type="String" p1:ValidateMaxLength="128" p1:ValidateRequired="true" p1:Guid="855a172f-8d21-4b6d-9c29-afb0fcd8bafd">
+      <Documentation>
+        <Summary>Parent Menu IDs</Summary>
+      </Documentation>
+      <column name="parentids" not-null="True" length="128" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="Perm" type="String" p1:ValidateMaxLength="32" p1:ValidateRequired="true" p1:Guid="120bb679-5e70-4221-af20-f7085ea0992c">
+      <Documentation>
+        <Summary>Permission Code</Summary>
+      </Documentation>
+      <column name="perm" not-null="True" length="32" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="Redirect" type="String" p1:ValidateMaxLength="128" p1:ValidateRequired="true" p1:Guid="e8177950-c962-4c72-93a2-aedd3702af9b">
+      <Documentation>
+        <Summary>Redirect Route Path</Summary>
+      </Documentation>
+      <column name="redirect" not-null="True" length="128" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="Routename" type="String" p1:ValidateMaxLength="64" p1:ValidateRequired="true" p1:Guid="1b30b584-3b39-4d82-9cda-6ca43c333941">
+      <Documentation>
+        <Summary>Route Name</Summary>
+      </Documentation>
+      <column name="routename" not-null="True" length="64" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="Routepath" type="String" p1:ValidateMaxLength="64" p1:ValidateRequired="true" p1:Guid="6748aad2-83b2-4d8b-964a-874c08201e10">
+      <Documentation>
+        <Summary>Route Path</Summary>
+      </Documentation>
+      <column name="routepath" not-null="True" length="64" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="Type" type="String" p1:ValidateMaxLength="16" p1:ValidateRequired="true" p1:Guid="93635d6f-63f4-4711-b876-d13b065d6f5e">
+      <Documentation>
+        <Summary>Menu Type</Summary>
+      </Documentation>
+      <column name="type" not-null="True" length="16" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="Visible" type="Boolean" p1:ValidateRequired="true" p1:Guid="aedc9528-e44a-486a-bcd9-5d8b5ee151b3">
+      <Documentation>
+        <Summary>Is Visible</Summary>
+      </Documentation>
+      <column name="visible" not-null="True" precision="1" scale="0" sql-type="tinyint" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="SysEventtracker" entity-set="SysEventtrackers" table="sys_eventtracker" schema="raimond" p1:Guid="1385466f-81da-4d64-b09e-ca2e447d657a">
+    <Documentation>
+      <Summary>Event Tracking/Processing Information</Summary>
+    </Documentation>
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="6f763af6-3281-4cb5-9967-13c66f199f20">
+      <column name="id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </id>
+    <property name="Createby" type="Int64" p1:ValidateRequired="true" p1:Guid="032ad959-0e2e-4add-9f4b-4cf0b2fd3040">
+      <Documentation>
+        <Summary>Creator</Summary>
+      </Documentation>
+      <column name="createby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Createtime" type="DateTime" p1:ValidateRequired="true" p1:Guid="d711d698-e40f-47da-ae66-e93ae45cccfe">
+      <Documentation>
+        <Summary>Creation Time/Registration Time</Summary>
+      </Documentation>
+      <column name="createtime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Eventid" type="Int64" p1:ValidateRequired="true" p1:Guid="cde1b3a9-34b9-41f2-9c3c-a0bda233753f">
+      <column name="eventid" not-null="True" sql-type="bigint" unique-key="ix_sys_eventtracker_eventid_trackername" p1:unicode="False" />
+    </property>
+    <property name="Trackername" type="String" p1:ValidateMaxLength="50" p1:ValidateRequired="true" p1:Guid="336b9869-0e9d-4755-a2f8-2c715754d5f0">
+      <column name="trackername" not-null="True" length="50" sql-type="varchar" unique-key="ix_sys_eventtracker_eventid_trackername" p1:unicode="True" />
+    </property>
+  </class>
+  <class name="SysDictionaryData" entity-set="SysDictionaryDatas" table="sys_dictionary_data" schema="raimond" p1:Guid="5b310b05-7e4d-4e7d-b600-db1f2c44110d">
+    <Documentation>
+      <Summary>Dictionary Data</Summary>
+    </Documentation>
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="cc220358-4324-460f-8665-2342b44fd81e">
+      <column name="id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </id>
+    <property name="Createby" type="Int64" p1:ValidateRequired="true" p1:Guid="5d6d274e-ab0e-422d-a03d-39dc2ca4d224">
+      <Documentation>
+        <Summary>Creator</Summary>
+      </Documentation>
+      <column name="createby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Createtime" type="DateTime" p1:ValidateRequired="true" p1:Guid="7866fdb3-c07e-4f5a-9493-da06b6224174">
+      <Documentation>
+        <Summary>Creation Time/Registration Time</Summary>
+      </Documentation>
+      <column name="createtime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Dictcode" type="String" p1:ValidateMaxLength="32" p1:ValidateRequired="true" p1:Guid="061370d4-6f6a-4847-afb3-a008b5e5142f">
+      <column name="dictcode" not-null="True" length="32" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="Label" type="String" p1:ValidateMaxLength="32" p1:ValidateRequired="true" p1:Guid="fb6c46e2-18a7-417c-a442-f13d1f3604ba">
+      <column name="label" not-null="True" length="32" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="Modifyby" type="Int64" p1:ValidateRequired="true" p1:Guid="936e4ef7-1f3b-4da8-adbc-6325a79b5987">
+      <Documentation>
+        <Summary>Last Updated By</Summary>
+      </Documentation>
+      <column name="modifyby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Modifytime" type="DateTime" p1:ValidateRequired="true" p1:Guid="0718d3ed-98c1-4541-846f-3e330fa78d0c">
+      <Documentation>
+        <Summary>Last Update Time</Summary>
+      </Documentation>
+      <column name="modifytime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Ordinal" type="Int32" p1:ValidateRequired="true" p1:Guid="b1122aa0-8e63-4a32-a8cb-fca891c73109">
+      <column name="ordinal" not-null="True" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="Status" type="Boolean" p1:ValidateRequired="true" p1:Guid="5bd1b027-31d6-45fa-ad4b-d7a47e0fa77d">
+      <column name="status" not-null="True" precision="1" scale="0" sql-type="tinyint" p1:unicode="False" />
+    </property>
+    <property name="Tagtype" type="String" p1:ValidateMaxLength="32" p1:ValidateRequired="true" p1:Guid="09b9f96f-f46f-4720-bac2-b0f62793dc15">
+      <column name="tagtype" not-null="True" length="32" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="Value" type="String" p1:ValidateMaxLength="32" p1:ValidateRequired="true" p1:Guid="306176b0-047c-4224-8950-5e2469962ef2">
+      <column name="value" not-null="True" length="32" sql-type="varchar" p1:unicode="True" />
+    </property>
+  </class>
+  <class name="SysDictionary" entity-set="SysDictionaries" table="sys_dictionary" schema="raimond" p1:Guid="36472e46-bb3d-4b4f-81e6-34e8e6640c72">
+    <Documentation>
+      <Summary>Dictionary</Summary>
+    </Documentation>
+    <id name="Id" type="Int64" p1:ValidateRequired="true" p1:Guid="c01b2d09-414e-4c8e-b091-1e9708d06828">
+      <column name="id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </id>
+    <property name="Code" type="String" p1:ValidateMaxLength="32" p1:ValidateRequired="true" p1:Guid="74f14152-daa7-4c26-9001-55536a07d72d">
+      <column name="code" not-null="True" length="32" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="Createby" type="Int64" p1:ValidateRequired="true" p1:Guid="f8e026f8-dc4d-425c-9101-d7b0eeb64dcc">
+      <Documentation>
+        <Summary>Creator</Summary>
+      </Documentation>
+      <column name="createby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Createtime" type="DateTime" p1:ValidateRequired="true" p1:Guid="ce569c10-8b8d-45e9-be32-62def310befd">
+      <Documentation>
+        <Summary>Creation Time/Registration Time</Summary>
+      </Documentation>
+      <column name="createtime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Modifyby" type="Int64" p1:ValidateRequired="true" p1:Guid="7043f2d4-2331-4ec4-ad07-042bfdfb64be">
+      <Documentation>
+        <Summary>Last Updated By</Summary>
+      </Documentation>
+      <column name="modifyby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Modifytime" type="DateTime" p1:ValidateRequired="true" p1:Guid="49df2ff0-879b-43ec-a5d6-3061cc463951">
+      <Documentation>
+        <Summary>Last Update Time</Summary>
+      </Documentation>
+      <column name="modifytime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Name" type="String" p1:ValidateMaxLength="32" p1:ValidateRequired="true" p1:Guid="53d79353-f151-418c-a46f-8708ab8ff5a3">
+      <column name="name" not-null="True" length="32" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="Remark" type="String" p1:ValidateMaxLength="128" p1:ValidateRequired="true" p1:Guid="0d5fe1fd-f193-47cb-a39b-ccb1c17cd822">
+      <column name="remark" not-null="True" length="128" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="Status" type="Boolean" p1:ValidateRequired="true" p1:Guid="79b491bd-5867-4fa5-8962-bfe01a9b0353">
+      <column name="status" not-null="True" precision="1" scale="0" sql-type="tinyint" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="SysConfig" entity-set="SysConfigs" table="sys_config" schema="raimond" p1:Guid="76f7fbd7-d133-4a92-b51d-d794cae2f968">
+    <Documentation>
+      <Summary>System Parameter</Summary>
+    </Documentation>
+    <id name="Id" type="Int64" p1:ValidateRequired="true" p1:Guid="1238cc73-112f-4388-95c2-d0081d373541">
+      <column name="id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </id>
+    <property name="Createby" type="Int64" p1:ValidateRequired="true" p1:Guid="24593998-9a79-4fe1-a89d-5e12b5bb971a">
+      <Documentation>
+        <Summary>Creator</Summary>
+      </Documentation>
+      <column name="createby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Createtime" type="DateTime" p1:ValidateRequired="true" p1:Guid="a9944e44-b426-44cc-8c59-4c5085a1f92c">
+      <Documentation>
+        <Summary>Creation Time/Registration Time</Summary>
+      </Documentation>
+      <column name="createtime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Key" type="String" p1:ValidateMaxLength="64" p1:ValidateRequired="true" p1:Guid="a6bdb320-4724-44fc-a471-3e2ea984ae40">
+      <Documentation>
+        <Summary>Parameter Key</Summary>
+      </Documentation>
+      <column name="`key`" not-null="True" length="64" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="Modifyby" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="9960b0d7-58ec-42ad-ade1-f0c9816cc605">
+      <Documentation>
+        <Summary>Last Updated By</Summary>
+      </Documentation>
+      <column name="modifyby" not-null="False" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Modifytime" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="a9c973fd-e3e8-485e-b6fc-2ceeaee88a2b">
+      <Documentation>
+        <Summary>Last Update Time</Summary>
+      </Documentation>
+      <column name="modifytime" not-null="False" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Name" type="String" p1:ValidateMaxLength="64" p1:ValidateRequired="true" p1:Guid="c7ca3a25-d23d-4f65-9795-752a25c72a56">
+      <Documentation>
+        <Summary>Parameter Name</Summary>
+      </Documentation>
+      <column name="name" not-null="True" length="64" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="Remark" type="String" p1:ValidateMaxLength="128" p1:ValidateRequired="true" p1:Guid="ea084a48-ff3a-4a86-bb8c-7b20c9567189">
+      <Documentation>
+        <Summary>Remarks</Summary>
+      </Documentation>
+      <column name="remark" not-null="True" length="128" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="Value" type="String" p1:ValidateMaxLength="128" p1:ValidateRequired="true" p1:Guid="9cb2ea70-4fb0-422f-b5dc-68012abaf8be">
+      <Documentation>
+        <Summary>Parameter Value</Summary>
+      </Documentation>
+      <column name="value" not-null="True" length="128" sql-type="varchar" p1:unicode="True" />
+    </property>
+  </class>
+  <class name="CursCourseObjectives" entity-set="CursCourseObjectives" table="curs_course_objectives" schema="raimond" p1:Guid="8f289ce3-b0b5-4d4f-a1c0-77d554023cce">
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="ad6395a4-49e7-4f83-a66c-bd1e3fa58ef2">
+      <column name="id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </id>
+    <property name="CourseId" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="a3e98f84-7412-47f0-854e-5c59f608bac0">
+      <column name="course_id" not-null="False" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="Createby" type="Int64" p1:ValidateRequired="true" p1:Guid="f698ef0f-b5cd-466f-9f53-5048e3cc4610">
+      <column name="createby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Createtime" type="DateTime" p1:ValidateRequired="true" p1:Guid="4aea1c9b-5e2c-45d3-af75-000c361dadfe">
+      <column name="createtime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Isdeleted" type="Boolean" p1:ValidateRequired="true" p1:Guid="6a53f40f-70fa-46e8-9a84-bbcb15c96dac">
+      <column name="isdeleted" default="0" not-null="True" precision="1" scale="0" sql-type="tinyint" p1:unicode="False" />
+    </property>
+    <property name="Modifyby" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="4ec1cb32-4721-4480-b4e2-409f317de6da">
+      <column name="modifyby" not-null="False" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Modifytime" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="892e360a-e60a-4e04-a6cb-469ad3773a41">
+      <column name="modifytime" not-null="False" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="ObjectiveDescription" type="Clob" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="9387724e-d5b3-4709-8b17-26948fe68a78">
+      <column name="objective_description" not-null="False" sql-type="text" p1:unicode="True" />
+    </property>
+  </class>
+  <class name="CurUsers" entity-set="CurUsers" table="cur_users" schema="raimond" p1:Guid="a52ee3d8-d434-41b9-8107-8a4771b17d78">
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="c7ee76f0-a5f1-461c-8057-37be00f43fd5">
+      <column name="id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </id>
+    <property name="Createby" type="Int64" p1:ValidateRequired="true" p1:Guid="e30c5e75-2a05-4efe-873a-30ad4c43e4c0">
+      <column name="createby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="CreatedAt" type="DateTime" p1:nullable="True" value-generated="OnAdd" p1:ValidateRequired="false" p1:Guid="5f4025bc-7ba8-405c-a1c1-48916c21c669">
+      <column name="created_at" default="CURRENT_TIMESTAMP" not-null="False" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Createtime" type="DateTime" p1:ValidateRequired="true" p1:Guid="3aeb3dbb-86fc-4338-a94f-844d971189f3">
+      <column name="createtime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Email" type="String" p1:nullable="True" p1:ValidateMaxLength="255" p1:ValidateRequired="false" p1:Guid="d3d111ab-6d84-4ba9-aef8-ed88a7f8216c">
+      <column name="email" not-null="False" length="255" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="EmployeeNumber" type="String" p1:nullable="True" p1:ValidateMaxLength="20" p1:ValidateRequired="false" p1:Guid="608fe79f-7d0d-4b6b-b68b-6344f3ab9c85">
+      <column name="employee_number" not-null="False" length="20" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="FullName" type="String" p1:ValidateMaxLength="255" p1:ValidateRequired="true" p1:Guid="1b2bc0d5-3cb8-4fa9-b21d-eac25df1b45c">
+      <column name="full_name" not-null="True" length="255" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="Isdeleted" type="Boolean" p1:ValidateRequired="true" p1:Guid="cb31636d-cc81-4e14-ae34-91a309686423">
+      <column name="isdeleted" default="0" not-null="True" precision="1" scale="0" sql-type="tinyint" p1:unicode="False" />
+    </property>
+    <property name="Modifyby" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="f23ad9ca-90ae-4afd-afa8-472ec901dd74">
+      <column name="modifyby" not-null="False" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Modifytime" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="08ba7460-8f4f-40d1-af93-1e00757e3659">
+      <column name="modifytime" not-null="False" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="NationalCode" type="String" p1:nullable="True" p1:ValidateMaxLength="20" p1:ValidateRequired="false" p1:Guid="fb57b255-6936-41b4-b066-ccbdadd85f2f">
+      <column name="national_code" not-null="False" length="20" sql-type="varchar" unique="True" p1:unicode="True" />
+    </property>
+    <property name="OrganizationId" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="8c670a00-0a39-4d8d-b2f3-b006503f7d8c">
+      <column name="organization_id" not-null="False" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Phone" type="String" p1:nullable="True" p1:ValidateMaxLength="20" p1:ValidateRequired="false" p1:Guid="fba42f8b-0c97-4eb5-a976-9d7bd7e558b8">
+      <column name="phone" not-null="False" length="20" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="Role" type="String" p1:ValidateRequired="true" p1:Guid="9b14b966-f1f4-446c-ab17-01103cf7f410">
+      <column name="role" not-null="True" sql-type="enum" p1:unicode="True" />
+    </property>
+    <property name="Status" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="1b8f29ad-96ae-4ab2-8b6c-4dd8bcf427c8">
+      <column name="status" default="'active'" not-null="False" sql-type="enum" p1:unicode="True" />
+    </property>
+    <property name="UpdatedAt" type="DateTime" p1:nullable="True" value-generated="OnAdd" p1:ValidateRequired="false" p1:Guid="26059c93-236e-42ce-b3c1-da2edd98bace">
+      <column name="updated_at" default="CURRENT_TIMESTAMP" not-null="False" sql-type="datetime" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="CurTeachingMethods" entity-set="CurTeachingMethods" table="cur_teaching_methods" schema="raimond" p1:Guid="ff45e7cf-b7a7-4047-9ddb-8089e1b592c1">
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="b178a2ef-be93-4b16-a14f-d3c038fc8318">
+      <column name="id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </id>
+    <property name="Createby" type="Int64" p1:ValidateRequired="true" p1:Guid="b7117641-2c63-44c0-8255-18b25293c363">
+      <column name="createby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Createtime" type="DateTime" p1:ValidateRequired="true" p1:Guid="3cb39231-2380-43f0-91b9-dfd80c275ab4">
+      <column name="createtime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Isdeleted" type="Boolean" p1:ValidateRequired="true" p1:Guid="f28fc46f-6d7b-42e5-bac8-8f59a26b4987">
+      <column name="isdeleted" default="0" not-null="True" precision="1" scale="0" sql-type="tinyint" p1:unicode="False" />
+    </property>
+    <property name="MethodName" type="String" p1:ValidateMaxLength="255" p1:ValidateRequired="true" p1:Guid="b4a04bf9-5a3f-470d-8e8a-f077607ad554">
+      <column name="method_name" not-null="True" length="255" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="Modifyby" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="71452553-637d-4d15-a40e-34816d54500a">
+      <column name="modifyby" not-null="False" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Modifytime" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="90134680-5165-42f4-b76e-97c26066ca80">
+      <column name="modifytime" not-null="False" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="CurTeachers" entity-set="CurTeachers" table="cur_teachers" schema="raimond" p1:Guid="077c2345-d107-44f4-8519-254db1df2cd2">
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="23e91536-66e5-47ce-a4da-c73d7521a721">
+      <column name="id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </id>
+    <property name="Address" type="Clob" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="9e24d604-7619-42ee-9f8d-ff5ed067221e">
+      <column name="address" not-null="False" sql-type="text" p1:unicode="True" />
+    </property>
+    <property name="BirthDate" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="4c12f1a8-0347-41e5-8d5b-ba1f8c6cd3c9">
+      <column name="birth_date" not-null="False" sql-type="date" p1:unicode="False" />
+    </property>
+    <property name="BirthPlace" type="String" p1:nullable="True" p1:ValidateMaxLength="100" p1:ValidateRequired="false" p1:Guid="ad296ce2-26c4-46d1-af9c-d3d0c0a125d2">
+      <column name="birth_place" not-null="False" length="100" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="Createby" type="Int64" p1:ValidateRequired="true" p1:Guid="34dbd744-43fe-41c4-97e9-c9fcb15a6e61">
+      <column name="createby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="CreatedAt" type="DateTime" p1:nullable="True" value-generated="OnAdd" p1:ValidateRequired="false" p1:Guid="b18f2a0f-e96b-43e1-80ae-ca49cde1ec56">
+      <column name="created_at" default="CURRENT_TIMESTAMP" not-null="False" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Createtime" type="DateTime" p1:ValidateRequired="true" p1:Guid="c9ed73f2-27b5-4865-894a-28350570afe5">
+      <column name="createtime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="DegreeId" type="Int32" p1:ValidateRequired="true" p1:Guid="341f0582-b885-420b-9c5d-a6fd242b1e81">
+      <column name="degree_id" not-null="True" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="DenominationId" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="7651c811-4fe1-4142-adc5-61ee47b3e9e5">
+      <column name="denomination_id" not-null="False" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="FatherName" type="String" p1:nullable="True" p1:ValidateMaxLength="100" p1:ValidateRequired="false" p1:Guid="f438c911-8345-4474-9122-e0b003be277a">
+      <column name="father_name" not-null="False" length="100" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="FieldOfStudyId" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="59179850-c756-4644-86c6-f40527ad1457">
+      <column name="field_of_study_id" not-null="False" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="FirstName" type="String" p1:ValidateMaxLength="100" p1:ValidateRequired="true" p1:Guid="a13c8b26-04ce-4356-9f6d-c5953ab619ba">
+      <column name="first_name" not-null="True" length="100" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="Gender" type="String" p1:ValidateRequired="true" p1:Guid="8739822c-77e3-47a0-b5fa-502557255802">
+      <column name="gender" not-null="True" sql-type="enum" p1:unicode="True" />
+    </property>
+    <property name="IdIssuePlace" type="String" p1:nullable="True" p1:ValidateMaxLength="100" p1:ValidateRequired="false" p1:Guid="25aa6e24-4f6f-4c94-a9de-862bdf6ef43e">
+      <column name="id_issue_place" not-null="False" length="100" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="IdNumber" type="String" p1:nullable="True" p1:ValidateMaxLength="20" p1:ValidateRequired="false" p1:Guid="4d6da84a-b7fe-4776-ae28-5bed08bca415">
+      <column name="id_number" not-null="False" length="20" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="IsAcademicMember" type="Boolean" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="fe96ce58-3f88-49e3-8d46-faa78248c168">
+      <column name="is_academic_member" default="0" not-null="False" precision="1" scale="0" sql-type="tinyint" p1:unicode="False" />
+    </property>
+    <property name="Isdeleted" type="Boolean" p1:ValidateRequired="true" p1:Guid="e7babd8a-4fb9-4216-84bd-dd12fe7698ba">
+      <column name="isdeleted" default="0" not-null="True" precision="1" scale="0" sql-type="tinyint" p1:unicode="False" />
+    </property>
+    <property name="LastName" type="String" p1:ValidateMaxLength="100" p1:ValidateRequired="true" p1:Guid="6ad8c816-e832-4905-b580-3d0094cf4060">
+      <column name="last_name" not-null="True" length="100" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="MaritalStatusId" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="65530e00-ea12-41e1-9866-b89b94769217">
+      <column name="marital_status_id" not-null="False" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="MilitaryStatus" type="String" p1:nullable="True" p1:ValidateMaxLength="50" p1:ValidateRequired="false" p1:Guid="b0c12cec-1e22-4f06-bde5-a73d5320dff6">
+      <column name="military_status" not-null="False" length="50" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="Modifyby" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="bfefe44c-7586-415c-a0a3-1a0c21550a94">
+      <column name="modifyby" not-null="False" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Modifytime" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="a10da2b4-3b38-4413-a53d-e3098d9f4dfe">
+      <column name="modifytime" not-null="False" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="NationalCode" type="String" p1:ValidateMaxLength="10" p1:ValidateRequired="true" p1:Guid="f88d5fb1-da02-40a3-8bd8-e64b49017c00">
+      <column name="national_code" not-null="True" length="10" sql-type="char" unique="True" p1:fixed-length="True" p1:unicode="True" />
+    </property>
+    <property name="PhoneLandline" type="String" p1:nullable="True" p1:ValidateMaxLength="15" p1:ValidateRequired="false" p1:Guid="b8471bfa-95e0-41e5-a861-d33b36368fb6">
+      <column name="phone_landline" not-null="False" length="15" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="PhoneMobile" type="String" p1:ValidateMaxLength="15" p1:ValidateRequired="true" p1:Guid="c3e22227-c7ef-42c3-af68-ed23d902b7e1">
+      <column name="phone_mobile" not-null="True" length="15" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="PostalCode" type="String" p1:nullable="True" p1:ValidateMaxLength="20" p1:ValidateRequired="false" p1:Guid="a22d78f2-01ac-415a-8212-c6313e0488e4">
+      <column name="postal_code" not-null="False" length="20" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="ReligionId" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="aca905a2-51e5-48d2-84e1-04d47053b598">
+      <column name="religion_id" not-null="False" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="TeacherTypeId" type="Int32" p1:ValidateRequired="true" p1:Guid="8d5a6882-c420-42b8-8430-c4d5b1bc2480">
+      <column name="teacher_type_id" not-null="True" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="UpdatedAt" type="DateTime" p1:nullable="True" value-generated="OnAdd" p1:ValidateRequired="false" p1:Guid="8565bf2d-576b-4d4e-aa82-509746df59e9">
+      <column name="updated_at" default="CURRENT_TIMESTAMP" not-null="False" sql-type="datetime" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="CurTeacherTypes" entity-set="CurTeacherTypes" table="cur_teacher_types" schema="raimond" p1:Guid="75e4d7ec-5842-4960-9263-f2c7dcde5234">
+    <id name="Id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="0619e18a-1057-40cd-9edf-4859ce140890">
+      <column name="id" not-null="True" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="Createby" type="Int64" p1:ValidateRequired="true" p1:Guid="7a958fc1-db17-4578-95b1-562ac9e06976">
+      <column name="createby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Createtime" type="DateTime" p1:ValidateRequired="true" p1:Guid="741487b1-3f53-4b93-8565-5d3211fd97c9">
+      <column name="createtime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Isdeleted" type="Boolean" p1:ValidateRequired="true" p1:Guid="dd9c1fbd-2246-49ba-af7f-26d36e0f7fb3">
+      <column name="isdeleted" default="0" not-null="True" precision="1" scale="0" sql-type="tinyint" p1:unicode="False" />
+    </property>
+    <property name="Modifyby" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="f2cfd295-635e-4879-8370-7269f383f727">
+      <column name="modifyby" not-null="False" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Modifytime" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="c88f28f9-1be9-4b56-be46-100007da80e6">
+      <column name="modifytime" not-null="False" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Name" type="String" p1:ValidateMaxLength="50" p1:ValidateRequired="true" p1:Guid="e55e7985-4e01-40d1-b44e-bc106715874c">
+      <column name="name" not-null="True" length="50" sql-type="varchar" p1:unicode="True" />
+    </property>
+  </class>
+  <class name="CurSpecializations" entity-set="CurSpecializations" table="cur_specializations" schema="raimond" p1:Guid="3bdddf4b-3dac-43a6-86c9-506a77832d88">
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="8ca3ab0c-2ab5-449a-b375-9b1cbe8f1460">
+      <column name="id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </id>
+    <property name="Createby" type="Int64" p1:ValidateRequired="true" p1:Guid="59a516f3-56f8-405f-b2b5-c0036fdd49aa">
+      <column name="createby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Createtime" type="DateTime" p1:ValidateRequired="true" p1:Guid="332809cc-8dc3-4a7e-a2e7-0f6de4494085">
+      <column name="createtime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Isdeleted" type="Boolean" p1:ValidateRequired="true" p1:Guid="3ae82c80-1c7d-4cbe-8080-412f696cbe53">
+      <column name="isdeleted" default="0" not-null="True" precision="1" scale="0" sql-type="tinyint" p1:unicode="False" />
+    </property>
+    <property name="Modifyby" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="2dcfaa38-94d4-4450-8565-9193105d0d56">
+      <column name="modifyby" not-null="False" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Modifytime" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="a0c1538c-0e49-4c77-b125-19c4865d53eb">
+      <column name="modifytime" not-null="False" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Name" type="String" p1:ValidateMaxLength="255" p1:ValidateRequired="true" p1:Guid="4a3daea7-a548-49f5-973b-ad0486e6f11f">
+      <column name="name" not-null="True" length="255" sql-type="varchar" p1:unicode="True" />
+    </property>
+  </class>
+  <class name="CurSchedules" entity-set="CurSchedules" table="cur_schedules" schema="raimond" p1:Guid="d047bb26-9c0f-468e-8ad4-99123d67d647">
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="4192d96a-1a49-409d-84ee-3e7da93395cd">
+      <column name="id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </id>
+    <property name="ClassId" type="Int64" p1:ValidateRequired="true" p1:Guid="46f16e2e-3fb9-4452-834e-b64afbf32167">
+      <column name="class_id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Createby" type="Int64" p1:ValidateRequired="true" p1:Guid="1703fe82-e8f0-494d-a243-eeffb6378678">
+      <column name="createby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="CreatedAt" type="DateTime" p1:nullable="True" value-generated="OnAdd" p1:ValidateRequired="false" p1:Guid="4d2cf7c5-6378-4390-8b28-d9a4845c6e7c">
+      <column name="created_at" default="CURRENT_TIMESTAMP" not-null="False" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Createtime" type="DateTime" p1:ValidateRequired="true" p1:Guid="b61d4efb-d894-4d2c-ae59-a7bc3190c0fd">
+      <column name="createtime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="EndTime" type="Time" p1:ValidateRequired="true" p1:Guid="0a236b29-9664-4038-ab88-53ea4653f728">
+      <column name="end_time" not-null="True" sql-type="time" p1:unicode="False" />
+    </property>
+    <property name="Isdeleted" type="Boolean" p1:ValidateRequired="true" p1:Guid="121d9df0-3647-4d1b-a68e-43edb0e748d4">
+      <column name="isdeleted" default="0" not-null="True" precision="1" scale="0" sql-type="tinyint" p1:unicode="False" />
+    </property>
+    <property name="Location" type="String" p1:nullable="True" p1:ValidateMaxLength="255" p1:ValidateRequired="false" p1:Guid="d692d2bc-78a8-4f48-8423-dc69f6a5cba5">
+      <column name="location" not-null="False" length="255" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="Modifyby" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="e6104491-fd7d-4adc-a3e0-ba05e58c942c">
+      <column name="modifyby" not-null="False" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Modifytime" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="14973245-ec8f-468c-9429-17bf192d0bf8">
+      <column name="modifytime" not-null="False" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="StartTime" type="Time" p1:ValidateRequired="true" p1:Guid="4569f333-21b0-4ece-893b-16fcd00b17d0">
+      <column name="start_time" not-null="True" sql-type="time" p1:unicode="False" />
+    </property>
+    <property name="UpdatedAt" type="DateTime" p1:nullable="True" value-generated="OnAdd" p1:ValidateRequired="false" p1:Guid="bfda4f45-fbe5-4d26-b666-1ed14b161d22">
+      <column name="updated_at" default="CURRENT_TIMESTAMP" not-null="False" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Weekday" type="String" p1:ValidateRequired="true" p1:Guid="3c0fe48f-56c6-48de-b490-cec8c0dfccc7">
+      <column name="weekday" not-null="True" sql-type="enum" p1:unicode="True" />
+    </property>
+  </class>
+  <class name="CurReligions" entity-set="CurReligions" table="cur_religions" schema="raimond" p1:Guid="e943eb25-551b-4397-8b8d-c198ed7962f0">
+    <id name="Id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="6756559e-b5e5-4507-87f5-310188894040">
+      <column name="id" not-null="True" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="Createby" type="Int64" p1:ValidateRequired="true" p1:Guid="9f18cb26-da80-4f50-8880-f39fc1ffe6f4">
+      <column name="createby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Createtime" type="DateTime" p1:ValidateRequired="true" p1:Guid="256f17d9-781c-4d08-b58a-ff9430e425b2">
+      <column name="createtime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Isdeleted" type="Boolean" p1:ValidateRequired="true" p1:Guid="0987efe1-5f09-4a83-af4e-4a73566415f0">
+      <column name="isdeleted" default="0" not-null="True" precision="1" scale="0" sql-type="tinyint" p1:unicode="False" />
+    </property>
+    <property name="Modifyby" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="f9fa1844-2e4d-45ae-a5f3-e9514ed99175">
+      <column name="modifyby" not-null="False" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Modifytime" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="6820854c-514f-42cf-8f1d-1a1428270718">
+      <column name="modifytime" not-null="False" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Name" type="String" p1:ValidateMaxLength="50" p1:ValidateRequired="true" p1:Guid="5ff52c46-dfa2-43ce-b840-a2969675640f">
+      <column name="name" not-null="True" length="50" sql-type="varchar" p1:unicode="True" />
+    </property>
+  </class>
+  <class name="CurRelatedJobs" entity-set="CurRelatedJobs" table="cur_related_jobs" schema="raimond" p1:Guid="6f12b256-9a80-48fd-9a76-4a97664ea868">
+    <id name="JobId" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="376f9eb8-a8c6-4822-ae78-33457c23fe25">
+      <column name="job_id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </id>
+    <property name="CourseId" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="ff0bf3c2-c50c-4b30-bd73-720a05b5191e">
+      <column name="course_id" not-null="False" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="Createby" type="Int64" p1:ValidateRequired="true" p1:Guid="af5b7808-1114-41d1-9970-0634772cc9fe">
+      <column name="createby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Createtime" type="DateTime" p1:ValidateRequired="true" p1:Guid="e374b306-16f0-4916-8d95-950854245f52">
+      <column name="createtime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Isdeleted" type="Boolean" p1:ValidateRequired="true" p1:Guid="98f3876f-3720-4c0d-8c06-cdf663f8fe08">
+      <column name="isdeleted" default="0" not-null="True" precision="1" scale="0" sql-type="tinyint" p1:unicode="False" />
+    </property>
+    <property name="JobTitle" type="String" p1:nullable="True" p1:ValidateMaxLength="255" p1:ValidateRequired="false" p1:Guid="6dd1dc8b-733a-428a-8c67-3f45cd03b3ec">
+      <column name="job_title" not-null="False" length="255" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="Modifyby" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="cded5bdb-6b33-4e57-bad3-10ab93eed7a4">
+      <column name="modifyby" not-null="False" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Modifytime" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="a9723224-19ca-4ffb-9977-35b8ca658bb0">
+      <column name="modifytime" not-null="False" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="CurQuizzes" entity-set="CurQuizzes" table="cur_quizzes" schema="raimond" p1:Guid="53380075-91e9-41d1-b6d7-6833d874c0aa">
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="a0082844-995b-4b9c-974b-6e788c1895e4">
+      <column name="id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </id>
+    <property name="ClassId" type="Int64" p1:ValidateRequired="true" p1:Guid="e5de8e05-27e8-476f-b404-c0bc4fd36378">
+      <column name="class_id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Createby" type="Int64" p1:ValidateRequired="true" p1:Guid="9c778bf6-bd14-414b-95ad-ec02d14194f4">
+      <column name="createby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="CreatedBy" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="b16b281b-db34-4bd7-a2ed-cc4bccaad7ca">
+      <column name="created_by" not-null="False" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Createtime" type="DateTime" p1:ValidateRequired="true" p1:Guid="583a81c5-2812-4c05-b42b-03c6e8f8ca69">
+      <column name="createtime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Description" type="Clob" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="2dec0afa-88dd-4c4e-9d04-02569987bd9c">
+      <column name="description" not-null="False" sql-type="text" p1:unicode="True" />
+    </property>
+    <property name="DurationMinutes" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="f70eaa7c-5c76-4978-833b-e46a6015a070">
+      <column name="duration_minutes" not-null="False" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="EndTime" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="35f3ea5f-7879-4912-b45b-bd80350f903c">
+      <column name="end_time" not-null="False" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Isdeleted" type="Boolean" p1:ValidateRequired="true" p1:Guid="1489679b-fc8d-4ed3-a5e1-678c4f2ec920">
+      <column name="isdeleted" default="0" not-null="True" precision="1" scale="0" sql-type="tinyint" p1:unicode="False" />
+    </property>
+    <property name="Modifyby" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="9830abab-3879-4d21-947a-2e75bb0d6572">
+      <column name="modifyby" not-null="False" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Modifytime" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="84be4f04-c540-46a9-87cc-251bcccf49d1">
+      <column name="modifytime" not-null="False" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="StartTime" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="faa8939e-471f-476f-98be-6864c626c69e">
+      <column name="start_time" not-null="False" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Title" type="String" p1:nullable="True" p1:ValidateMaxLength="255" p1:ValidateRequired="false" p1:Guid="3c0c97f9-9ed6-4ff1-91e2-3abf79f41cbe">
+      <column name="title" not-null="False" length="255" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="TotalScore" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="5ef96b17-c402-49ab-8fa5-fead80ba0941">
+      <column name="total_score" not-null="False" sql-type="int" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="CurQuizSubmissions" entity-set="CurQuizSubmissions" table="cur_quiz_submissions" schema="raimond" p1:Guid="d11d7685-4b80-4088-960b-940b5e7c0a7c">
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="68e888d3-0540-4783-891c-5844c8bfd993">
+      <column name="id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </id>
+    <property name="Createby" type="Int64" p1:ValidateRequired="true" p1:Guid="ecdef87c-ee89-4b91-9757-bb9083e2cafa">
+      <column name="createby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Createtime" type="DateTime" p1:ValidateRequired="true" p1:Guid="a697765c-5d75-48dc-bc78-5903036040f7">
+      <column name="createtime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Isdeleted" type="Boolean" p1:ValidateRequired="true" p1:Guid="9329a165-a6eb-43fc-9e87-6910264d56fd">
+      <column name="isdeleted" default="0" not-null="True" precision="1" scale="0" sql-type="tinyint" p1:unicode="False" />
+    </property>
+    <property name="Modifyby" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="9730c8d3-3252-4980-bf89-257be785040a">
+      <column name="modifyby" not-null="False" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Modifytime" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="3fd887d7-e91b-40a9-b253-f1cf60afc7ab">
+      <column name="modifytime" not-null="False" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="QuizId" type="Int64" p1:ValidateRequired="true" p1:Guid="8443335e-efa6-412a-9ad1-0cf58fc04812">
+      <column name="quiz_id" not-null="True" sql-type="bigint" unique-key="quiz_id" p1:unicode="False" />
+    </property>
+    <property name="StudentId" type="Int64" p1:ValidateRequired="true" p1:Guid="b4be499a-9f0d-4e38-a43e-1faf8a8f90c8">
+      <column name="student_id" not-null="True" sql-type="bigint" unique-key="quiz_id" p1:unicode="False" />
+    </property>
+    <property name="SubmittedAt" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="5cd43b6d-cdf6-46f7-b6a3-270b3dd04a17">
+      <column name="submitted_at" not-null="False" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="TotalScore" type="Decimal" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="618d694c-ed9e-41d7-8f62-8ec8bdae9146">
+      <column name="total_score" not-null="False" precision="5" scale="2" sql-type="decimal" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="CurQuestions" entity-set="CurQuestions" table="cur_questions" schema="raimond" p1:Guid="fa606d90-c6f8-4a24-bce3-f27f02ee9ba0">
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="2ffb68c8-d951-4ecf-8be6-12ca8c9096a7">
+      <column name="id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </id>
+    <property name="Createby" type="Int64" p1:ValidateRequired="true" p1:Guid="cb43c7ce-9b79-4572-b747-543d701bd273">
+      <column name="createby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Createtime" type="DateTime" p1:ValidateRequired="true" p1:Guid="7f691af3-9910-443a-9174-7dca0d34078f">
+      <column name="createtime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Isdeleted" type="Boolean" p1:ValidateRequired="true" p1:Guid="5630bc42-18c4-4fd9-a365-27e700451105">
+      <column name="isdeleted" default="0" not-null="True" precision="1" scale="0" sql-type="tinyint" p1:unicode="False" />
+    </property>
+    <property name="Modifyby" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="50bf8921-5cba-472c-9d49-b47438e04652">
+      <column name="modifyby" not-null="False" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Modifytime" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="3c5a7652-bcc3-4fec-a314-36930c33d9fa">
+      <column name="modifytime" not-null="False" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="QuizId" type="Int64" p1:ValidateRequired="true" p1:Guid="f7d7a3da-1515-4090-80df-72fa2a593dc6">
+      <column name="quiz_id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Score" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="8085fe49-bcb6-47b2-9da8-89f947c4cae6">
+      <column name="score" default="1" not-null="False" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="Text" type="Clob" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="1c631b19-0017-47cc-86e5-f21f96d913a4">
+      <column name="`text`" not-null="False" sql-type="text" p1:unicode="True" />
+    </property>
+    <property name="Type" type="String" p1:ValidateRequired="true" p1:Guid="bfff4032-06c3-4c3c-a763-8f9f60170d75">
+      <column name="type" not-null="True" sql-type="enum" p1:unicode="True" />
+    </property>
+  </class>
+  <class name="CurQuestionAnswers" entity-set="CurQuestionAnswers" table="cur_question_answers" schema="raimond" p1:Guid="a19b1f1e-8416-4f12-81da-bfa4c5c3ef0a">
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="0cd31cff-d4fe-4e6a-80a8-0a5659af2531">
+      <column name="id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </id>
+    <property name="AnswerText" type="Clob" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="e7531159-212e-40c6-b92f-79ae3a55022d">
+      <column name="answer_text" not-null="False" sql-type="text" p1:unicode="True" />
+    </property>
+    <property name="Createby" type="Int64" p1:ValidateRequired="true" p1:Guid="9a9519ab-58fd-4dbd-92fa-36bedf99fbda">
+      <column name="createby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Createtime" type="DateTime" p1:ValidateRequired="true" p1:Guid="b9798128-e96e-4dfc-84c5-8f9aed928429">
+      <column name="createtime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Isdeleted" type="Boolean" p1:ValidateRequired="true" p1:Guid="29206fff-d963-4a71-a38b-535c9d88b7a3">
+      <column name="isdeleted" default="0" not-null="True" precision="1" scale="0" sql-type="tinyint" p1:unicode="False" />
+    </property>
+    <property name="Modifyby" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="74f45273-a067-4101-a9a9-7ac980f31f5b">
+      <column name="modifyby" not-null="False" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Modifytime" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="5096bb37-2105-4bc3-96bf-0c5cf945ca37">
+      <column name="modifytime" not-null="False" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="QuestionId" type="Int64" p1:ValidateRequired="true" p1:Guid="3cb9b7f4-29dd-46a0-8509-0a4cd504aa77">
+      <column name="question_id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Score" type="Decimal" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="2730b0e9-4c2a-450d-92e5-d48ad33af4d1">
+      <column name="score" default="0.00" not-null="False" precision="5" scale="2" sql-type="decimal" p1:unicode="False" />
+    </property>
+    <property name="SelectedOptionIds" type="Clob" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="a830950c-7208-446f-9ff3-7d08e1cdac08">
+      <column name="selected_option_ids" not-null="False" sql-type="text" p1:unicode="True" />
+    </property>
+    <property name="SubmissionId" type="Int64" p1:ValidateRequired="true" p1:Guid="743846b3-022d-4eb6-8ea4-ce52ee05c824">
+      <column name="submission_id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="CurQualifications" entity-set="CurQualifications" table="cur_qualifications" schema="raimond" p1:Guid="8e54f4b8-d124-4778-a097-867eb350c85c">
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="3a798c9a-b3e7-4526-b38d-2fb4bac55ac4">
+      <column name="id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </id>
+    <property name="Createby" type="Int64" p1:ValidateRequired="true" p1:Guid="886d4f84-7a61-4998-b270-5664cd56f547">
+      <column name="createby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Createtime" type="DateTime" p1:ValidateRequired="true" p1:Guid="6e1c5207-5238-44a9-9800-d45e071febc5">
+      <column name="createtime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Isdeleted" type="Boolean" p1:ValidateRequired="true" p1:Guid="d3c9b93e-f47a-4472-bcc4-9e1f91e1141f">
+      <column name="isdeleted" default="0" not-null="True" precision="1" scale="0" sql-type="tinyint" p1:unicode="False" />
+    </property>
+    <property name="Modifyby" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="c19f6bc3-154a-4443-9e32-fd1a72c1fc5a">
+      <column name="modifyby" not-null="False" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Modifytime" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="bb34b92a-5ec4-442c-920b-233aeaae4f6e">
+      <column name="modifytime" not-null="False" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="QualificationLevel" type="String" p1:ValidateMaxLength="255" p1:ValidateRequired="true" p1:Guid="af980b71-0cb1-4441-b0dc-f816406bf711">
+      <column name="qualification_level" not-null="True" length="255" sql-type="varchar" p1:unicode="True" />
+    </property>
+  </class>
+  <class name="CurOrganizations" entity-set="CurOrganizations" table="cur_organizations" schema="raimond" p1:Guid="06303ff0-0689-49cf-8959-cb44e21c39ba">
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="2649619e-dee3-410b-b678-874ad1073906">
+      <column name="id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </id>
+    <property name="Code" type="String" p1:nullable="True" p1:ValidateMaxLength="50" p1:ValidateRequired="false" p1:Guid="c1f3717d-d25f-48c4-a4bd-469b514ea6f8">
+      <column name="code" not-null="False" length="50" sql-type="varchar" unique="True" p1:unicode="True" />
+    </property>
+    <property name="Createby" type="Int64" p1:ValidateRequired="true" p1:Guid="aade5f68-f453-44fe-97a0-9d70c4cc4611">
+      <column name="createby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="CreatedAt" type="DateTime" p1:nullable="True" value-generated="OnAdd" p1:ValidateRequired="false" p1:Guid="95f62cf4-95a1-4e29-ab8a-747594bdcda6">
+      <column name="created_at" default="CURRENT_TIMESTAMP" not-null="False" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Createtime" type="DateTime" p1:ValidateRequired="true" p1:Guid="a78a3447-b32d-4b9d-be56-84576363f9b5">
+      <column name="createtime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Isdeleted" type="Boolean" p1:ValidateRequired="true" p1:Guid="7e02c409-562d-49be-a3f7-4080913fba27">
+      <column name="isdeleted" default="0" not-null="True" precision="1" scale="0" sql-type="tinyint" p1:unicode="False" />
+    </property>
+    <property name="Level" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="d0c673ae-a043-4e7f-9505-0e4cd5327bab">
+      <column name="level" default="0" not-null="False" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="Modifyby" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="db1e6c06-b590-4969-80b5-fe246fe77847">
+      <column name="modifyby" not-null="False" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Modifytime" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="f71aa90c-100e-4e05-84d8-bfa8491a4dc8">
+      <column name="modifytime" not-null="False" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Name" type="String" p1:ValidateMaxLength="255" p1:ValidateRequired="true" p1:Guid="4d7d9919-a437-402a-a07b-241be417765a">
+      <column name="name" not-null="True" length="255" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="ParentId" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="9ce1c020-8a67-46de-9340-be1eef03b8f2">
+      <column name="parent_id" not-null="False" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Path" type="String" p1:nullable="True" p1:ValidateMaxLength="1000" p1:ValidateRequired="false" p1:Guid="b0b21734-108b-45ed-b33b-7dc48cf9d96e">
+      <column name="path" not-null="False" length="1000" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="Type" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="3bba3ff5-50cb-49cd-9ea5-f5730bd68b69">
+      <column name="type" default="'department'" not-null="False" sql-type="enum" p1:unicode="True" />
+    </property>
+    <property name="UpdatedAt" type="DateTime" p1:nullable="True" value-generated="OnAdd" p1:ValidateRequired="false" p1:Guid="c3293089-5b69-4244-b8cd-d0a47d895cc0">
+      <column name="updated_at" default="CURRENT_TIMESTAMP" not-null="False" sql-type="datetime" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="CurMaritalStatuses" entity-set="CurMaritalStatuses" table="cur_marital_statuses" schema="raimond" p1:Guid="af27c3f0-0f5a-480f-8ce8-23b9bad2beb4">
+    <id name="Id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="090581c4-c0c3-4196-b4ba-2477d0239d4b">
+      <column name="id" not-null="True" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="Createby" type="Int64" p1:ValidateRequired="true" p1:Guid="15d51115-1b85-4397-b461-949f69172c73">
+      <column name="createby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Createtime" type="DateTime" p1:ValidateRequired="true" p1:Guid="2d8688f8-39cf-4c61-bf8e-9140fd7756b7">
+      <column name="createtime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Isdeleted" type="Boolean" p1:ValidateRequired="true" p1:Guid="337a8b34-1bbc-4e2c-b8c7-e44993e5055c">
+      <column name="isdeleted" default="0" not-null="True" precision="1" scale="0" sql-type="tinyint" p1:unicode="False" />
+    </property>
+    <property name="Modifyby" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="c26dbb77-3d2e-47c3-8f6c-6b9cf8729e46">
+      <column name="modifyby" not-null="False" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Modifytime" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="d148332e-d27d-4271-ae24-425356ce2896">
+      <column name="modifytime" not-null="False" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Name" type="String" p1:ValidateMaxLength="50" p1:ValidateRequired="true" p1:Guid="db83d4c9-7451-48df-a62b-f18f707be637">
+      <column name="name" not-null="True" length="50" sql-type="varchar" p1:unicode="True" />
+    </property>
+  </class>
+  <class name="CurLrsLogs" entity-set="CurLrsLogs" table="cur_lrs_logs" schema="raimond" p1:Guid="c29a62c5-cd18-4b52-926e-2633bb17e640">
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="a29fc7bc-3108-4fc0-bab7-222b7c5bacca">
+      <column name="id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </id>
+    <property name="Context" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="b5e744ec-b646-488d-b989-e385c99cb381">
+      <column name="context" not-null="False" sql-type="json" p1:unicode="False" />
+    </property>
+    <property name="CourseId" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="a18cf75c-061d-416c-addc-ea1f2d798e36">
+      <column name="course_id" not-null="False" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Createby" type="Int64" p1:ValidateRequired="true" p1:Guid="0d69b9e9-a23f-48f2-a672-2776f36c85b3">
+      <column name="createby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Createtime" type="DateTime" p1:ValidateRequired="true" p1:Guid="061aa168-cc05-4826-81f5-e646b1e17841">
+      <column name="createtime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Isdeleted" type="Boolean" p1:ValidateRequired="true" p1:Guid="aa8b032c-5638-4e0a-879d-a724720239fd">
+      <column name="isdeleted" default="0" not-null="True" precision="1" scale="0" sql-type="tinyint" p1:unicode="False" />
+    </property>
+    <property name="Modifyby" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="2a79fae7-27e6-40f4-a319-1200fb15f2c7">
+      <column name="modifyby" not-null="False" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Modifytime" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="4ce1d6ec-fc9e-4787-b18e-7da9fa2966ca">
+      <column name="modifytime" not-null="False" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Object" type="String" p1:nullable="True" p1:ValidateMaxLength="1000" p1:ValidateRequired="false" p1:Guid="73652448-c7e9-4560-9e18-8ca9a91b22ef">
+      <column name="object" not-null="False" length="1000" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="Result" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="ba615735-ea0a-4e60-96cb-77193e5c3ca7">
+      <column name="result" not-null="False" sql-type="json" p1:unicode="False" />
+    </property>
+    <property name="StatementId" type="String" p1:nullable="True" p1:ValidateMaxLength="100" p1:ValidateRequired="false" p1:Guid="5e48260f-789f-42d2-9eba-d12834543f20">
+      <column name="statement_id" not-null="False" length="100" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="Timestamp" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="ff765b03-a97a-484c-ab2e-341abf8ef86d">
+      <column name="`timestamp`" not-null="False" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="UserId" type="Int64" p1:ValidateRequired="true" p1:Guid="1264c92e-3b04-44c3-9017-5e6fb0657bae">
+      <column name="user_id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Verb" type="String" p1:nullable="True" p1:ValidateMaxLength="100" p1:ValidateRequired="false" p1:Guid="bb48ad89-29b5-436a-9282-40c3d8ec4763">
+      <column name="verb" not-null="False" length="100" sql-type="varchar" p1:unicode="True" />
+    </property>
+  </class>
+  <class name="CurFieldsOfStudy" entity-set="CurFieldsOfStudies" table="cur_fields_of_study" schema="raimond" p1:Guid="670133b3-2a3c-468e-911c-f6ac142650f5">
+    <id name="Id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="0684c1b5-34f1-4fff-b548-d67f0b3eeb9a">
+      <column name="id" not-null="True" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="Createby" type="Int64" p1:ValidateRequired="true" p1:Guid="0172a8fc-9d7d-4b0b-abb6-f5171013c503">
+      <column name="createby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Createtime" type="DateTime" p1:ValidateRequired="true" p1:Guid="141a5342-9a39-4494-a8bc-d3a952e5fee6">
+      <column name="createtime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Isdeleted" type="Boolean" p1:ValidateRequired="true" p1:Guid="4f9b53bc-4b82-4bf0-a914-96118e8029d3">
+      <column name="isdeleted" default="0" not-null="True" precision="1" scale="0" sql-type="tinyint" p1:unicode="False" />
+    </property>
+    <property name="Modifyby" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="e8d84803-b827-4941-ac47-227425e77690">
+      <column name="modifyby" not-null="False" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Modifytime" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="42c0a526-6fc0-44ab-aa5b-f5240c262663">
+      <column name="modifytime" not-null="False" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Name" type="String" p1:ValidateMaxLength="100" p1:ValidateRequired="true" p1:Guid="708c574c-5365-43de-ac0e-33f0357fc3d3">
+      <column name="name" not-null="True" length="100" sql-type="varchar" p1:unicode="True" />
+    </property>
+  </class>
+  <class name="CurEnrollments" entity-set="CurEnrollments" table="cur_enrollments" schema="raimond" p1:Guid="934ca484-318b-410c-85d9-5b747da08025">
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="261a85d4-6060-4444-9a48-3c5893ed030f">
+      <column name="id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </id>
+    <property name="ClassId" type="Int64" p1:ValidateRequired="true" p1:Guid="36c98f7d-86a0-4728-993d-631192e1b9eb">
+      <column name="class_id" not-null="True" sql-type="bigint" unique-key="class_id" p1:unicode="False" />
+    </property>
+    <property name="Createby" type="Int64" p1:ValidateRequired="true" p1:Guid="d7c0d7b4-4764-4556-a1e6-49099ca95ea5">
+      <column name="createby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Createtime" type="DateTime" p1:ValidateRequired="true" p1:Guid="0a9bf393-bd97-4494-bc7f-205ea34ce19b">
+      <column name="createtime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="EnrolledAt" type="DateTime" p1:nullable="True" value-generated="OnAdd" p1:ValidateRequired="false" p1:Guid="f6377c37-a334-4fe6-b032-b84055408e96">
+      <column name="enrolled_at" default="CURRENT_TIMESTAMP" not-null="False" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Isdeleted" type="Boolean" p1:ValidateRequired="true" p1:Guid="d09de6c7-2d68-450d-b06c-b2e60d326f3d">
+      <column name="isdeleted" default="0" not-null="True" precision="1" scale="0" sql-type="tinyint" p1:unicode="False" />
+    </property>
+    <property name="Modifyby" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="4383dd0b-324f-4d7d-883d-507c80175037">
+      <column name="modifyby" not-null="False" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Modifytime" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="44bf171e-2f18-4933-9113-3b7e184cab4c">
+      <column name="modifytime" not-null="False" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Status" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="a0fd0dd2-c9c6-4654-bdb8-4b99e4fc7909">
+      <column name="status" default="'active'" not-null="False" sql-type="enum" p1:unicode="True" />
+    </property>
+    <property name="StudentId" type="Int64" p1:ValidateRequired="true" p1:Guid="f455d261-4701-4536-9d55-f296ddcaf65b">
+      <column name="student_id" not-null="True" sql-type="bigint" unique-key="class_id" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="CurDenominations" entity-set="CurDenominations" table="cur_denominations" schema="raimond" p1:Guid="62b306ea-253d-4752-b7f9-05527a6127f0">
+    <id name="Id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="a04eb06f-f73b-46cc-8b0d-9372c64e7c4b">
+      <column name="id" not-null="True" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="Createby" type="Int64" p1:ValidateRequired="true" p1:Guid="1696d7da-6c50-4103-8cfd-deeeb240f0e5">
+      <column name="createby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Createtime" type="DateTime" p1:ValidateRequired="true" p1:Guid="15b7ab2f-0b0a-46c1-950f-515a121e8ab6">
+      <column name="createtime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Isdeleted" type="Boolean" p1:ValidateRequired="true" p1:Guid="f45fa1a3-a5a9-4a9e-a126-e6f4b3e30379">
+      <column name="isdeleted" default="0" not-null="True" precision="1" scale="0" sql-type="tinyint" p1:unicode="False" />
+    </property>
+    <property name="Modifyby" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="e534f13b-f82b-4804-89a6-86ddfaad1caf">
+      <column name="modifyby" not-null="False" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Modifytime" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="5a93445d-319b-4d19-a19a-62cf5588cacf">
+      <column name="modifytime" not-null="False" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Name" type="String" p1:ValidateMaxLength="50" p1:ValidateRequired="true" p1:Guid="cbfdc0d5-c2e9-4fa7-abe2-e54d44e131e8">
+      <column name="name" not-null="True" length="50" sql-type="varchar" p1:unicode="True" />
+    </property>
+  </class>
+  <class name="CurDegrees" entity-set="CurDegrees" table="cur_degrees" schema="raimond" p1:Guid="cb8de128-3413-4ebf-985d-da39085c03d2">
+    <id name="Id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="53986102-57ba-434d-81c0-927381f43dd4">
+      <column name="id" not-null="True" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="Createby" type="Int64" p1:ValidateRequired="true" p1:Guid="bd342131-6cb2-438a-a14c-f6ba1ba16b33">
+      <column name="createby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Createtime" type="DateTime" p1:ValidateRequired="true" p1:Guid="f12810e1-cd85-4760-9dc8-0a4d0fcfa950">
+      <column name="createtime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Isdeleted" type="Boolean" p1:ValidateRequired="true" p1:Guid="a10d75bb-473d-4478-be6a-2cc038825b58">
+      <column name="isdeleted" default="0" not-null="True" precision="1" scale="0" sql-type="tinyint" p1:unicode="False" />
+    </property>
+    <property name="Modifyby" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="21f18098-a333-471c-9255-733299078529">
+      <column name="modifyby" not-null="False" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Modifytime" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="03673f94-01ee-4e74-86fd-c85f16563286">
+      <column name="modifytime" not-null="False" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Name" type="String" p1:ValidateMaxLength="100" p1:ValidateRequired="true" p1:Guid="51dd4959-6532-4d0c-9e78-b0f7e0210469">
+      <column name="name" not-null="True" length="100" sql-type="varchar" p1:unicode="True" />
+    </property>
+  </class>
+  <class name="CurCourses" entity-set="CurCourses" table="cur_courses" schema="raimond" p1:Guid="67ef72a9-b335-426c-aecf-3ed6de892666">
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="eb290a5d-c2f9-4331-8465-81f3d91a1072">
+      <column name="id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </id>
+    <property name="Code" type="String" p1:nullable="True" p1:ValidateMaxLength="50" p1:ValidateRequired="false" p1:Guid="d592ffa7-9493-4f89-b042-2bb3ca79845f">
+      <column name="code" not-null="False" length="50" sql-type="varchar" p1:unicode="True" />
+    </property>
+    <property name="CourseTypeId" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="abb54eeb-3c67-4f68-aea8-1a1528ff7b32">
+      <column name="course_type_id" not-null="False" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Createby" type="Int64" p1:ValidateRequired="true" p1:Guid="ab29c675-2908-470b-bdae-7aa6ee4d1b90">
+      <column name="createby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="CreatedAt" type="DateTime" p1:nullable="True" value-generated="OnAdd" p1:ValidateRequired="false" p1:Guid="5f1ffa09-e13e-4648-b935-b1ece39cde2e">
+      <column name="created_at" default="CURRENT_TIMESTAMP" not-null="False" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="CreatedBy" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="df7f1ed7-d75d-4b59-8a1b-60063f166489">
+      <column name="created_by" not-null="False" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Createtime" type="DateTime" p1:ValidateRequired="true" p1:Guid="cbff7591-02cd-4dab-b612-91d9b0926fff">
+      <column name="createtime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Description" type="Clob" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="3b4dfd3a-4233-4ea9-b37c-99945b096090">
+      <column name="description" not-null="False" sql-type="text" p1:unicode="True" />
+    </property>
+    <property name="Isdeleted" type="Boolean" p1:ValidateRequired="true" p1:Guid="e234fe63-1311-4bc8-af1e-1d0d534697f0">
+      <column name="isdeleted" default="0" not-null="True" precision="1" scale="0" sql-type="tinyint" p1:unicode="False" />
+    </property>
+    <property name="Modifyby" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="950495a4-086a-4444-8477-5e8c51622b78">
+      <column name="modifyby" not-null="False" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Modifytime" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="58098986-3aee-4aee-a759-133a6b9d841b">
+      <column name="modifytime" not-null="False" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="PracticalHours" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="6c84241e-25d0-4466-a6e0-950ceb530ebd">
+      <column name="practical_hours" not-null="False" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="Proposal" type="Clob" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="89e9d055-4c2c-4203-ba83-b9b08cdeac3f">
+      <column name="proposal" not-null="False" sql-type="text" p1:unicode="True" />
+    </property>
+    <property name="QualificationId" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="5b3c2e5d-f7bc-411d-b6f1-c38db1597030">
+      <column name="qualification_id" not-null="False" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="SpecializationId" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="e4b2e7f0-6969-4775-bb69-9d2334c44c0b">
+      <column name="specialization_id" not-null="False" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="TeachingMethodId" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="001485a9-09cc-4d27-894e-287d327a1408">
+      <column name="teaching_method_id" not-null="False" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="TheoreticalHours" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="20c99439-8838-4c06-a7cb-a9ff6bfc7da0">
+      <column name="theoretical_hours" not-null="False" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="Title" type="String" p1:ValidateMaxLength="255" p1:ValidateRequired="true" p1:Guid="25d1fe60-424b-45a5-b7ee-9832883f64d7">
+      <column name="title" not-null="True" length="255" sql-type="varchar" p1:unicode="True" />
+    </property>
+  </class>
+  <class name="CurCourseTypes" entity-set="CurCourseTypes" table="cur_course_types" schema="raimond" p1:Guid="b77337cb-b979-413b-bfbf-aeee1c37152b">
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="be60a888-19aa-4ce8-ae8c-b20f7282dffa">
+      <column name="id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </id>
+    <property name="Createby" type="Int64" p1:ValidateRequired="true" p1:Guid="7741e628-f969-4a4b-ae6a-1309848680aa">
+      <column name="createby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Createtime" type="DateTime" p1:ValidateRequired="true" p1:Guid="cfe24b6b-68cb-4c22-ba70-89b6a723f626">
+      <column name="createtime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Isdeleted" type="Boolean" p1:ValidateRequired="true" p1:Guid="e2edc7c6-2429-49ab-aaca-3188ad745f82">
+      <column name="isdeleted" default="0" not-null="True" precision="1" scale="0" sql-type="tinyint" p1:unicode="False" />
+    </property>
+    <property name="Modifyby" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="66a4b2f5-5a7b-4676-8d34-ae95d248ea62">
+      <column name="modifyby" not-null="False" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Modifytime" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="1de5a49f-0dd3-4c98-bf78-f7190f8a871f">
+      <column name="modifytime" not-null="False" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Name" type="String" p1:ValidateMaxLength="255" p1:ValidateRequired="true" p1:Guid="73e556ff-baf7-4e33-abdc-0195b669b017">
+      <column name="name" not-null="True" length="255" sql-type="varchar" p1:unicode="True" />
+    </property>
+  </class>
+  <class name="CurCourseStandards" entity-set="CurCourseStandards" table="cur_course_standards" schema="raimond" p1:Guid="428b8ef8-25c2-408d-82c8-bb108bb3deae">
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="ae6e1790-9b66-4e81-8753-721da7813733">
+      <column name="id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </id>
+    <property name="CourseId" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="cba9e2f0-e196-4520-91c8-4ad0238fe6cf">
+      <column name="course_id" not-null="False" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="Createby" type="Int64" p1:ValidateRequired="true" p1:Guid="a1ce4914-51d8-44f5-b526-87a00d14051d">
+      <column name="createby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Createtime" type="DateTime" p1:ValidateRequired="true" p1:Guid="94f1819c-209f-4355-bf4e-3fdbc583b52f">
+      <column name="createtime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Isdeleted" type="Boolean" p1:ValidateRequired="true" p1:Guid="0514fcc7-918a-4934-9550-786768a7170d">
+      <column name="isdeleted" default="0" not-null="True" precision="1" scale="0" sql-type="tinyint" p1:unicode="False" />
+    </property>
+    <property name="Modifyby" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="c8595ca3-a46f-4d0f-bc0d-8fc18bd67fd8">
+      <column name="modifyby" not-null="False" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Modifytime" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="c797cda0-3226-4a90-b4e0-12d3e63b28f8">
+      <column name="modifytime" not-null="False" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="StandardDescription" type="Clob" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="f076756d-7f47-4a65-8d69-bfc063d60204">
+      <column name="standard_description" not-null="False" sql-type="text" p1:unicode="True" />
+    </property>
+  </class>
+  <class name="CurCourseContents" entity-set="CurCourseContents" table="cur_course_contents" schema="raimond" p1:Guid="1caf53ec-b974-472e-ae0a-166e0d2174e0">
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="daae3e87-2edb-4170-b783-58eef204bfcd">
+      <column name="id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </id>
+    <property name="ContentDescription" type="Clob" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="b4b37471-1620-4ac8-9403-02ec1eb0e7f7">
+      <column name="content_description" not-null="False" sql-type="text" p1:unicode="True" />
+    </property>
+    <property name="CourseId" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="ae91821d-60b0-4eda-9efc-d2db1b163f69">
+      <column name="course_id" not-null="False" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="Createby" type="Int64" p1:ValidateRequired="true" p1:Guid="9743f208-5cc7-4775-afe1-dd526c6cc49c">
+      <column name="createby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Createtime" type="DateTime" p1:ValidateRequired="true" p1:Guid="edcdd661-a790-4511-bbad-59cf7f4637bd">
+      <column name="createtime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Isdeleted" type="Boolean" p1:ValidateRequired="true" p1:Guid="1fd79218-82e4-4d80-b66d-e35ac34d4fb5">
+      <column name="isdeleted" default="0" not-null="True" precision="1" scale="0" sql-type="tinyint" p1:unicode="False" />
+    </property>
+    <property name="Modifyby" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="dbdf4ca5-245b-40d7-aac9-40cad608068a">
+      <column name="modifyby" not-null="False" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Modifytime" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="cc325d09-0b5c-4b4d-a8c3-9fed354528f1">
+      <column name="modifytime" not-null="False" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="CurClasses" entity-set="CurClasses" table="cur_classes" schema="raimond" p1:Guid="93a6afc4-8efa-473d-ba0b-3caa85b07fb7">
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="29e94623-701d-48d9-8269-165ef797bf60">
+      <column name="id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </id>
+    <property name="CourseId" type="Int64" p1:ValidateRequired="true" p1:Guid="ace4a3e5-4663-4d90-9a5f-c92524c86476">
+      <column name="course_id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Createby" type="Int64" p1:ValidateRequired="true" p1:Guid="9c0d4cd5-1ba7-4453-8455-a78045c7fae4">
+      <column name="createby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Createtime" type="DateTime" p1:ValidateRequired="true" p1:Guid="0c54f5c2-5f4e-4d42-8ce9-d7d8b4393ec1">
+      <column name="createtime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="EndDate" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="5675f85b-87f0-4d84-ba19-8a531931ebbe">
+      <column name="end_date" not-null="False" sql-type="date" p1:unicode="False" />
+    </property>
+    <property name="Isdeleted" type="Boolean" p1:ValidateRequired="true" p1:Guid="43ba8860-c7f9-4282-bdf7-ad1df5fe8134">
+      <column name="isdeleted" default="0" not-null="True" precision="1" scale="0" sql-type="tinyint" p1:unicode="False" />
+    </property>
+    <property name="MaxStudents" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="36357091-be5e-4841-ba68-60ae27b74761">
+      <column name="max_students" not-null="False" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="Modifyby" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="4171c2ce-1296-412a-9c86-500f2909166a">
+      <column name="modifyby" not-null="False" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Modifytime" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="e25a5e1a-b76d-4c4b-a7a9-687419d71f75">
+      <column name="modifytime" not-null="False" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="StartDate" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="b09fe05f-4d5f-44a2-b233-b01cbafdd5bb">
+      <column name="start_date" not-null="False" sql-type="date" p1:unicode="False" />
+    </property>
+    <property name="Status" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="3324f403-e46a-4beb-94f1-4c09b1ae21f3">
+      <column name="status" default="'planned'" not-null="False" sql-type="enum" p1:unicode="True" />
+    </property>
+    <property name="TeacherId" type="Int64" p1:ValidateRequired="true" p1:Guid="67a8920c-f108-486c-8883-595cedf1d7e1">
+      <column name="teacher_id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="CurAttendances" entity-set="CurAttendances" table="cur_attendances" schema="raimond" p1:Guid="75851270-f40f-462b-a24c-02e550ec50ab">
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="4700e44a-5314-4388-b450-f4e05956c997">
+      <column name="id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </id>
+    <property name="ClassId" type="Int64" p1:ValidateRequired="true" p1:Guid="31004edf-a323-4409-a0ce-6d71dbf887e5">
+      <column name="class_id" not-null="True" sql-type="bigint" unique-key="class_id" p1:unicode="False" />
+    </property>
+    <property name="Createby" type="Int64" p1:ValidateRequired="true" p1:Guid="97af2cec-adbe-48ba-aec8-c27439141c94">
+      <column name="createby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="CreatedAt" type="DateTime" p1:nullable="True" value-generated="OnAdd" p1:ValidateRequired="false" p1:Guid="a9865ab5-b622-4f00-badf-83e13520ecb8">
+      <column name="created_at" default="CURRENT_TIMESTAMP" not-null="False" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Createtime" type="DateTime" p1:ValidateRequired="true" p1:Guid="08841606-e8a9-47a4-8426-b1086c83f8ed">
+      <column name="createtime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Isdeleted" type="Boolean" p1:ValidateRequired="true" p1:Guid="48801486-cc31-4ccd-be49-679c642092e1">
+      <column name="isdeleted" default="0" not-null="True" precision="1" scale="0" sql-type="tinyint" p1:unicode="False" />
+    </property>
+    <property name="Modifyby" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="5b3dd59b-9086-4a89-9e93-c2980c2cd091">
+      <column name="modifyby" not-null="False" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Modifytime" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="2090a4ce-baf7-4926-b682-b5977f1329bb">
+      <column name="modifytime" not-null="False" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="SessionDate" type="DateTime" p1:ValidateRequired="true" p1:Guid="6cd81d89-0a0d-4a4c-a69d-fe174db5b82f">
+      <column name="session_date" not-null="True" sql-type="date" unique-key="class_id" p1:unicode="False" />
+    </property>
+    <property name="Status" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="c8398be0-106c-47ca-8f20-a7c2a4ad8e3a">
+      <column name="status" default="'present'" not-null="False" sql-type="enum" p1:unicode="True" />
+    </property>
+    <property name="StudentId" type="Int64" p1:ValidateRequired="true" p1:Guid="f125fa4c-094c-445e-9913-6321f2a89b86">
+      <column name="student_id" not-null="True" sql-type="bigint" unique-key="class_id" p1:unicode="False" />
+    </property>
+    <property name="UpdatedAt" type="DateTime" p1:nullable="True" value-generated="OnAdd" p1:ValidateRequired="false" p1:Guid="6dab5e5b-cdae-49f9-b1f3-275dc8ed3efc">
+      <column name="updated_at" default="CURRENT_TIMESTAMP" not-null="False" sql-type="datetime" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="CurAssignments" entity-set="CurAssignments" table="cur_assignments" schema="raimond" p1:Guid="bb8f9e1d-c930-4075-9e58-05afab0a9011">
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="fd1c620e-231f-46b7-885d-f7c876813b50">
+      <column name="id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </id>
+    <property name="ClassId" type="Int64" p1:ValidateRequired="true" p1:Guid="e74ddb69-c869-4445-90a8-08680fe80d9e">
+      <column name="class_id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Createby" type="Int64" p1:ValidateRequired="true" p1:Guid="3959e237-82d8-4e9b-b399-b75d4ab49eac">
+      <column name="createby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="CreatedAt" type="DateTime" p1:nullable="True" value-generated="OnAdd" p1:ValidateRequired="false" p1:Guid="210f66b2-f89b-4b31-861d-0ed4e76776b3">
+      <column name="created_at" default="CURRENT_TIMESTAMP" not-null="False" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="CreatedBy" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="2b2cff8b-f98c-4f90-bfd5-ee07b12d84d1">
+      <column name="created_by" not-null="False" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Createtime" type="DateTime" p1:ValidateRequired="true" p1:Guid="ba4c3628-2493-4b69-aa1c-f11ef1fc3078">
+      <column name="createtime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Description" type="Clob" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="93388bc6-83ba-461e-8967-48befc198689">
+      <column name="description" not-null="False" sql-type="text" p1:unicode="True" />
+    </property>
+    <property name="DueDate" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="910cd3b9-3a6f-476c-9b2a-297fd337e019">
+      <column name="due_date" not-null="False" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Isdeleted" type="Boolean" p1:ValidateRequired="true" p1:Guid="fa7f4f6a-0e0a-4f17-aa3a-3ff2e94fc23a">
+      <column name="isdeleted" default="0" not-null="True" precision="1" scale="0" sql-type="tinyint" p1:unicode="False" />
+    </property>
+    <property name="MaxScore" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="a8af83f1-9949-422f-b658-7558ce1a2308">
+      <column name="max_score" not-null="False" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="Modifyby" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="ba953d4e-4562-4053-8ece-cac3c04ab9be">
+      <column name="modifyby" not-null="False" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Modifytime" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="1df30c25-c6a1-45ad-a384-1e331eb56af7">
+      <column name="modifytime" not-null="False" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Title" type="String" p1:nullable="True" p1:ValidateMaxLength="255" p1:ValidateRequired="false" p1:Guid="cf46bfbc-221f-43fb-93a7-d6c075bd85e8">
+      <column name="title" not-null="False" length="255" sql-type="varchar" p1:unicode="True" />
+    </property>
+  </class>
+  <class name="CurAssignmentSubmissions" entity-set="CurAssignmentSubmissions" table="cur_assignment_submissions" schema="raimond" p1:Guid="9b1f4879-5690-4a9a-b76d-5e75395ed1db">
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="9a52a029-3d15-4add-bdbd-e4e10e0ecc5c">
+      <column name="id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </id>
+    <property name="AssignmentId" type="Int64" p1:ValidateRequired="true" p1:Guid="df450974-eae0-46e2-b62c-fdb1d0c32730">
+      <column name="assignment_id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Comment" type="Clob" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="496d01a2-861d-4aef-856b-0c22c59d2426">
+      <column name="`comment`" not-null="False" sql-type="text" p1:unicode="True" />
+    </property>
+    <property name="Createby" type="Int64" p1:ValidateRequired="true" p1:Guid="661a3c53-000d-47f8-bcb4-61a588e81baa">
+      <column name="createby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Createtime" type="DateTime" p1:ValidateRequired="true" p1:Guid="9343639f-8bc1-4ffd-b4fa-ff196c9d0a04">
+      <column name="createtime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="FileUrl" type="Clob" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="348d5c93-bbda-49ea-9d2b-da0aa7143d68">
+      <column name="file_url" not-null="False" sql-type="text" p1:unicode="True" />
+    </property>
+    <property name="Isdeleted" type="Boolean" p1:ValidateRequired="true" p1:Guid="a651df4c-1435-4f0e-be2c-140895941813">
+      <column name="isdeleted" default="0" not-null="True" precision="1" scale="0" sql-type="tinyint" p1:unicode="False" />
+    </property>
+    <property name="Modifyby" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="46bbac79-752e-49b3-9a66-971771f2fe1f">
+      <column name="modifyby" not-null="False" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Modifytime" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="51fd4506-6afb-4a1f-8ecf-de6da2fb8956">
+      <column name="modifytime" not-null="False" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="ReviewedAt" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="532e0abc-06a1-47b1-8b0c-b6a46d8bcd0c">
+      <column name="reviewed_at" not-null="False" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="ReviewedBy" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="be9a3a17-9de4-4a5b-8fff-58d85636ef52">
+      <column name="reviewed_by" not-null="False" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Score" type="Decimal" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="5033df4c-1807-493b-b599-54819fbb19b3">
+      <column name="score" not-null="False" precision="5" scale="2" sql-type="decimal" p1:unicode="False" />
+    </property>
+    <property name="StudentId" type="Int64" p1:ValidateRequired="true" p1:Guid="2518abb4-502f-4835-ad03-9a1a36fd7136">
+      <column name="student_id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="SubmittedAt" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="f71df42e-00df-4696-bfca-64617d3cbfc9">
+      <column name="submitted_at" not-null="False" sql-type="datetime" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="CurAnswers" entity-set="CurAnswers" table="cur_answers" schema="raimond" p1:Guid="67534479-4c0e-4481-b3cd-23523ad10072">
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="fc4c0e9c-1656-4668-ad27-c96f15ff21c4">
+      <column name="id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </id>
+    <property name="Createby" type="Int64" p1:ValidateRequired="true" p1:Guid="a1a31694-2abf-437a-ae66-709287fbca9b">
+      <column name="createby" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Createtime" type="DateTime" p1:ValidateRequired="true" p1:Guid="b25f72a5-5b36-4bd0-aa59-ce111338f1fd">
+      <column name="createtime" not-null="True" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="IsCorrect" type="Boolean" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="21a2c8bd-3a58-4563-87a3-7d04308c12f7">
+      <column name="is_correct" default="0" not-null="False" precision="1" scale="0" sql-type="tinyint" p1:unicode="False" />
+    </property>
+    <property name="Isdeleted" type="Boolean" p1:ValidateRequired="true" p1:Guid="053dfb23-e48d-4f83-9e88-f88cad697bb7">
+      <column name="isdeleted" default="0" not-null="True" precision="1" scale="0" sql-type="tinyint" p1:unicode="False" />
+    </property>
+    <property name="Modifyby" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="fae4020b-e568-43a8-a2d6-f66d807194b8">
+      <column name="modifyby" not-null="False" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Modifytime" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="0a0658d5-d365-4d89-b6d5-6153a61db6ab">
+      <column name="modifytime" not-null="False" precision="6" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="QuestionId" type="Int64" p1:ValidateRequired="true" p1:Guid="df4c5cfd-bfd1-401e-ab70-c9d5bb217ac8">
+      <column name="question_id" not-null="True" sql-type="bigint" p1:unicode="False" />
+    </property>
+    <property name="Text" type="Clob" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="3fc0724d-97ab-4521-9067-581b77326bdf">
+      <column name="`text`" not-null="False" sql-type="text" p1:unicode="True" />
+    </property>
+  </class>
+  <associations>
+    <association name="CurQuestions_CurAnswers" cardinality="OneToMany" p1:Guid="26d2a826-b298-49d6-94e9-f51c99f5666a">
+      <end1 multiplicity="One" name="CurQuestions" class="CurAnswers" relation-class="CurQuestions" constrained="True" lazy="False" p1:Guid="3b21c676-f7f7-467f-a5ef-2f2446981a5b">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="CurAnswers" class="CurQuestions" relation-class="CurAnswers" lazy="False" p1:Guid="eb035e10-6d24-43d3-b88c-c83024e76f9a">
+        <property name="QuestionId" />
+      </end2>
+    </association>
+    <association name="CurAssignments_CurAssignmentSubmissions" cardinality="OneToMany" p1:Guid="08ac9b9f-a5f9-48b8-abf4-41ae88f3aa83">
+      <end1 multiplicity="One" name="CurAssignments" class="CurAssignmentSubmissions" relation-class="CurAssignments" constrained="True" lazy="False" p1:Guid="0bb67215-5ec9-417d-92bb-20e64e353a5e">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="CurAssignmentSubmissions" class="CurAssignments" relation-class="CurAssignmentSubmissions" lazy="False" p1:Guid="52440245-9854-42ca-ba39-3ea0ca78b8e0">
+        <property name="AssignmentId" />
+      </end2>
+    </association>
+    <association name="CurUsers_CurAssignmentSubmissions" cardinality="OneToMany" p1:Guid="ef269685-d0db-46e2-ab56-7e3cd2c826f4">
+      <end1 multiplicity="One" name="CurUsers_StudentId" class="CurAssignmentSubmissions" relation-class="CurUsers" constrained="True" lazy="False" p1:Guid="02bfdd23-d016-4b51-a7a7-72c0bb155f19">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="CurAssignmentSubmissions_StudentId" class="CurUsers" relation-class="CurAssignmentSubmissions" lazy="False" p1:Guid="cc9aaa73-d2b4-4d86-94a0-fde13245b8e9">
+        <property name="StudentId" />
+      </end2>
+    </association>
+    <association name="CurUsers_CurAssignmentSubmissions1" cardinality="OneToMany" p1:Guid="865393c5-2042-4015-9ae3-a65c203026a7">
+      <end1 multiplicity="ZeroOrOne" name="CurUsers_ReviewedBy" class="CurAssignmentSubmissions" relation-class="CurUsers" constrained="True" lazy="False" p1:Guid="ca931436-3f9f-4198-a399-d9de5aa4c5d7">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="CurAssignmentSubmissions_ReviewedBy" class="CurUsers" relation-class="CurAssignmentSubmissions" lazy="False" p1:Guid="e42b09aa-6cd1-424a-a2f4-6856bc426805">
+        <property name="ReviewedBy" />
+      </end2>
+    </association>
+    <association name="CurClasses_CurAssignments" cardinality="OneToMany" p1:Guid="ce62fbde-e090-42c6-9444-aec09617ce89">
+      <end1 multiplicity="One" name="CurClasses" class="CurAssignments" relation-class="CurClasses" constrained="True" lazy="False" p1:Guid="da4f75fc-9bd8-44cc-accd-50ad042c3f09">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="CurAssignments" class="CurClasses" relation-class="CurAssignments" lazy="False" p1:Guid="a6fec9b0-3acd-4f84-a2cd-670c84698433">
+        <property name="ClassId" />
+      </end2>
+    </association>
+    <association name="CurUsers_CurAssignments" cardinality="OneToMany" p1:Guid="e867fea6-58ea-40d3-812b-b82d8cd9e9ef">
+      <end1 multiplicity="ZeroOrOne" name="CurUsers" class="CurAssignments" relation-class="CurUsers" constrained="True" lazy="False" p1:Guid="36f4586e-c8a1-49bf-90b3-a17cc78751b4">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="CurAssignments" class="CurUsers" relation-class="CurAssignments" lazy="False" p1:Guid="19d6caf7-93d2-4e8b-a3a8-3203743a8500">
+        <property name="CreatedBy" />
+      </end2>
+    </association>
+    <association name="CurClasses_CurAttendances" cardinality="OneToOne" p1:Guid="7c3f9051-6d00-46a3-a6cf-abdfc88ea7f6">
+      <end1 multiplicity="One" name="CurClasses" class="CurAttendances" relation-class="CurClasses" constrained="True" lazy="False" p1:Guid="392d9808-683e-46d3-9c1d-05bed4d6ffcd">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="ZeroOrOne" name="CurAttendances" class="CurClasses" relation-class="CurAttendances" constrained="False" lazy="False" p1:Guid="64bd50bc-904d-4d83-b0a3-7207f54f9ea4">
+        <property name="ClassId" />
+      </end2>
+    </association>
+    <association name="CurUsers_CurAttendances" cardinality="OneToOne" p1:Guid="a876663d-5cda-4e05-9c08-01f14452faa6">
+      <end1 multiplicity="One" name="CurUsers" class="CurAttendances" relation-class="CurUsers" constrained="True" lazy="False" p1:Guid="3d374e7a-b854-4b8c-8f80-a40e633465eb">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="ZeroOrOne" name="CurAttendances" class="CurUsers" relation-class="CurAttendances" constrained="False" lazy="False" p1:Guid="f4c87d3b-a94d-4d9e-ab44-2cee2fe14908">
+        <property name="StudentId" />
+      </end2>
+    </association>
+    <association name="CurCourses_CurClasses" cardinality="OneToMany" p1:Guid="34717769-2a4b-4aa7-880c-ed76226e3180">
+      <end1 multiplicity="One" name="CurCourses" class="CurClasses" relation-class="CurCourses" constrained="True" lazy="False" p1:Guid="8ec530bb-3f7c-4057-88a4-616068506639">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="CurClasses" class="CurCourses" relation-class="CurClasses" lazy="False" p1:Guid="309f40d7-afb6-4950-80e0-d429c937a4cc">
+        <property name="CourseId" />
+      </end2>
+    </association>
+    <association name="CurUsers_CurClasses" cardinality="OneToMany" p1:Guid="43b78818-9bfa-4531-84b6-c3f0df96ada6">
+      <end1 multiplicity="One" name="CurUsers" class="CurClasses" relation-class="CurUsers" constrained="True" lazy="False" p1:Guid="63b6d0f0-4911-449b-902b-0474aa1dd36d">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="CurClasses" class="CurUsers" relation-class="CurClasses" lazy="False" p1:Guid="62a3bc6d-759f-4ea4-85c0-0f7b638d4fbc">
+        <property name="TeacherId" />
+      </end2>
+    </association>
+    <association name="CurUsers_CurCourses" cardinality="OneToMany" p1:Guid="1e6591f7-babb-4355-bc0a-99cbcfad42f9">
+      <end1 multiplicity="ZeroOrOne" name="CurUsers" class="CurCourses" relation-class="CurUsers" constrained="True" lazy="False" p1:Guid="cad8e61d-06db-411c-ac4d-9acc3eb344e0">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="CurCourses" class="CurUsers" relation-class="CurCourses" lazy="False" p1:Guid="786c90a6-2d91-4c60-8f24-d0473d95ff95">
+        <property name="CreatedBy" />
+      </end2>
+    </association>
+    <association name="CurClasses_CurEnrollments" cardinality="OneToOne" p1:Guid="98304f19-d016-4336-bfc8-ca2b0e0c2ac1">
+      <end1 multiplicity="One" name="CurClasses" class="CurEnrollments" relation-class="CurClasses" constrained="True" lazy="False" p1:Guid="df6e3c1c-ec03-4101-a912-ba98b5270944">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="ZeroOrOne" name="CurEnrollments" class="CurClasses" relation-class="CurEnrollments" constrained="False" lazy="False" p1:Guid="07e65ed1-2a03-4586-8f25-e369e5716d55">
+        <property name="ClassId" />
+      </end2>
+    </association>
+    <association name="CurUsers_CurEnrollments" cardinality="OneToOne" p1:Guid="e4e1d64c-1b1d-492e-a6e3-36ca59d0bd60">
+      <end1 multiplicity="One" name="CurUsers" class="CurEnrollments" relation-class="CurUsers" constrained="True" lazy="False" p1:Guid="f46e2d82-e7b5-473a-a068-4f1832bdd266">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="ZeroOrOne" name="CurEnrollments" class="CurUsers" relation-class="CurEnrollments" constrained="False" lazy="False" p1:Guid="8ca6bf02-2dc3-4e8c-9fd6-d5b115f3d5fd">
+        <property name="StudentId" />
+      </end2>
+    </association>
+    <association name="CurUsers_CurLrsLogs" cardinality="OneToMany" p1:Guid="50be4960-a156-4570-9e98-14b0831fe13b">
+      <end1 multiplicity="One" name="CurUsers" class="CurLrsLogs" relation-class="CurUsers" constrained="True" lazy="False" p1:Guid="ca705484-f1e5-428b-90aa-67a74e7418ca">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="CurLrsLogs" class="CurUsers" relation-class="CurLrsLogs" lazy="False" p1:Guid="dd7e031e-9004-4b8e-9b53-0ae17579a8bc">
+        <property name="UserId" />
+      </end2>
+    </association>
+    <association name="CurCourses_CurLrsLogs" cardinality="OneToMany" p1:Guid="93c8a624-9f6a-45d4-abcb-c1c80e124930">
+      <end1 multiplicity="ZeroOrOne" name="CurCourses" class="CurLrsLogs" relation-class="CurCourses" constrained="True" lazy="False" p1:Guid="92037a33-4121-424c-a36d-258d5c56cedb">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="CurLrsLogs" class="CurCourses" relation-class="CurLrsLogs" lazy="False" p1:Guid="baca81e8-a5a0-4402-9953-08972dc60adb">
+        <property name="CourseId" />
+      </end2>
+    </association>
+    <association name="CurOrganizations_CurOrganizations" cardinality="OneToMany" p1:Guid="1d6475b5-21ea-494a-8571-971682d487df">
+      <end1 multiplicity="ZeroOrOne" name="CurOrganizations_ParentId" class="CurOrganizations" relation-class="CurOrganizations" constrained="True" lazy="False" p1:Guid="97a55f64-a029-4aa7-92cf-66b9a2e98b58">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="CurOrganizations_ParentId1" class="CurOrganizations" relation-class="CurOrganizations" lazy="False" p1:Guid="1235216e-8462-40cf-a63b-964d1fe2fa99">
+        <property name="ParentId" />
+      </end2>
+    </association>
+    <association name="CurQuizSubmissions_CurQuestionAnswers" cardinality="OneToMany" p1:Guid="d6da1ac3-ea0a-4726-81dd-2b088d5a8cca">
+      <end1 multiplicity="One" name="CurQuizSubmissions" class="CurQuestionAnswers" relation-class="CurQuizSubmissions" constrained="True" lazy="False" p1:Guid="0b12db29-f199-4eba-a85d-aa3bfced9a6a">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="CurQuestionAnswers" class="CurQuizSubmissions" relation-class="CurQuestionAnswers" lazy="False" p1:Guid="b115e121-1b5e-4e92-8b71-fe10e949ad46">
+        <property name="SubmissionId" />
+      </end2>
+    </association>
+    <association name="CurQuestions_CurQuestionAnswers" cardinality="OneToMany" p1:Guid="da534fd6-7ba5-4daa-92e1-962f5034e9e7">
+      <end1 multiplicity="One" name="CurQuestions" class="CurQuestionAnswers" relation-class="CurQuestions" constrained="True" lazy="False" p1:Guid="24a155bb-d893-42b5-8774-5241c9edd776">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="CurQuestionAnswers" class="CurQuestions" relation-class="CurQuestionAnswers" lazy="False" p1:Guid="0cf1845b-266c-4626-a764-04e6c54beeb5">
+        <property name="QuestionId" />
+      </end2>
+    </association>
+    <association name="CurQuizzes_CurQuestions" cardinality="OneToMany" p1:Guid="72d297ea-6c8c-42bf-bf22-a68c81f8a2c5">
+      <end1 multiplicity="One" name="CurQuizzes" class="CurQuestions" relation-class="CurQuizzes" constrained="True" lazy="False" p1:Guid="eba44d39-9674-4a21-8257-f18d73c1e7e1">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="CurQuestions" class="CurQuizzes" relation-class="CurQuestions" lazy="False" p1:Guid="631a73f9-d6a6-4973-9479-94fa855b1ab3">
+        <property name="QuizId" />
+      </end2>
+    </association>
+    <association name="CurQuizzes_CurQuizSubmissions" cardinality="OneToOne" p1:Guid="5ad71724-651d-4861-9fe8-cc1eb06862d3">
+      <end1 multiplicity="One" name="CurQuizzes" class="CurQuizSubmissions" relation-class="CurQuizzes" constrained="True" lazy="False" p1:Guid="6f1c5cac-038a-4bc0-97d9-b71e3e93ea94">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="ZeroOrOne" name="CurQuizSubmissions" class="CurQuizzes" relation-class="CurQuizSubmissions" constrained="False" lazy="False" p1:Guid="41e9749e-771e-45c7-a2c5-733acf50bb2c">
+        <property name="QuizId" />
+      </end2>
+    </association>
+    <association name="CurUsers_CurQuizSubmissions" cardinality="OneToOne" p1:Guid="8cd4d3e8-d2a5-4c3d-88a5-19cde19debaf">
+      <end1 multiplicity="One" name="CurUsers" class="CurQuizSubmissions" relation-class="CurUsers" constrained="True" lazy="False" p1:Guid="b93ea459-0be0-425e-97bb-1dc98eb99e62">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="ZeroOrOne" name="CurQuizSubmissions" class="CurUsers" relation-class="CurQuizSubmissions" constrained="False" lazy="False" p1:Guid="f059916f-e42e-43b2-93f2-cfdc81f3b513">
+        <property name="StudentId" />
+      </end2>
+    </association>
+    <association name="CurClasses_CurQuizzes" cardinality="OneToMany" p1:Guid="ad757bb8-2067-4da0-9e92-2c581728cd23">
+      <end1 multiplicity="One" name="CurClasses" class="CurQuizzes" relation-class="CurClasses" constrained="True" lazy="False" p1:Guid="e61701ad-4fcb-4b06-84a8-e6d465af53aa">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="CurQuizzes" class="CurClasses" relation-class="CurQuizzes" lazy="False" p1:Guid="f93ce526-9156-40cc-956f-249e08a58d84">
+        <property name="ClassId" />
+      </end2>
+    </association>
+    <association name="CurUsers_CurQuizzes" cardinality="OneToMany" p1:Guid="725ed585-0b72-4c84-9145-d08a0300bdcc">
+      <end1 multiplicity="ZeroOrOne" name="CurUsers" class="CurQuizzes" relation-class="CurUsers" constrained="True" lazy="False" p1:Guid="e9250b82-fbd8-4cf0-80e4-630f342b57dd">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="CurQuizzes" class="CurUsers" relation-class="CurQuizzes" lazy="False" p1:Guid="bf0178e5-9e38-4d84-aeeb-f7e2c93c71cf">
+        <property name="CreatedBy" />
+      </end2>
+    </association>
+    <association name="CurClasses_CurSchedules" cardinality="OneToMany" p1:Guid="4f04f820-6aa1-4a1c-afcf-66648a13bc3c">
+      <end1 multiplicity="One" name="CurClasses" class="CurSchedules" relation-class="CurClasses" constrained="True" lazy="False" p1:Guid="448bb380-6baa-488d-8ccb-fc13dbe06f0e">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="CurSchedules" class="CurClasses" relation-class="CurSchedules" lazy="False" p1:Guid="d9a9e13e-ef1d-4894-b181-eb891f36144d">
+        <property name="ClassId" />
+      </end2>
+    </association>
+    <association name="CurReligions_CurTeachers" cardinality="OneToMany" p1:Guid="de39f79f-d281-40c7-9206-02a4b6129634">
+      <end1 multiplicity="ZeroOrOne" name="CurReligions" class="CurTeachers" relation-class="CurReligions" constrained="True" lazy="False" p1:Guid="46189b13-4ec9-4f55-9873-69739b03d10d">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="CurTeachers" class="CurReligions" relation-class="CurTeachers" lazy="False" p1:Guid="ef2efeeb-af9e-4e9d-aee9-09519acefef5">
+        <property name="ReligionId" />
+      </end2>
+    </association>
+    <association name="CurDenominations_CurTeachers" cardinality="OneToMany" p1:Guid="80578bf1-973f-4b3d-a3e2-86026b5ce1be">
+      <end1 multiplicity="ZeroOrOne" name="CurDenominations" class="CurTeachers" relation-class="CurDenominations" constrained="True" lazy="False" p1:Guid="089a2c18-12c1-4267-98cf-511ff14e5c9e">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="CurTeachers" class="CurDenominations" relation-class="CurTeachers" lazy="False" p1:Guid="a5a41f5e-2b5b-4b59-bf96-bf69033b3692">
+        <property name="DenominationId" />
+      </end2>
+    </association>
+    <association name="CurMaritalStatuses_CurTeachers" cardinality="OneToMany" p1:Guid="8853429d-8063-4a01-9a04-28cab5025d51">
+      <end1 multiplicity="ZeroOrOne" name="CurMaritalStatuses" class="CurTeachers" relation-class="CurMaritalStatuses" constrained="True" lazy="False" p1:Guid="ce0ec509-2473-4fb7-bd3c-12a9baa5c9e3">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="CurTeachers" class="CurMaritalStatuses" relation-class="CurTeachers" lazy="False" p1:Guid="804fa1e0-d440-4740-bc30-c58e832844a6">
+        <property name="MaritalStatusId" />
+      </end2>
+    </association>
+    <association name="CurTeacherTypes_CurTeachers" cardinality="OneToMany" p1:Guid="07c66da8-cb73-4e6e-a29c-48cc8428d60e">
+      <end1 multiplicity="One" name="CurTeacherTypes" class="CurTeachers" relation-class="CurTeacherTypes" constrained="True" lazy="False" p1:Guid="f1bcbe8d-3d93-4a67-a613-ad448fd4cfcd">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="CurTeachers" class="CurTeacherTypes" relation-class="CurTeachers" lazy="False" p1:Guid="e54b77e0-39c1-40a5-9e21-3c66f6f6751f">
+        <property name="TeacherTypeId" />
+      </end2>
+    </association>
+    <association name="CurDegrees_CurTeachers" cardinality="OneToMany" p1:Guid="845368d4-49ab-4ace-a2e5-e138f48b6458">
+      <end1 multiplicity="One" name="CurDegrees" class="CurTeachers" relation-class="CurDegrees" constrained="True" lazy="False" p1:Guid="6fea2a64-6487-4f10-9ed6-f6fe971f018a">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="CurTeachers" class="CurDegrees" relation-class="CurTeachers" lazy="False" p1:Guid="b3425335-7a67-4d78-a249-1b4808bf3cb1">
+        <property name="DegreeId" />
+      </end2>
+    </association>
+    <association name="CurFieldsOfStudy_CurTeachers" cardinality="OneToMany" p1:Guid="8319b559-0c9a-4839-b19e-4c4c43a7b0c8">
+      <end1 multiplicity="ZeroOrOne" name="CurFieldsOfStudy" class="CurTeachers" relation-class="CurFieldsOfStudy" constrained="True" lazy="False" p1:Guid="83b08caf-8433-48a3-8495-dcf584a9e27f">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="CurTeachers" class="CurFieldsOfStudy" relation-class="CurTeachers" lazy="False" p1:Guid="b1470363-869c-475e-8676-0b9a390442d3">
+        <property name="FieldOfStudyId" />
+      </end2>
+    </association>
+    <association name="CurOrganizations_CurUsers" cardinality="OneToMany" p1:Guid="98baf033-5033-447d-bf5c-c143a67e926e">
+      <end1 multiplicity="ZeroOrOne" name="CurOrganizations" class="CurUsers" relation-class="CurOrganizations" constrained="True" lazy="False" p1:Guid="3187736f-d2a5-4c2f-b922-6dfec04d31af">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="CurUsers" class="CurOrganizations" relation-class="CurUsers" lazy="False" p1:Guid="935817b1-fefd-4db7-bf82-c0b956e883e1">
+        <property name="OrganizationId" />
+      </end2>
+    </association>
+    <association name="SysUserType_SysUser" cardinality="OneToMany" p1:Guid="17180d9e-da9d-40cf-a41b-190b0e7d354e">
+      <end1 multiplicity="ZeroOrOne" name="SysUserType" class="SysUser" relation-class="SysUserType" constrained="True" lazy="False" p1:Guid="18d45504-de7e-4961-a264-140248589f53">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="SysUsers" class="SysUserType" relation-class="SysUser" lazy="False" p1:Guid="3c0d6d68-c1fe-4f22-ba67-950f409049f8">
+        <property name="FkUserType" />
+      </end2>
+    </association>
+  </associations>
+</efcore>

@@ -1,0 +1,21 @@
+version: '3.9'
+
+services:
+  dkd.app.admin.api:
+    image: ${DOCKER_REGISTRY-}dkdadminRaimondwebapi
+    container_name: dkd.app.raimond.api
+    restart: on-failure
+    hostname: dkd.app.admin.api
+    build:
+      context: .
+      dockerfile: App/Admin/Admin.Api/Dockerfile
+      args:
+        DOCKER_BUILDKIT: 1
+    networks:
+      - ServiceNetwork
+networks:
+  ServiceNetwork:
+    external: true
+volumes:
+  cache:
+    driver: local

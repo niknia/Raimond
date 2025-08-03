@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<Description>This project implements SQL Server functionality based on `Adnc.Infra.Repository.EfCore`.</Description>
+		<PackageTags>adnc,efcore,sqlserver</PackageTags>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="DotNetCore.CAP" Version="$(DotNetCore_CAP_Version)" />
+		<PackageReference Include="DotNetCore.CAP.SqlServer" Version="$(DotNetCore_CAP_SqlServer_Version)" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="$(Microsoft_EntityFrameworkCore_SqlServer_Version)" />
+		<PackageReference Include="EFCore.NamingConventions" Version="$(EFCore_NamingConventions_Version)" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="$(Microsoft_Extensions_Configuration_Binder_Version)" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Repository.EfCore\Dkd.Infra.Repository.EfCore.csproj" />
+		<ProjectReference Include="..\Repository\Dkd.Infra.Repository.csproj" />
+	</ItemGroup>
+</Project>

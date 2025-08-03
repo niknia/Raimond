@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<ItemGroup>
+		<ProjectReference Include="..\..\Shared\Const\Dkd.App.Const.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\Infrastructures\Helper\Dkd.Infra.Helper.csproj" />
+    <ProjectReference Include="..\..\..\Infrastructures\Repository\Dkd.Infra.Repository.csproj" />
+    <ProjectReference Include="..\..\..\Infrastructures\Redis.Caching\Dkd.Infra.Redis.Caching.csproj" />
+		<ProjectReference Include="..\..\..\ServiceShared\Shared\Dkd.Shared.csproj" />
+		<ProjectReference Include="..\..\..\ServiceShared\Application.Contracts\Dkd.Shared.Application.Contracts.csproj" />
+    <PackageReference Include="Refit" Version="$(Refit_HttpClientFactory)" />
+    <PackageReference Include="Refit.HttpClientFactory" Version="$(Refit_HttpClientFactory)" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Dtos\NewFolder1\" />
+	  <Folder Include="Dtos\NewFolder2\" />
+	  <Folder Include="Dtos\NewFolder3\" />
+	  <Folder Include="Dtos\CurCourseTypes\" />
+	  <Folder Include="Dtos\NewFolder\" />
+	</ItemGroup>
+
+</Project>

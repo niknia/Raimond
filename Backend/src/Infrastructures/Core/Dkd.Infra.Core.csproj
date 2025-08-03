@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<Description>This library is the top-level library that all other libraries directly or indirectly depend on. It provides extensive extension methods for C# basic types and extension methods for Configuration, DependencyInjection, and ContainerBuilder.</Description>
+		<PackageTags>adnc,adnc.infra,adnc.infra.core</PackageTags>
+	</PropertyGroup>
+	<ItemGroup>
+	  <Compile Remove="NewFolder\**" />
+	  <EmbeddedResource Remove="NewFolder\**" />
+	  <None Remove="NewFolder\**" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="$(Microsoft_Extensions_Hosting_Abstractions_Version)" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="$(Microsoft_Extensions_Logging_Abstractions_Version)" />
+		<PackageReference Include="Microsoft.Extensions.Options" Version="$(Microsoft_Extensions_Options_Version)" />
+		<PackageReference Include="System.Runtime.Caching" Version="$(System_Runtime_Caching_Version)" />
+	</ItemGroup>
+</Project>

@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<Description>This layer is used to define Const constants and does not need to be published to Nuget.</Description>
+	</PropertyGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\ServiceShared\Shared\Dkd.Shared.csproj" />
+	</ItemGroup>
+</Project>

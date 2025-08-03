@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<Description>This layer defines the base classes for the repository layer.</Description>
+		<PackageTags>Adnc.Shared.Repository</PackageTags>
+	</PropertyGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\Infrastructures\Repository\Dkd.Infra.Repository.csproj" />
+	</ItemGroup>
+</Project>
