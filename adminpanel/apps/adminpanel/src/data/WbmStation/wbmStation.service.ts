@@ -1,6 +1,6 @@
 import { CrudService, buildResourceEndpoints } from '@dkd-query';
 import { UriString } from '@dkd-axios';
-import type { WbmStationDto } from './WbmStation.models';
+import type { WbmStationDto } from './wbmStation.models';
 
 
 const wbmStationEndpoints = {

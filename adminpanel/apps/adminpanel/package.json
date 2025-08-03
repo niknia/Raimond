@@ -12,6 +12,7 @@
     "@dkd-axios": "workspace:*",
     "@dkd-font-factory": "workspace:*",
     "@dkd-query": "workspace:*",
+    "@dkd-grid": "workspace:*",
     "@dkd/hook-form-mantine": "workspace:*",
     "@dkd/panel-kit": "workspace:*",
     "@dkd/utils": "workspace:*",
