@@ -1,4 +1,4 @@
-﻿    namespace Dkd.App.Admin.Api.Controllers;
+    namespace Dkd.App.Admin.Api.Controllers;
     /// <summary>
     /// curmaritalstatuses  controllers
     /// </summary>
@@ -26,7 +26,8 @@
     /// <param name="input">CurMaritalStatuses information</param>
     /// <returns></returns>
     [HttpPost]
-    [AdncAuthorize(PermissionConsts.CurMaritalStatuses.Create)]
+    //[AdncAuthorize(PermissionConsts.CurMaritalStatuses.Create)]
+    [AllowAnonymous]
     [ProducesResponseType(StatusCodes.Status201Created)]
     public async Task<ActionResult<IDto>> CreateAsync([FromBody] CurMaritalStatusesCreationDto input)
         => CreatedResult(await _curmaritalstatusesappservice.CreateAsync(input));
@@ -38,7 +39,8 @@
     /// <param name="input">CurMaritalStatuses information</param>
     /// <returns></returns>
     [HttpPut("{id}")]
-    [AdncAuthorize(PermissionConsts.CurMaritalStatuses.Update)]
+    //[AdncAuthorize(PermissionConsts.CurMaritalStatuses.Update)]
+    [AllowAnonymous]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     public async Task<ActionResult> UpdateAsync([FromRoute] long id, [FromBody] CurMaritalStatusesUpdationDto input)
         => Result(await _curmaritalstatusesappservice.UpdateAsync(id, input));
@@ -49,7 +51,8 @@
     /// <param name="id">CurMaritalStatuses ID</param>
     /// <returns></returns>
     [HttpDelete("{id}")]
-    [AdncAuthorize(PermissionConsts.CurMaritalStatuses.Delete)]
+    //[AdncAuthorize(PermissionConsts.CurMaritalStatuses.Delete)]
+    [AllowAnonymous]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     public async Task<ActionResult> DeleteAsync([FromRoute] long id)
         => Result(await _curmaritalstatusesappservice.DeleteAsync(id));
@@ -60,7 +63,8 @@
     /// <param name="search">Query criteria</param>
     /// <returns></returns>
     [HttpGet("page")]
-    [AdncAuthorize(PermissionConsts.CurMaritalStatuses.GetList)]    
+    //[AdncAuthorize(PermissionConsts.CurMaritalStatuses.GetList)]
+    [AllowAnonymous]
     [ProducesResponseType(typeof(PageModelDto<CurMaritalStatusesDto>), StatusCodes.Status200OK)]
     public async Task<ActionResult<PageModelDto<CurMaritalStatusesDto>>> GetPagedAsync([FromQuery] CurMaritalStatusesSearchPagedDto search)
         => await _curmaritalstatusesappservice.GetPagedAsync(search);
@@ -70,7 +74,8 @@
     /// </summary>
     /// <returns></returns>
     [HttpGet("{id}")]
-    [AdncAuthorize(PermissionConsts.CurMaritalStatuses.Get)]
+    //[AdncAuthorize(PermissionConsts.CurMaritalStatuses.Get)]
+    [AllowAnonymous]
     [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<ActionResult<CurMaritalStatusesDto>> GetAsync([FromRoute] long id)
     {
@@ -81,4 +86,3 @@
         return NotFound();
     }
    }
-    

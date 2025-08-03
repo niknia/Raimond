@@ -1,4 +1,4 @@
-﻿    namespace Dkd.App.Admin.Api.Controllers;
+    namespace Dkd.App.Admin.Api.Controllers;
     /// <summary>
     /// curquizzes  controllers
     /// </summary>
@@ -26,7 +26,8 @@
     /// <param name="input">CurQuizzes information</param>
     /// <returns></returns>
     [HttpPost]
-    [AdncAuthorize(PermissionConsts.CurQuizzes.Create)]
+    //[AdncAuthorize(PermissionConsts.CurQuizzes.Create)]
+    [AllowAnonymous]
     [ProducesResponseType(StatusCodes.Status201Created)]
     public async Task<ActionResult<IDto>> CreateAsync([FromBody] CurQuizzesCreationDto input)
         => CreatedResult(await _curquizzesappservice.CreateAsync(input));
@@ -38,7 +39,8 @@
     /// <param name="input">CurQuizzes information</param>
     /// <returns></returns>
     [HttpPut("{id}")]
-    [AdncAuthorize(PermissionConsts.CurQuizzes.Update)]
+    // [AdncAuthorize(PermissionConsts.CurQuizzes.Update)]
+    [AllowAnonymous]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     public async Task<ActionResult> UpdateAsync([FromRoute] long id, [FromBody] CurQuizzesUpdationDto input)
         => Result(await _curquizzesappservice.UpdateAsync(id, input));
@@ -49,7 +51,8 @@
     /// <param name="id">CurQuizzes ID</param>
     /// <returns></returns>
     [HttpDelete("{id}")]
-    [AdncAuthorize(PermissionConsts.CurQuizzes.Delete)]
+    // [AdncAuthorize(PermissionConsts.CurQuizzes.Delete)]
+    [AllowAnonymous]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     public async Task<ActionResult> DeleteAsync([FromRoute] long id)
         => Result(await _curquizzesappservice.DeleteAsync(id));
@@ -60,7 +63,8 @@
     /// <param name="search">Query criteria</param>
     /// <returns></returns>
     [HttpGet("page")]
-    [AdncAuthorize(PermissionConsts.CurQuizzes.GetList)]    
+    //  [AdncAuthorize(PermissionConsts.CurQuizzes.GetList)]
+    [AllowAnonymous]
     [ProducesResponseType(typeof(PageModelDto<CurQuizzesDto>), StatusCodes.Status200OK)]
     public async Task<ActionResult<PageModelDto<CurQuizzesDto>>> GetPagedAsync([FromQuery] CurQuizzesSearchPagedDto search)
         => await _curquizzesappservice.GetPagedAsync(search);
@@ -70,7 +74,8 @@
     /// </summary>
     /// <returns></returns>
     [HttpGet("{id}")]
-    [AdncAuthorize(PermissionConsts.CurQuizzes.Get)]
+    // [AdncAuthorize(PermissionConsts.CurQuizzes.Get)]
+    [AllowAnonymous]
     [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<ActionResult<CurQuizzesDto>> GetAsync([FromRoute] long id)
     {
@@ -81,4 +86,3 @@
         return NotFound();
     }
    }
-    

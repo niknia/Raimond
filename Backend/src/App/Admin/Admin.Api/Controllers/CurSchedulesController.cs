@@ -1,4 +1,4 @@
-﻿    namespace Dkd.App.Admin.Api.Controllers;
+    namespace Dkd.App.Admin.Api.Controllers;
     /// <summary>
     /// curschedules  controllers
     /// </summary>
@@ -26,7 +26,8 @@
     /// <param name="input">CurSchedules information</param>
     /// <returns></returns>
     [HttpPost]
-    [AdncAuthorize(PermissionConsts.CurSchedules.Create)]
+    // [AdncAuthorize(PermissionConsts.CurSchedules.Create)]
+    [AllowAnonymous]
     [ProducesResponseType(StatusCodes.Status201Created)]
     public async Task<ActionResult<IDto>> CreateAsync([FromBody] CurSchedulesCreationDto input)
         => CreatedResult(await _curschedulesappservice.CreateAsync(input));
@@ -38,7 +39,8 @@
     /// <param name="input">CurSchedules information</param>
     /// <returns></returns>
     [HttpPut("{id}")]
-    [AdncAuthorize(PermissionConsts.CurSchedules.Update)]
+    // [AdncAuthorize(PermissionConsts.CurSchedules.Update)]
+    [AllowAnonymous]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     public async Task<ActionResult> UpdateAsync([FromRoute] long id, [FromBody] CurSchedulesUpdationDto input)
         => Result(await _curschedulesappservice.UpdateAsync(id, input));
@@ -49,7 +51,8 @@
     /// <param name="id">CurSchedules ID</param>
     /// <returns></returns>
     [HttpDelete("{id}")]
-    [AdncAuthorize(PermissionConsts.CurSchedules.Delete)]
+    //  [AdncAuthorize(PermissionConsts.CurSchedules.Delete)]
+    [AllowAnonymous]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     public async Task<ActionResult> DeleteAsync([FromRoute] long id)
         => Result(await _curschedulesappservice.DeleteAsync(id));
@@ -60,7 +63,8 @@
     /// <param name="search">Query criteria</param>
     /// <returns></returns>
     [HttpGet("page")]
-    [AdncAuthorize(PermissionConsts.CurSchedules.GetList)]    
+    //  [AdncAuthorize(PermissionConsts.CurSchedules.GetList)]
+    [AllowAnonymous]
     [ProducesResponseType(typeof(PageModelDto<CurSchedulesDto>), StatusCodes.Status200OK)]
     public async Task<ActionResult<PageModelDto<CurSchedulesDto>>> GetPagedAsync([FromQuery] CurSchedulesSearchPagedDto search)
         => await _curschedulesappservice.GetPagedAsync(search);
@@ -70,7 +74,8 @@
     /// </summary>
     /// <returns></returns>
     [HttpGet("{id}")]
-    [AdncAuthorize(PermissionConsts.CurSchedules.Get)]
+    // [AdncAuthorize(PermissionConsts.CurSchedules.Get)]
+    [AllowAnonymous]
     [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<ActionResult<CurSchedulesDto>> GetAsync([FromRoute] long id)
     {
@@ -81,4 +86,3 @@
         return NotFound();
     }
    }
-    

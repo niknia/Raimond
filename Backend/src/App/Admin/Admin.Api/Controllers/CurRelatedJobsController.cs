@@ -1,4 +1,4 @@
-﻿    namespace Dkd.App.Admin.Api.Controllers;
+    namespace Dkd.App.Admin.Api.Controllers;
     /// <summary>
     /// currelatedjobs  controllers
     /// </summary>
@@ -26,7 +26,8 @@
     /// <param name="input">CurRelatedJobs information</param>
     /// <returns></returns>
     [HttpPost]
-    [AdncAuthorize(PermissionConsts.CurRelatedJobs.Create)]
+    //[AdncAuthorize(PermissionConsts.CurRelatedJobs.Create)]
+    [AllowAnonymous]
     [ProducesResponseType(StatusCodes.Status201Created)]
     public async Task<ActionResult<IDto>> CreateAsync([FromBody] CurRelatedJobsCreationDto input)
         => CreatedResult(await _currelatedjobsappservice.CreateAsync(input));
@@ -38,7 +39,8 @@
     /// <param name="input">CurRelatedJobs information</param>
     /// <returns></returns>
     [HttpPut("{id}")]
-    [AdncAuthorize(PermissionConsts.CurRelatedJobs.Update)]
+    // [AdncAuthorize(PermissionConsts.CurRelatedJobs.Update)]
+    [AllowAnonymous]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     public async Task<ActionResult> UpdateAsync([FromRoute] long id, [FromBody] CurRelatedJobsUpdationDto input)
         => Result(await _currelatedjobsappservice.UpdateAsync(id, input));
@@ -49,7 +51,8 @@
     /// <param name="id">CurRelatedJobs ID</param>
     /// <returns></returns>
     [HttpDelete("{id}")]
-    [AdncAuthorize(PermissionConsts.CurRelatedJobs.Delete)]
+    //  [AdncAuthorize(PermissionConsts.CurRelatedJobs.Delete)]
+    [AllowAnonymous]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     public async Task<ActionResult> DeleteAsync([FromRoute] long id)
         => Result(await _currelatedjobsappservice.DeleteAsync(id));
@@ -60,7 +63,8 @@
     /// <param name="search">Query criteria</param>
     /// <returns></returns>
     [HttpGet("page")]
-    [AdncAuthorize(PermissionConsts.CurRelatedJobs.GetList)]    
+    //[AdncAuthorize(PermissionConsts.CurRelatedJobs.GetList)]
+    [AllowAnonymous]
     [ProducesResponseType(typeof(PageModelDto<CurRelatedJobsDto>), StatusCodes.Status200OK)]
     public async Task<ActionResult<PageModelDto<CurRelatedJobsDto>>> GetPagedAsync([FromQuery] CurRelatedJobsSearchPagedDto search)
         => await _currelatedjobsappservice.GetPagedAsync(search);
@@ -70,7 +74,8 @@
     /// </summary>
     /// <returns></returns>
     [HttpGet("{id}")]
-    [AdncAuthorize(PermissionConsts.CurRelatedJobs.Get)]
+    //  [AdncAuthorize(PermissionConsts.CurRelatedJobs.Get)]
+    [AllowAnonymous]
     [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<ActionResult<CurRelatedJobsDto>> GetAsync([FromRoute] long id)
     {
@@ -81,4 +86,3 @@
         return NotFound();
     }
    }
-    

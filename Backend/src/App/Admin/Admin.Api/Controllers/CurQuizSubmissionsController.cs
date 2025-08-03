@@ -1,4 +1,4 @@
-﻿    namespace Dkd.App.Admin.Api.Controllers;
+    namespace Dkd.App.Admin.Api.Controllers;
     /// <summary>
     /// curquizsubmissions  controllers
     /// </summary>
@@ -26,7 +26,8 @@
     /// <param name="input">CurQuizSubmissions information</param>
     /// <returns></returns>
     [HttpPost]
-    [AdncAuthorize(PermissionConsts.CurQuizSubmissions.Create)]
+    // [AdncAuthorize(PermissionConsts.CurQuizSubmissions.Create)]
+    [AllowAnonymous]
     [ProducesResponseType(StatusCodes.Status201Created)]
     public async Task<ActionResult<IDto>> CreateAsync([FromBody] CurQuizSubmissionsCreationDto input)
         => CreatedResult(await _curquizsubmissionsappservice.CreateAsync(input));
@@ -38,7 +39,8 @@
     /// <param name="input">CurQuizSubmissions information</param>
     /// <returns></returns>
     [HttpPut("{id}")]
-    [AdncAuthorize(PermissionConsts.CurQuizSubmissions.Update)]
+    //[AdncAuthorize(PermissionConsts.CurQuizSubmissions.Update)]
+    [AllowAnonymous]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     public async Task<ActionResult> UpdateAsync([FromRoute] long id, [FromBody] CurQuizSubmissionsUpdationDto input)
         => Result(await _curquizsubmissionsappservice.UpdateAsync(id, input));
@@ -49,7 +51,8 @@
     /// <param name="id">CurQuizSubmissions ID</param>
     /// <returns></returns>
     [HttpDelete("{id}")]
-    [AdncAuthorize(PermissionConsts.CurQuizSubmissions.Delete)]
+    //[AdncAuthorize(PermissionConsts.CurQuizSubmissions.Delete)]
+    [AllowAnonymous]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     public async Task<ActionResult> DeleteAsync([FromRoute] long id)
         => Result(await _curquizsubmissionsappservice.DeleteAsync(id));
@@ -60,7 +63,8 @@
     /// <param name="search">Query criteria</param>
     /// <returns></returns>
     [HttpGet("page")]
-    [AdncAuthorize(PermissionConsts.CurQuizSubmissions.GetList)]    
+    // [AdncAuthorize(PermissionConsts.CurQuizSubmissions.GetList)]
+    [AllowAnonymous]
     [ProducesResponseType(typeof(PageModelDto<CurQuizSubmissionsDto>), StatusCodes.Status200OK)]
     public async Task<ActionResult<PageModelDto<CurQuizSubmissionsDto>>> GetPagedAsync([FromQuery] CurQuizSubmissionsSearchPagedDto search)
         => await _curquizsubmissionsappservice.GetPagedAsync(search);
@@ -70,7 +74,8 @@
     /// </summary>
     /// <returns></returns>
     [HttpGet("{id}")]
-    [AdncAuthorize(PermissionConsts.CurQuizSubmissions.Get)]
+    //  [AdncAuthorize(PermissionConsts.CurQuizSubmissions.Get)]
+    [AllowAnonymous]
     [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<ActionResult<CurQuizSubmissionsDto>> GetAsync([FromRoute] long id)
     {
@@ -81,4 +86,3 @@
         return NotFound();
     }
    }
-    

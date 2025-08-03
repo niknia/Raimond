@@ -1,4 +1,4 @@
-﻿    namespace Dkd.App.Admin.Api.Controllers;
+    namespace Dkd.App.Admin.Api.Controllers;
     /// <summary>
     /// curdenominations  controllers
     /// </summary>
@@ -26,7 +26,8 @@
     /// <param name="input">CurDenominations information</param>
     /// <returns></returns>
     [HttpPost]
-    [AdncAuthorize(PermissionConsts.CurDenominations.Create)]
+    [AllowAnonymous]
+    //[AdncAuthorize(PermissionConsts.CurDenominations.Create)]
     [ProducesResponseType(StatusCodes.Status201Created)]
     public async Task<ActionResult<IDto>> CreateAsync([FromBody] CurDenominationsCreationDto input)
         => CreatedResult(await _curdenominationsappservice.CreateAsync(input));
@@ -38,7 +39,8 @@
     /// <param name="input">CurDenominations information</param>
     /// <returns></returns>
     [HttpPut("{id}")]
-    [AdncAuthorize(PermissionConsts.CurDenominations.Update)]
+    //[AdncAuthorize(PermissionConsts.CurDenominations.Update)]
+    [AllowAnonymous]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     public async Task<ActionResult> UpdateAsync([FromRoute] long id, [FromBody] CurDenominationsUpdationDto input)
         => Result(await _curdenominationsappservice.UpdateAsync(id, input));
@@ -49,7 +51,8 @@
     /// <param name="id">CurDenominations ID</param>
     /// <returns></returns>
     [HttpDelete("{id}")]
-    [AdncAuthorize(PermissionConsts.CurDenominations.Delete)]
+    //[AdncAuthorize(PermissionConsts.CurDenominations.Delete)]
+    [AllowAnonymous]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     public async Task<ActionResult> DeleteAsync([FromRoute] long id)
         => Result(await _curdenominationsappservice.DeleteAsync(id));
@@ -60,7 +63,8 @@
     /// <param name="search">Query criteria</param>
     /// <returns></returns>
     [HttpGet("page")]
-    [AdncAuthorize(PermissionConsts.CurDenominations.GetList)]    
+    // [AdncAuthorize(PermissionConsts.CurDenominations.GetList)]
+    [AllowAnonymous]
     [ProducesResponseType(typeof(PageModelDto<CurDenominationsDto>), StatusCodes.Status200OK)]
     public async Task<ActionResult<PageModelDto<CurDenominationsDto>>> GetPagedAsync([FromQuery] CurDenominationsSearchPagedDto search)
         => await _curdenominationsappservice.GetPagedAsync(search);
@@ -70,7 +74,8 @@
     /// </summary>
     /// <returns></returns>
     [HttpGet("{id}")]
-    [AdncAuthorize(PermissionConsts.CurDenominations.Get)]
+    //[AdncAuthorize(PermissionConsts.CurDenominations.Get)]
+    [AllowAnonymous]
     [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<ActionResult<CurDenominationsDto>> GetAsync([FromRoute] long id)
     {
@@ -81,4 +86,3 @@
         return NotFound();
     }
    }
-    

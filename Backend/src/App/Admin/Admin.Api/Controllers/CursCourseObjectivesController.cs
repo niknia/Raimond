@@ -1,4 +1,4 @@
-﻿    namespace Dkd.App.Admin.Api.Controllers;
+    namespace Dkd.App.Admin.Api.Controllers;
     /// <summary>
     /// curscourseobjectives  controllers
     /// </summary>
@@ -26,7 +26,8 @@
     /// <param name="input">CursCourseObjectives information</param>
     /// <returns></returns>
     [HttpPost]
-    [AdncAuthorize(PermissionConsts.CursCourseObjectives.Create)]
+    //[AdncAuthorize(PermissionConsts.CursCourseObjectives.Create)]
+    [AllowAnonymous]
     [ProducesResponseType(StatusCodes.Status201Created)]
     public async Task<ActionResult<IDto>> CreateAsync([FromBody] CursCourseObjectivesCreationDto input)
         => CreatedResult(await _curscourseobjectivesappservice.CreateAsync(input));
@@ -38,7 +39,8 @@
     /// <param name="input">CursCourseObjectives information</param>
     /// <returns></returns>
     [HttpPut("{id}")]
-    [AdncAuthorize(PermissionConsts.CursCourseObjectives.Update)]
+    // [AdncAuthorize(PermissionConsts.CursCourseObjectives.Update)]
+    [AllowAnonymous]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     public async Task<ActionResult> UpdateAsync([FromRoute] long id, [FromBody] CursCourseObjectivesUpdationDto input)
         => Result(await _curscourseobjectivesappservice.UpdateAsync(id, input));
@@ -49,7 +51,8 @@
     /// <param name="id">CursCourseObjectives ID</param>
     /// <returns></returns>
     [HttpDelete("{id}")]
-    [AdncAuthorize(PermissionConsts.CursCourseObjectives.Delete)]
+    //  [AdncAuthorize(PermissionConsts.CursCourseObjectives.Delete)]
+    [AllowAnonymous]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     public async Task<ActionResult> DeleteAsync([FromRoute] long id)
         => Result(await _curscourseobjectivesappservice.DeleteAsync(id));
@@ -60,7 +63,8 @@
     /// <param name="search">Query criteria</param>
     /// <returns></returns>
     [HttpGet("page")]
-    [AdncAuthorize(PermissionConsts.CursCourseObjectives.GetList)]    
+    //  [AdncAuthorize(PermissionConsts.CursCourseObjectives.GetList)]
+    [AllowAnonymous]
     [ProducesResponseType(typeof(PageModelDto<CursCourseObjectivesDto>), StatusCodes.Status200OK)]
     public async Task<ActionResult<PageModelDto<CursCourseObjectivesDto>>> GetPagedAsync([FromQuery] CursCourseObjectivesSearchPagedDto search)
         => await _curscourseobjectivesappservice.GetPagedAsync(search);
@@ -70,7 +74,8 @@
     /// </summary>
     /// <returns></returns>
     [HttpGet("{id}")]
-    [AdncAuthorize(PermissionConsts.CursCourseObjectives.Get)]
+    //  [AdncAuthorize(PermissionConsts.CursCourseObjectives.Get)]
+    [AllowAnonymous]
     [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<ActionResult<CursCourseObjectivesDto>> GetAsync([FromRoute] long id)
     {
@@ -81,4 +86,3 @@
         return NotFound();
     }
    }
-    

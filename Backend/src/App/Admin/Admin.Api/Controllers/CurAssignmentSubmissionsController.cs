@@ -1,4 +1,4 @@
-﻿    namespace Dkd.App.Admin.Api.Controllers;
+    namespace Dkd.App.Admin.Api.Controllers;
     /// <summary>
     /// curassignmentsubmissions  controllers
     /// </summary>
@@ -26,7 +26,8 @@
     /// <param name="input">CurAssignmentSubmissions information</param>
     /// <returns></returns>
     [HttpPost]
-    [AdncAuthorize(PermissionConsts.CurAssignmentSubmissions.Create)]
+    //[AdncAuthorize(PermissionConsts.CurAssignmentSubmissions.Create)]
+    [AllowAnonymous]
     [ProducesResponseType(StatusCodes.Status201Created)]
     public async Task<ActionResult<IDto>> CreateAsync([FromBody] CurAssignmentSubmissionsCreationDto input)
         => CreatedResult(await _curassignmentsubmissionsappservice.CreateAsync(input));
@@ -38,7 +39,8 @@
     /// <param name="input">CurAssignmentSubmissions information</param>
     /// <returns></returns>
     [HttpPut("{id}")]
-    [AdncAuthorize(PermissionConsts.CurAssignmentSubmissions.Update)]
+    //[AdncAuthorize(PermissionConsts.CurAssignmentSubmissions.Update)]
+    [AllowAnonymous]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     public async Task<ActionResult> UpdateAsync([FromRoute] long id, [FromBody] CurAssignmentSubmissionsUpdationDto input)
         => Result(await _curassignmentsubmissionsappservice.UpdateAsync(id, input));
@@ -49,7 +51,8 @@
     /// <param name="id">CurAssignmentSubmissions ID</param>
     /// <returns></returns>
     [HttpDelete("{id}")]
-    [AdncAuthorize(PermissionConsts.CurAssignmentSubmissions.Delete)]
+    //    [AdncAuthorize(PermissionConsts.CurAssignmentSubmissions.Delete)]
+    [AllowAnonymous]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     public async Task<ActionResult> DeleteAsync([FromRoute] long id)
         => Result(await _curassignmentsubmissionsappservice.DeleteAsync(id));
@@ -60,7 +63,8 @@
     /// <param name="search">Query criteria</param>
     /// <returns></returns>
     [HttpGet("page")]
-    [AdncAuthorize(PermissionConsts.CurAssignmentSubmissions.GetList)]    
+    //[AdncAuthorize(PermissionConsts.CurAssignmentSubmissions.GetList)]
+    [AllowAnonymous]
     [ProducesResponseType(typeof(PageModelDto<CurAssignmentSubmissionsDto>), StatusCodes.Status200OK)]
     public async Task<ActionResult<PageModelDto<CurAssignmentSubmissionsDto>>> GetPagedAsync([FromQuery] CurAssignmentSubmissionsSearchPagedDto search)
         => await _curassignmentsubmissionsappservice.GetPagedAsync(search);
@@ -70,7 +74,8 @@
     /// </summary>
     /// <returns></returns>
     [HttpGet("{id}")]
-    [AdncAuthorize(PermissionConsts.CurAssignmentSubmissions.Get)]
+    //[AdncAuthorize(PermissionConsts.CurAssignmentSubmissions.Get)]
+    [AllowAnonymous]
     [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<ActionResult<CurAssignmentSubmissionsDto>> GetAsync([FromRoute] long id)
     {
@@ -81,4 +86,3 @@
         return NotFound();
     }
    }
-    
