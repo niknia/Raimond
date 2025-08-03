@@ -2,7 +2,7 @@ version: '3.9'
 
 services:
   dkd.app.admin.api:
-    image: ${DOCKER_REGISTRY-}dkdadminRaimondwebapi
+    image: ${DOCKER_REGISTRY-}dkdadminraimondwebapi
     container_name: dkd.app.raimond.api
     restart: on-failure
     hostname: dkd.app.admin.api
