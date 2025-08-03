@@ -1,0 +1,67 @@
+{
+  "name": "@dkd-font-factory",
+  "version": "0.2.0",
+  "description": "A collection of beautiful Persian fonts optimized for Next.js, Tailwind v4, and Mantine UI 7",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    },
+    "./styles.css": "./dist/styles.css",
+    "./assets/fonts/*": "./dist/assets/fonts/*"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "sideEffects": [
+    "**/*.css",
+    "**/*.woff",
+    "**/*.woff2"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "clean": "rimraf dist"
+  },
+  "keywords": [
+    "farsi",
+    "persian",
+    "fonts",
+    "nextjs",
+    "react",
+    "typography",
+    "mantine",
+    "tailwind",
+    "tailwindcss",
+    "tailwind v4",
+    "mantine ui 7",
+    "rtl"
+  ],
+  "author": "",
+  "license": "MIT",
+  "peerDependencies": {
+    "@mantine/core": "7.17.8",
+    "next": "^15.4.5",
+    "react": "^19.1.1"
+  },
+  "peerDependenciesMeta": {
+    "next": {
+      "optional": true
+    },
+    "@mantine/core": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^19.1.1",
+    "@types/react-dom": "^19.1.1",
+    "tsup": "^8.4.0",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.8.3"
+  }
+}

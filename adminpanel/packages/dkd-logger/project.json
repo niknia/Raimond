@@ -1,0 +1,9 @@
+{
+  "name": "@dkd/logger",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/dkd-logger/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project dkd-logger --web",
+  "targets": {}
+}

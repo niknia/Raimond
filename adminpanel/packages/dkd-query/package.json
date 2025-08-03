@@ -1,0 +1,46 @@
+{
+  "name": "@dkd-query",
+  "version": "1.0.0",
+  "description": "Query management library for DKD",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rimraf dist"
+  },
+  "keywords": [
+    "query",
+    "data-fetching",
+    "state-management"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^19.1.1",
+    "@types/react-dom": "^19.1.1",
+    "tsup": "^8.4.0",
+    "rimraf": "^5.0.5",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@dkd/utils": "workspace:*",
+    "@dkd-font-factory": "workspace:*",
+    "@tanstack/react-query": "^5.0.0",
+    "@dkd-axios": "workspace:*",
+    "@tanstack/react-query-devtools": "^5.0.0"
+  },
+  "peerDependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "next": "^15.4.5",
+    "@mantine/core": "7.17.8",
+    "@mantine/hooks": "7.17.8"
+  }
+}

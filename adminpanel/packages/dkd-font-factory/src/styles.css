@@ -1,0 +1,377 @@
+/**
+ * farsi-font-factory default styles
+ * Generated font styles for Persian fonts
+ */
+
+/* Vazirmatn Font */
+@font-face {
+  font-family: 'Vazirmatn';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url('./assets/fonts/vazirmatn/Vazirmatn-Thin.woff2') format('woff2');
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+FB50-FDFF, U+FE80-FEFC;
+}
+
+@font-face {
+  font-family: 'Vazirmatn';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url('./assets/fonts/vazirmatn/Vazirmatn-ExtraLight.woff2') format('woff2');
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+FB50-FDFF, U+FE80-FEFC;
+}
+
+@font-face {
+  font-family: 'Vazirmatn';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('./assets/fonts/vazirmatn/Vazirmatn-Light.woff2') format('woff2');
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+FB50-FDFF, U+FE80-FEFC;
+}
+
+@font-face {
+  font-family: 'Vazirmatn';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./assets/fonts/vazirmatn/Vazirmatn-Regular.woff2') format('woff2');
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+FB50-FDFF, U+FE80-FEFC;
+}
+
+@font-face {
+  font-family: 'Vazirmatn';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('./assets/fonts/vazirmatn/Vazirmatn-Medium.woff2') format('woff2');
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+FB50-FDFF, U+FE80-FEFC;
+}
+
+@font-face {
+  font-family: 'Vazirmatn';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('./assets/fonts/vazirmatn/Vazirmatn-SemiBold.woff2') format('woff2');
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+FB50-FDFF, U+FE80-FEFC;
+}
+
+@font-face {
+  font-family: 'Vazirmatn';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('./assets/fonts/vazirmatn/Vazirmatn-Bold.woff2') format('woff2');
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+FB50-FDFF, U+FE80-FEFC;
+}
+
+@font-face {
+  font-family: 'Vazirmatn';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('./assets/fonts/vazirmatn/Vazirmatn-ExtraBold.woff2') format('woff2');
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+FB50-FDFF, U+FE80-FEFC;
+}
+
+@font-face {
+  font-family: 'Vazirmatn';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('./assets/fonts/vazirmatn/Vazirmatn-Black.woff2') format('woff2');
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+FB50-FDFF, U+FE80-FEFC;
+}
+
+
+/* IRANSansX Font - All weights */
+@font-face {
+  font-family: 'IRANSansX';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url('./assets/fonts/iransans/IRANSansXFaNum-Thin.woff2') format('woff2');
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+FB50-FDFF, U+FE80-FEFC;
+}
+
+@font-face {
+  font-family: 'IRANSansX';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url('./assets/fonts/iransans/IRANSansXFaNum-UltraLight.woff2') format('woff2');
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+FB50-FDFF, U+FE80-FEFC;
+}
+
+@font-face {
+  font-family: 'IRANSansX';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('./assets/fonts/iransans/IRANSansXFaNum-Light.woff2') format('woff2');
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+FB50-FDFF, U+FE80-FEFC;
+}
+
+@font-face {
+  font-family: 'IRANSansX';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./assets/fonts/iransans/IRANSansXFaNum-Regular.woff2') format('woff2');
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+FB50-FDFF, U+FE80-FEFC;
+}
+
+@font-face {
+  font-family: 'IRANSansX';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('./assets/fonts/iransans/IRANSansXFaNum-Medium.woff2') format('woff2');
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+FB50-FDFF, U+FE80-FEFC;
+}
+
+@font-face {
+  font-family: 'IRANSansX';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('./assets/fonts/iransans/IRANSansXFaNum-DemiBold.woff2') format('woff2');
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+FB50-FDFF, U+FE80-FEFC;
+}
+
+@font-face {
+  font-family: 'IRANSansX';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('./assets/fonts/iransans/IRANSansXFaNum-Bold.woff2') format('woff2');
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+FB50-FDFF, U+FE80-FEFC;
+}
+
+@font-face {
+  font-family: 'IRANSansX';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('./assets/fonts/iransans/IRANSansXFaNum-ExtraBold.woff2') format('woff2');
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+FB50-FDFF, U+FE80-FEFC;
+}
+
+@font-face {
+  font-family: 'IRANSansX';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('./assets/fonts/iransans/IRANSansXFaNum-Black.woff2') format('woff2');
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+FB50-FDFF, U+FE80-FEFC;
+}
+
+/* Sahel Font */
+@font-face {
+  font-family: 'Sahel';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('./assets/fonts/sahel/Sahel-Light.woff2') format('woff2');
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+FB50-FDFF, U+FE80-FEFC;
+}
+
+@font-face {
+  font-family: 'Sahel';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./assets/fonts/sahel/Sahel.woff2') format('woff2');
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+FB50-FDFF, U+FE80-FEFC;
+}
+
+@font-face {
+  font-family: 'Sahel';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('./assets/fonts/sahel/Sahel-Light.woff2') format('woff2');
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+FB50-FDFF, U+FE80-FEFC;
+}
+
+@font-face {
+  font-family: 'Sahel';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('./assets/fonts/sahel/Sahel-SemiBold.woff2') format('woff2');
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+FB50-FDFF, U+FE80-FEFC;
+}
+
+@font-face {
+  font-family: 'Sahel';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('./assets/fonts/sahel/Sahel-Black.woff2') format('woff2');
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+FB50-FDFF, U+FE80-FEFC;
+}
+
+/* Samim Font */
+@font-face {
+  font-family: 'Samim';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./assets/fonts/samim/Samim.woff2') format('woff2');
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+FB50-FDFF, U+FE80-FEFC;
+}
+
+@font-face {
+  font-family: 'Samim';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('./assets/fonts/samim/Samim-Medium.woff2') format('woff2');
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+FB50-FDFF, U+FE80-FEFC;
+}
+
+@font-face {
+  font-family: 'Samim';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('./assets/fonts/samim/Samim-Bold.woff2') format('woff2');
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+FB50-FDFF, U+FE80-FEFC;
+}
+
+
+/* Roboto Font */
+@font-face {
+  font-family: Roboto;
+  src: url("./assets/fonts/roboto/Thin/Roboto-Thin.woff2?v=2.137") format("woff2"),
+       url("./assets/fonts/roboto/Thin/Roboto-Thin.woff?v=2.137") format("woff");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("./assets/fonts/roboto/ThinItalic/Roboto-ThinItalic.woff2?v=2.137") format("woff2"),
+       url("./assets/fonts/roboto/ThinItalic/Roboto-ThinItalic.woff?v=2.137") format("woff");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("./assets/fonts/roboto/Light/Roboto-Light.woff2?v=2.137") format("woff2"),
+       url("./assets/fonts/roboto/Light/Roboto-Light.woff?v=2.137") format("woff");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("./assets/fonts/roboto/LightItalic/Roboto-LightItalic.woff2?v=2.137") format("woff2"),
+       url("./assets/fonts/roboto/LightItalic/Roboto-LightItalic.woff?v=2.137") format("woff");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("./assets/fonts/roboto/Regular/Roboto-Regular.woff2?v=2.137") format("woff2"),
+       url("./assets/fonts/roboto/Regular/Roboto-Regular.woff?v=2.137") format("woff");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("./assets/fonts/roboto/Italic/Roboto-Italic.woff2?v=2.137") format("woff2"),
+       url("./assets/fonts/roboto/Italic/Roboto-Italic.woff?v=2.137") format("woff");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("./assets/fonts/roboto/Medium/Roboto-Medium.woff2?v=2.137") format("woff2"),
+       url("./assets/fonts/roboto/Medium/Roboto-Medium.woff?v=2.137") format("woff");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("./assets/fonts/roboto/MediumItalic/Roboto-MediumItalic.woff2?v=2.137") format("woff2"),
+       url("./assets/fonts/roboto/MediumItalic/Roboto-MediumItalic.woff?v=2.137") format("woff");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("./assets/fonts/roboto/Bold/Roboto-Bold.woff2?v=2.137") format("woff2"),
+       url("./assets/fonts/roboto/Bold/Roboto-Bold.woff?v=2.137") format("woff");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("./assets/fonts/roboto/BoldItalic/Roboto-BoldItalic.woff2?v=2.137") format("woff2"),
+       url("./assets/fonts/roboto/BoldItalic/Roboto-BoldItalic.woff?v=2.137") format("woff");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("./assets/fonts/roboto/Black/Roboto-Black.woff2?v=2.137") format("woff2"),
+       url("./assets/fonts/roboto/Black/Roboto-Black.woff?v=2.137") format("woff");
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("./assets/fonts/roboto/BlackItalic/Roboto-BlackItalic.woff2?v=2.137") format("woff2"),
+       url("./assets/fonts/roboto/BlackItalic/Roboto-BlackItalic.woff?v=2.137") format("woff");
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* Utility classes */
+.font-vazirmatn {
+  font-family: 'Vazirmatn', sans-serif;
+}
+
+.font-iransansx {
+  font-family: 'IRANSansX', sans-serif;
+}
+
+.font-sahel {
+  font-family: 'Sahel', sans-serif;
+}
+
+.font-samim {
+  font-family: 'Samim', sans-serif;
+}
+.font-roboto
+{
+  font-family: 'Roboto',sans-serif;
+}
+/* RTL base settings */
+[dir="rtl"] {
+  text-align: right;
+}
+
+html[dir="rtl"] body {
+  font-family: 'Vazirmatn', sans-serif;
+}
+
+html[dir="ltr"] body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* CSS Variables for Tailwind v4 */
+:root {
+  --font-vazirmatn: 'Vazirmatn', sans-serif;
+  --font-iransansx: 'IRANSansX', sans-serif;
+  --font-sahel: 'Sahel', sans-serif;
+  --font-samim: 'Samim', sans-serif;
+  --font-roboto:'Roboto',sans-serif;
+}

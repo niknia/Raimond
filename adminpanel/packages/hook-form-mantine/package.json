@@ -1,0 +1,34 @@
+{
+  "name": "@dkd/hook-form-mantine",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --external react,@mantine/core,react-dom --treeshake",
+    "test": "echo \"Testing product-list package\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "@mantine/core": "7.17.8",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@mantine/core": "7.17.8",
+    "@types/react": "^19.1.1",
+    "@types/react-dom": "^19.1.1",
+    "tsup": "^8.4.0"
+  },
+  "dependencies": {
+    "@types/node": "^20.0.0",
+    "clsx": "^2.1.1"
+  }
+}

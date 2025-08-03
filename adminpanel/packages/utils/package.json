@@ -1,0 +1,40 @@
+{
+  "name": "@dkd/utils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rimraf dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^19.1.1",
+    "@types/react-dom": "^19.1.1",
+    "rimraf": "^5.0.5",
+    "tsup": "^8.4.0"
+  },
+  "peerDependencies": {
+    "next": "^15.4.5",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "@mantine/notifications": "7.17.8",
+    "tailwind-merge": "^2.5.5"
+  },
+  "dependencies": {
+    "@tanstack/react-table": "^8.13.2",
+    "clsx": "^2.1.1",
+    "i18next": "^25.2.1",
+    "i18next-resources-to-backend": "^1.2.1",
+    "react-i18next": "^15.5.3"
+  }
+}

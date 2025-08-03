@@ -1,0 +1,9 @@
+{
+  "name": "@dkd-redux",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/dkd-redux/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project dkd-redux --web",
+  "targets": {}
+}

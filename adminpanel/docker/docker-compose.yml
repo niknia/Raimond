@@ -1,0 +1,28 @@
+services:
+  dkd.client.adminpanel:
+    image: ${DOCKER_REGISTRY-}dkdclientapp
+    container_name: dkd.client.adminpanel
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+      args:
+        DOCKER_BUILDKIT: 1  # Enable BuildKit for faster builds
+    ports:
+      - "4030:3000"
+    networks:
+      - ServiceNetwork
+    environment:
+      - NODE_ENV=production
+      - NEXT_TELEMETRY_DISABLED=1
+      - NEXT_PUBLIC_BASE_URL_PROD= http://87.107.165.236:4030
+      - NEXT_PUBLIC_API_URL_PROD= http://87.107.165.236:60080
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+
+networks:
+  ServiceNetwork:
+    external: true

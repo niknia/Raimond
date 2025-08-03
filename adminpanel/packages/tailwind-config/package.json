@@ -1,0 +1,42 @@
+{
+  "name": "@tailwind-config",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "license": "MIT",
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rimraf .turbo && rimraf node_modules && rimraf dist"
+  },
+  "dependencies": {
+    "tailwindcss": "3.4.3",
+    "postcss": "8.4.38",
+    "autoprefixer": "^10.4.13",
+    "postcss-import": "^16.1.0",
+    "postcss-nesting": "^10.0.0",
+    "postcss-preset-mantine": "^1.17.0",
+    "postcss-simple-vars": "^7.0.1",
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.10",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@dkd-font-factory": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3",
+    "rimraf": "^5.0.5"
+  },
+  "peerDependencies": {
+    "tailwindcss": "3.4.3",
+    "@mantine/core": "7.17.8"
+  }
+}

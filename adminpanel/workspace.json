@@ -1,0 +1,64 @@
+{
+  "projects": {
+    "dkd-axios": {
+      "root": "packages/dkd-axios",
+      "sourceRoot": "packages/dkd-axios/src",
+      "projectType": "library"
+    },
+    "dkd-db": {
+      "root": "packages/dkd-db",
+      "sourceRoot": "packages/dkd-db/src",
+      "projectType": "library"
+    },
+    "dkd-font-factory": {
+      "root": "packages/dkd-font-factory",
+      "sourceRoot": "packages/dkd-font-factory/src",
+      "projectType": "library"
+    },
+    "dkd-grid": {
+      "root": "packages/dkd-grid",
+      "sourceRoot": "packages/dkd-grid/src",
+      "projectType": "library"
+    },
+    "dkd-logger": {
+      "root": "packages/dkd-logger",
+      "sourceRoot": "packages/dkd-logger/src",
+      "projectType": "library"
+    },
+    "dkd-query": {
+      "root": "packages/dkd-query",
+      "sourceRoot": "packages/dkd-query/src",
+      "projectType": "library"
+    },
+    "dkd-redux": {
+      "root": "packages/dkd-redux",
+      "sourceRoot": "packages/dkd-redux/src",
+      "projectType": "library"
+    },
+    "hook-form-mantine": {
+      "root": "packages/hook-form-mantine",
+      "sourceRoot": "packages/hook-form-mantine/src",
+      "projectType": "library"
+    },
+    "hooks": {
+      "root": "packages/hooks",
+      "sourceRoot": "packages/hooks/src",
+      "projectType": "library"
+    },
+    "panel-kit": {
+      "root": "packages/panel-kit",
+      "sourceRoot": "packages/panel-kit/src",
+      "projectType": "library"
+    },
+    "tailwind-config": {
+      "root": "packages/tailwind-config",
+      "sourceRoot": "packages/tailwind-config/src",
+      "projectType": "library"
+    },
+    "utils": {
+      "root": "packages/utils",
+      "sourceRoot": "packages/utils/src",
+      "projectType": "library"
+    }
+  }
+}

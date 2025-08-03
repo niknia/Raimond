@@ -1,0 +1,56 @@
+{
+  "name": "@dkd/panel-kit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rimraf dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@dkd-font-factory": "workspace:*",
+    "@dkd/utils": "workspace:*",
+    "@tailwind-config": "workspace:*",
+    "@types/react": "^19.1.1",
+    "@types/react-dom": "^19.1.1",
+    "autoprefixer": "10.4.13",
+    "postcss": "8.4.38",
+    "rimraf": "^5.0.5",
+    "tailwindcss": "3.4.3",
+    "tsup": "^8.4.0",
+    "postcss-import": "^16.1.0"
+  },
+  "peerDependencies": {
+    "@mantine/core": "7.17.8",
+    "@mantine/hooks": "7.17.8",
+    "@mantine/notifications": "7.17.8",
+    "@mantine/modals": "7.17.8",
+    "@tanstack/react-query": "^5.0.0",
+    "@tailwind-config": "workspace:*",
+    "next": "^15.4.5",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "dependencies": {
+    "@mantine/nprogress": "7.17.8",
+    "@tabler/icons-react": "^2.47.0",
+    "@types/fuzzy-search": "^2.1.5",
+    "framer-motion": "^12.18.1",
+    "fuzzy-search": "^3.2.1",
+    "i18next": "^25.2.1",
+    "lucide-react": "^0.515.0",
+    "next-themes": "^0.4.6",
+    "react-i18next": "^15.5.3",
+    "react-resize-detector": "^12.0.2"
+  }
+}
