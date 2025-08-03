@@ -50,7 +50,8 @@
     "zod": "^3.22.4",
     "@tanstack/react-query": "^5.0.0",
     "@tanstack/react-query-devtools": "^5.0.0",
-    "react-resize-detector": "^12.0.2"
+    "react-resize-detector": "^12.0.2",
+    "@tanstack/react-table": "^8.13.2"
   },
   "devDependencies": {
     "@nx/eslint": "21.1.3",
